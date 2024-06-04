@@ -47,7 +47,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProviderTrackingID: { aliasOf: 'ProviderTrackingId' },
         PayerTrackingId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -56,7 +55,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PayerTrackingID: { aliasOf: 'PayerTrackingId' },
         ProductServiceLineItemStatus: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -255,7 +253,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ExecutingPhysicianID: { aliasOf: 'ExecutingPhysicianId' },
         ResponsiblePhysicianId: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -264,7 +261,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ResponsiblePhysicianID: { aliasOf: 'ResponsiblePhysicianId' },
         RoleExecutingPhysician: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -297,7 +293,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        NumberOfTPSPP: { aliasOf: 'NumberOfTpSPp' },
         TpValuePp: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -306,7 +301,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        TPValuePP: { aliasOf: 'TpValuePp' },
         InternalScalingFactorPp: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -315,7 +309,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InternalScalingFactorPP: { aliasOf: 'InternalScalingFactorPp' },
         ExternalScalingFactorPp: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -324,7 +317,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ExternalScalingFactorPP: { aliasOf: 'ExternalScalingFactorPp' },
         AmountPp: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -333,7 +325,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        AmountPP: { aliasOf: 'AmountPp' },
         NumberOfTpSTechnicalPart: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -342,7 +333,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        NumberOfTPSTechnicalPart: { aliasOf: 'NumberOfTpSTechnicalPart' },
         TpValueTechnicalPart: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -351,7 +341,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        TPValueTechnicalPart: { aliasOf: 'TpValueTechnicalPart' },
         InternalScalingFactorTechnicalPart: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -392,7 +381,6 @@ export class PSL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VATRate: { aliasOf: 'VatRate' },
         MainService: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -509,27 +497,11 @@ export class PSL extends Segment {
         this.setComponentValue('ProviderTrackingId', value);
     }
 
-    get ProviderTrackingID() {
-        return this.getComponent('ProviderTrackingId');
-    }
-
-    set ProviderTrackingID(value) {
-        this.setComponentValue('ProviderTrackingId', value);
-    }
-
     get PayerTrackingId() {
         return this.getComponent('PayerTrackingId');
     }
 
     set PayerTrackingId(value) {
-        this.setComponentValue('PayerTrackingId', value);
-    }
-
-    get PayerTrackingID() {
-        return this.getComponent('PayerTrackingId');
-    }
-
-    set PayerTrackingID(value) {
         this.setComponentValue('PayerTrackingId', value);
     }
 
@@ -725,27 +697,11 @@ export class PSL extends Segment {
         this.setComponentValue('ExecutingPhysicianId', value);
     }
 
-    get ExecutingPhysicianID() {
-        return this.getComponent('ExecutingPhysicianId');
-    }
-
-    set ExecutingPhysicianID(value) {
-        this.setComponentValue('ExecutingPhysicianId', value);
-    }
-
     get ResponsiblePhysicianId() {
         return this.getComponent('ResponsiblePhysicianId');
     }
 
     set ResponsiblePhysicianId(value) {
-        this.setComponentValue('ResponsiblePhysicianId', value);
-    }
-
-    get ResponsiblePhysicianID() {
-        return this.getComponent('ResponsiblePhysicianId');
-    }
-
-    set ResponsiblePhysicianID(value) {
         this.setComponentValue('ResponsiblePhysicianId', value);
     }
 
@@ -781,27 +737,11 @@ export class PSL extends Segment {
         this.setComponentValue('NumberOfTpSPp', value);
     }
 
-    get NumberOfTPSPP() {
-        return this.getComponent('NumberOfTpSPp');
-    }
-
-    set NumberOfTPSPP(value) {
-        this.setComponentValue('NumberOfTpSPp', value);
-    }
-
     get TpValuePp() {
         return this.getComponent('TpValuePp');
     }
 
     set TpValuePp(value) {
-        this.setComponentValue('TpValuePp', value);
-    }
-
-    get TPValuePP() {
-        return this.getComponent('TpValuePp');
-    }
-
-    set TPValuePP(value) {
         this.setComponentValue('TpValuePp', value);
     }
 
@@ -813,27 +753,11 @@ export class PSL extends Segment {
         this.setComponentValue('InternalScalingFactorPp', value);
     }
 
-    get InternalScalingFactorPP() {
-        return this.getComponent('InternalScalingFactorPp');
-    }
-
-    set InternalScalingFactorPP(value) {
-        this.setComponentValue('InternalScalingFactorPp', value);
-    }
-
     get ExternalScalingFactorPp() {
         return this.getComponent('ExternalScalingFactorPp');
     }
 
     set ExternalScalingFactorPp(value) {
-        this.setComponentValue('ExternalScalingFactorPp', value);
-    }
-
-    get ExternalScalingFactorPP() {
-        return this.getComponent('ExternalScalingFactorPp');
-    }
-
-    set ExternalScalingFactorPP(value) {
         this.setComponentValue('ExternalScalingFactorPp', value);
     }
 
@@ -845,14 +769,6 @@ export class PSL extends Segment {
         this.setComponentValue('AmountPp', value);
     }
 
-    get AmountPP() {
-        return this.getComponent('AmountPp');
-    }
-
-    set AmountPP(value) {
-        this.setComponentValue('AmountPp', value);
-    }
-
     get NumberOfTpSTechnicalPart() {
         return this.getComponent('NumberOfTpSTechnicalPart');
     }
@@ -861,27 +777,11 @@ export class PSL extends Segment {
         this.setComponentValue('NumberOfTpSTechnicalPart', value);
     }
 
-    get NumberOfTPSTechnicalPart() {
-        return this.getComponent('NumberOfTpSTechnicalPart');
-    }
-
-    set NumberOfTPSTechnicalPart(value) {
-        this.setComponentValue('NumberOfTpSTechnicalPart', value);
-    }
-
     get TpValueTechnicalPart() {
         return this.getComponent('TpValueTechnicalPart');
     }
 
     set TpValueTechnicalPart(value) {
-        this.setComponentValue('TpValueTechnicalPart', value);
-    }
-
-    get TPValueTechnicalPart() {
-        return this.getComponent('TpValueTechnicalPart');
-    }
-
-    set TPValueTechnicalPart(value) {
         this.setComponentValue('TpValueTechnicalPart', value);
     }
 
@@ -922,14 +822,6 @@ export class PSL extends Segment {
     }
 
     set VatRate(value) {
-        this.setComponentValue('VatRate', value);
-    }
-
-    get VATRate() {
-        return this.getComponent('VatRate');
-    }
-
-    set VATRate(value) {
         this.setComponentValue('VatRate', value);
     }
 

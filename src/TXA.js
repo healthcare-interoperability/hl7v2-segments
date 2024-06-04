@@ -20,7 +20,6 @@ export class TXA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDTXA: { aliasOf: 'SetIdTxa' },
         DocumentType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -283,14 +282,6 @@ export class TXA extends Segment {
     }
 
     set SetIdTxa(value) {
-        this.setComponentValue('SetIdTxa', value);
-    }
-
-    get SetIDTXA() {
-        return this.getComponent('SetIdTxa');
-    }
-
-    set SetIDTXA(value) {
         this.setComponentValue('SetIdTxa', value);
     }
 

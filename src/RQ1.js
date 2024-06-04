@@ -25,8 +25,8 @@ export class RQ1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ManufacturedID: { aliasOf: 'ManufacturerIdentifier' },
-        ManufacturerID: { aliasOf: 'ManufacturerIdentifier' },
+        ManufacturedId: { aliasOf: 'ManufacturerIdentifier' },
+        ManufacturerId: { aliasOf: 'ManufacturerIdentifier' },
         ManufacturerSCatalog: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,7 +46,6 @@ export class RQ1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VendorID: { aliasOf: 'VendorId' },
         VendorCatalog: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -97,19 +96,19 @@ export class RQ1 extends Segment {
         this.setComponentValue('ManufacturerIdentifier', value);
     }
 
-    get ManufacturedID() {
+    get ManufacturedId() {
         return this.getComponent('ManufacturerIdentifier');
     }
 
-    set ManufacturedID(value) {
+    set ManufacturedId(value) {
         this.setComponentValue('ManufacturerIdentifier', value);
     }
 
-    get ManufacturerID() {
+    get ManufacturerId() {
         return this.getComponent('ManufacturerIdentifier');
     }
 
-    set ManufacturerID(value) {
+    set ManufacturerId(value) {
         this.setComponentValue('ManufacturerIdentifier', value);
     }
 
@@ -126,14 +125,6 @@ export class RQ1 extends Segment {
     }
 
     set VendorId(value) {
-        this.setComponentValue('VendorId', value);
-    }
-
-    get VendorID() {
-        return this.getComponent('VendorId');
-    }
-
-    set VendorID(value) {
         this.setComponentValue('VendorId', value);
     }
 

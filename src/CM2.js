@@ -14,8 +14,7 @@ export class CM2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        Cm2SetID: { aliasOf: 'SetIdCm2' },
-        SetIDCm2: { aliasOf: 'SetIdCm2' },
+        Cm2SetId: { aliasOf: 'SetIdCm2' },
         ScheduledTimePoint: {
             defaultDataType: CWE,
             dataTypes: [
@@ -64,19 +63,11 @@ export class CM2 extends Segment {
         this.setComponentValue('SetIdCm2', value);
     }
 
-    get Cm2SetID() {
+    get Cm2SetId() {
         return this.getComponent('SetIdCm2');
     }
 
-    set Cm2SetID(value) {
-        this.setComponentValue('SetIdCm2', value);
-    }
-
-    get SetIDCm2() {
-        return this.getComponent('SetIdCm2');
-    }
-
-    set SetIDCm2(value) {
+    set Cm2SetId(value) {
         this.setComponentValue('SetIdCm2', value);
     }
 

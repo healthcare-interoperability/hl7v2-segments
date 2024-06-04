@@ -21,7 +21,6 @@ export class UB2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDUb2: { aliasOf: 'SetIdUb2' },
         CoInsuranceDays9: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -214,14 +213,6 @@ export class UB2 extends Segment {
     }
 
     set SetIdUb2(value) {
-        this.setComponentValue('SetIdUb2', value);
-    }
-
-    get SetIDUb2() {
-        return this.getComponent('SetIdUb2');
-    }
-
-    set SetIDUb2(value) {
         this.setComponentValue('SetIdUb2', value);
     }
 

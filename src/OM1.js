@@ -33,8 +33,7 @@ export class OM1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProducerSTestObservationID: { aliasOf: 'ProducerSServiceTestObservationId' },
-        ProducerSServiceTestObservationID: { aliasOf: 'ProducerSServiceTestObservationId' },
+        ProducerSTestObservationId: { aliasOf: 'ProducerSServiceTestObservationId' },
         PermittedDataTypes: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -62,7 +61,6 @@ export class OM1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProducerID: { aliasOf: 'ProducerId' },
         ObservationDescription: {
             defaultDataType: TX,
             dataTypes: [{ dataType: TX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -481,7 +479,7 @@ export class OM1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DiagnosticServSectID: {
+        DiagnosticServSectId: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8'] }],
             position: 49,
@@ -549,7 +547,7 @@ export class OM1 extends Segment {
         'TargetAnatomicSiteOfTest',
         'ModalityOfImagingMeasurement',
         'ExclusiveTest',
-        'DiagnosticServSectID',
+        'DiagnosticServSectId',
         'TaxonomicClassificationCode',
         'OtherNames',
     ];
@@ -584,19 +582,11 @@ export class OM1 extends Segment {
         this.setComponentValue('ProducerSServiceTestObservationId', value);
     }
 
-    get ProducerSTestObservationID() {
+    get ProducerSTestObservationId() {
         return this.getComponent('ProducerSServiceTestObservationId');
     }
 
-    set ProducerSTestObservationID(value) {
-        this.setComponentValue('ProducerSServiceTestObservationId', value);
-    }
-
-    get ProducerSServiceTestObservationID() {
-        return this.getComponent('ProducerSServiceTestObservationId');
-    }
-
-    set ProducerSServiceTestObservationID(value) {
+    set ProducerSTestObservationId(value) {
         this.setComponentValue('ProducerSServiceTestObservationId', value);
     }
 
@@ -621,14 +611,6 @@ export class OM1 extends Segment {
     }
 
     set ProducerId(value) {
-        this.setComponentValue('ProducerId', value);
-    }
-
-    get ProducerID() {
-        return this.getComponent('ProducerId');
-    }
-
-    set ProducerID(value) {
         this.setComponentValue('ProducerId', value);
     }
 
@@ -1088,12 +1070,12 @@ export class OM1 extends Segment {
         this.setComponentValue('ExclusiveTest', value);
     }
 
-    get DiagnosticServSectID() {
-        return this.getComponent('DiagnosticServSectID');
+    get DiagnosticServSectId() {
+        return this.getComponent('DiagnosticServSectId');
     }
 
-    set DiagnosticServSectID(value) {
-        this.setComponentValue('DiagnosticServSectID', value);
+    set DiagnosticServSectId(value) {
+        this.setComponentValue('DiagnosticServSectId', value);
     }
 
     get TaxonomicClassificationCode() {

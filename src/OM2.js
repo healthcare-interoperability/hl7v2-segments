@@ -52,7 +52,6 @@ export class OM2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        CorrespondingSIUnitsOfMeasure: { aliasOf: 'CorrespondingSiUnitsOfMeasure' },
         SiConversionFactor: {
             defaultDataType: TX,
             dataTypes: [{ dataType: TX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -61,7 +60,6 @@ export class OM2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SIConversionFactor: { aliasOf: 'SiConversionFactor' },
         ReferenceNormalRangeForOrdinalAndContinuousObservations: {
             defaultDataType: RFR,
             dataTypes: [
@@ -181,27 +179,11 @@ export class OM2 extends Segment {
         this.setComponentValue('CorrespondingSiUnitsOfMeasure', value);
     }
 
-    get CorrespondingSIUnitsOfMeasure() {
-        return this.getComponent('CorrespondingSiUnitsOfMeasure');
-    }
-
-    set CorrespondingSIUnitsOfMeasure(value) {
-        this.setComponentValue('CorrespondingSiUnitsOfMeasure', value);
-    }
-
     get SiConversionFactor() {
         return this.getComponent('SiConversionFactor');
     }
 
     set SiConversionFactor(value) {
-        this.setComponentValue('SiConversionFactor', value);
-    }
-
-    get SIConversionFactor() {
-        return this.getComponent('SiConversionFactor');
-    }
-
-    set SIConversionFactor(value) {
         this.setComponentValue('SiConversionFactor', value);
     }
 

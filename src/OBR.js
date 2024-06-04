@@ -36,8 +36,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDObservationRequest: { aliasOf: 'SetIdObr' },
-        SetIDOBR: { aliasOf: 'SetIdObr' },
+        SetIdObservationRequest: { aliasOf: 'SetIdObr' },
         PlacerOrderNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -65,7 +64,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        UniversalServiceID: { aliasOf: 'UniversalServiceIdentifier' },
+        UniversalServiceId: { aliasOf: 'UniversalServiceIdentifier' },
         Priority: {
             defaultDataType: ST,
             dataTypes: [
@@ -77,7 +76,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PriorityOBR: { aliasOf: 'Priority' },
+        PriorityObr: { aliasOf: 'Priority' },
         RequestedDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -261,8 +260,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DiagnosticServiceSectionID: { aliasOf: 'DiagnosticServSectId' },
-        DiagnosticServSectID: { aliasOf: 'DiagnosticServSectId' },
+        DiagnosticServiceSectionId: { aliasOf: 'DiagnosticServSectId' },
         ResultStatus: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -632,19 +630,11 @@ export class OBR extends Segment {
         this.setComponentValue('SetIdObr', value);
     }
 
-    get SetIDObservationRequest() {
+    get SetIdObservationRequest() {
         return this.getComponent('SetIdObr');
     }
 
-    set SetIDObservationRequest(value) {
-        this.setComponentValue('SetIdObr', value);
-    }
-
-    get SetIDOBR() {
-        return this.getComponent('SetIdObr');
-    }
-
-    set SetIDOBR(value) {
+    set SetIdObservationRequest(value) {
         this.setComponentValue('SetIdObr', value);
     }
 
@@ -672,11 +662,11 @@ export class OBR extends Segment {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 
-    get UniversalServiceID() {
+    get UniversalServiceId() {
         return this.getComponent('UniversalServiceIdentifier');
     }
 
-    set UniversalServiceID(value) {
+    set UniversalServiceId(value) {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 
@@ -688,11 +678,11 @@ export class OBR extends Segment {
         this.setComponentValue('Priority', value);
     }
 
-    get PriorityOBR() {
+    get PriorityObr() {
         return this.getComponent('Priority');
     }
 
-    set PriorityOBR(value) {
+    set PriorityObr(value) {
         this.setComponentValue('Priority', value);
     }
 
@@ -856,19 +846,11 @@ export class OBR extends Segment {
         this.setComponentValue('DiagnosticServSectId', value);
     }
 
-    get DiagnosticServiceSectionID() {
+    get DiagnosticServiceSectionId() {
         return this.getComponent('DiagnosticServSectId');
     }
 
-    set DiagnosticServiceSectionID(value) {
-        this.setComponentValue('DiagnosticServSectId', value);
-    }
-
-    get DiagnosticServSectID() {
-        return this.getComponent('DiagnosticServSectId');
-    }
-
-    set DiagnosticServSectID(value) {
+    set DiagnosticServiceSectionId(value) {
         this.setComponentValue('DiagnosticServSectId', value);
     }
 

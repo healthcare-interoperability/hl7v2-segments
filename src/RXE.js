@@ -144,7 +144,6 @@ export class RXE extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        OrderingProviderSDEANumber: { aliasOf: 'OrderingProviderSDeaNumber' },
         PharmacistTreatmentSupplierSVerifierId: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -153,7 +152,6 @@ export class RXE extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PharmacistTreatmentSupplierSVerifierID: { aliasOf: 'PharmacistTreatmentSupplierSVerifierId' },
         PrescriptionNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -598,27 +596,11 @@ export class RXE extends Segment {
         this.setComponentValue('OrderingProviderSDeaNumber', value);
     }
 
-    get OrderingProviderSDEANumber() {
-        return this.getComponent('OrderingProviderSDeaNumber');
-    }
-
-    set OrderingProviderSDEANumber(value) {
-        this.setComponentValue('OrderingProviderSDeaNumber', value);
-    }
-
     get PharmacistTreatmentSupplierSVerifierId() {
         return this.getComponent('PharmacistTreatmentSupplierSVerifierId');
     }
 
     set PharmacistTreatmentSupplierSVerifierId(value) {
-        this.setComponentValue('PharmacistTreatmentSupplierSVerifierId', value);
-    }
-
-    get PharmacistTreatmentSupplierSVerifierID() {
-        return this.getComponent('PharmacistTreatmentSupplierSVerifierId');
-    }
-
-    set PharmacistTreatmentSupplierSVerifierID(value) {
         this.setComponentValue('PharmacistTreatmentSupplierSVerifierId', value);
     }
 

@@ -124,7 +124,6 @@ export class SAC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        TrayTypeSAC: { aliasOf: 'TrayTypeSac' },
         TrayIdentifier: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -591,14 +590,6 @@ export class SAC extends Segment {
     }
 
     set TrayTypeSac(value) {
-        this.setComponentValue('TrayTypeSac', value);
-    }
-
-    get TrayTypeSAC() {
-        return this.getComponent('TrayTypeSac');
-    }
-
-    set TrayTypeSAC(value) {
         this.setComponentValue('TrayTypeSac', value);
     }
 

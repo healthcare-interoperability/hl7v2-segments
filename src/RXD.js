@@ -23,7 +23,6 @@ export class RXD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DispenseSubIDCounter: { aliasOf: 'DispenseSubIdCounter' },
         DispenseGiveCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -393,14 +392,6 @@ export class RXD extends Segment {
     }
 
     set DispenseSubIdCounter(value) {
-        this.setComponentValue('DispenseSubIdCounter', value);
-    }
-
-    get DispenseSubIDCounter() {
-        return this.getComponent('DispenseSubIdCounter');
-    }
-
-    set DispenseSubIDCounter(value) {
         this.setComponentValue('DispenseSubIdCounter', value);
     }
 

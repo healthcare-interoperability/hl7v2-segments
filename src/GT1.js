@@ -28,8 +28,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDGuarantor: { aliasOf: 'SetIdGt1' },
-        SetIDGt1: { aliasOf: 'SetIdGt1' },
+        SetIdGuarantor: { aliasOf: 'SetIdGt1' },
         GuarantorNumber: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -132,7 +131,6 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        GuarantorSSN: { aliasOf: 'GuarantorSsn' },
         GuarantorDateBegin: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -190,7 +188,6 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        GuarantorEmployeeIDNumber: { aliasOf: 'GuarantorEmployeeIdNumber' },
         GuarantorEmploymentStatus: {
             defaultDataType: CWE,
             dataTypes: [
@@ -284,7 +281,6 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        GuarantorEmployerIDNumber: { aliasOf: 'GuarantorEmployerIdNumber' },
         GuarantorMaritalStatusCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -558,7 +554,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VIPIndicator: {
+        VipIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.5', '2.5.1', '2.6'] },
@@ -569,7 +565,6 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VipIndicator: { aliasOf: 'VIPIndicator' },
     };
 
     static componentsByIndex = [
@@ -630,7 +625,7 @@ export class GT1 extends Segment {
         'GuarantorFinancialClass',
         'GuarantorRace',
         'GuarantorBirthPlace',
-        'VIPIndicator',
+        'VipIndicator',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -647,19 +642,11 @@ export class GT1 extends Segment {
         this.setComponentValue('SetIdGt1', value);
     }
 
-    get SetIDGuarantor() {
+    get SetIdGuarantor() {
         return this.getComponent('SetIdGt1');
     }
 
-    set SetIDGuarantor(value) {
-        this.setComponentValue('SetIdGt1', value);
-    }
-
-    get SetIDGt1() {
-        return this.getComponent('SetIdGt1');
-    }
-
-    set SetIDGt1(value) {
+    set SetIdGuarantor(value) {
         this.setComponentValue('SetIdGt1', value);
     }
 
@@ -759,14 +746,6 @@ export class GT1 extends Segment {
         this.setComponentValue('GuarantorSsn', value);
     }
 
-    get GuarantorSSN() {
-        return this.getComponent('GuarantorSsn');
-    }
-
-    set GuarantorSSN(value) {
-        this.setComponentValue('GuarantorSsn', value);
-    }
-
     get GuarantorDateBegin() {
         return this.getComponent('GuarantorDateBegin');
     }
@@ -828,14 +807,6 @@ export class GT1 extends Segment {
     }
 
     set GuarantorEmployeeIdNumber(value) {
-        this.setComponentValue('GuarantorEmployeeIdNumber', value);
-    }
-
-    get GuarantorEmployeeIDNumber() {
-        return this.getComponent('GuarantorEmployeeIdNumber');
-    }
-
-    set GuarantorEmployeeIDNumber(value) {
         this.setComponentValue('GuarantorEmployeeIdNumber', value);
     }
 
@@ -924,14 +895,6 @@ export class GT1 extends Segment {
     }
 
     set GuarantorEmployerIdNumber(value) {
-        this.setComponentValue('GuarantorEmployerIdNumber', value);
-    }
-
-    get GuarantorEmployerIDNumber() {
-        return this.getComponent('GuarantorEmployerIdNumber');
-    }
-
-    set GuarantorEmployerIDNumber(value) {
         this.setComponentValue('GuarantorEmployerIdNumber', value);
     }
 
@@ -1183,19 +1146,11 @@ export class GT1 extends Segment {
         this.setComponentValue('GuarantorBirthPlace', value);
     }
 
-    get VIPIndicator() {
-        return this.getComponent('VIPIndicator');
-    }
-
-    set VIPIndicator(value) {
-        this.setComponentValue('VIPIndicator', value);
-    }
-
     get VipIndicator() {
-        return this.getComponent('VIPIndicator');
+        return this.getComponent('VipIndicator');
     }
 
     set VipIndicator(value) {
-        this.setComponentValue('VIPIndicator', value);
+        this.setComponentValue('VipIndicator', value);
     }
 }

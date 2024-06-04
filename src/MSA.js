@@ -24,7 +24,6 @@ export class MSA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MessageControlID: { aliasOf: 'MessageControlId' },
         TextMessage: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -121,14 +120,6 @@ export class MSA extends Segment {
     }
 
     set MessageControlId(value) {
-        this.setComponentValue('MessageControlId', value);
-    }
-
-    get MessageControlID() {
-        return this.getComponent('MessageControlId');
-    }
-
-    set MessageControlID(value) {
         this.setComponentValue('MessageControlId', value);
     }
 

@@ -15,7 +15,6 @@ export class ARV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetID: { aliasOf: 'SetId' },
         AccessRestrictionActionCode: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -71,14 +70,6 @@ export class ARV extends Segment {
     }
 
     set SetId(value) {
-        this.setComponentValue('SetId', value);
-    }
-
-    get SetID() {
-        return this.getComponent('SetId');
-    }
-
-    set SetID(value) {
         this.setComponentValue('SetId', value);
     }
 

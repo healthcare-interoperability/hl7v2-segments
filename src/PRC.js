@@ -24,7 +24,6 @@ export class PRC extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValuePrc' },
-        PrimaryKeyValuePRC: { aliasOf: 'PrimaryKeyValuePrc' },
         FacilityIdPrc: {
             defaultDataType: CWE,
             dataTypes: [
@@ -36,8 +35,7 @@ export class PRC extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        FacilityID: { aliasOf: 'FacilityIdPrc' },
-        FacilityIDPRC: { aliasOf: 'FacilityIdPrc' },
+        FacilityId: { aliasOf: 'FacilityIdPrc' },
         Department: {
             defaultDataType: CWE,
             dataTypes: [
@@ -233,14 +231,6 @@ export class PRC extends Segment {
         this.setComponentValue('PrimaryKeyValuePrc', value);
     }
 
-    get PrimaryKeyValuePRC() {
-        return this.getComponent('PrimaryKeyValuePrc');
-    }
-
-    set PrimaryKeyValuePRC(value) {
-        this.setComponentValue('PrimaryKeyValuePrc', value);
-    }
-
     get FacilityIdPrc() {
         return this.getComponent('FacilityIdPrc');
     }
@@ -249,19 +239,11 @@ export class PRC extends Segment {
         this.setComponentValue('FacilityIdPrc', value);
     }
 
-    get FacilityID() {
+    get FacilityId() {
         return this.getComponent('FacilityIdPrc');
     }
 
-    set FacilityID(value) {
-        this.setComponentValue('FacilityIdPrc', value);
-    }
-
-    get FacilityIDPRC() {
-        return this.getComponent('FacilityIdPrc');
-    }
-
-    set FacilityIDPRC(value) {
+    set FacilityId(value) {
         this.setComponentValue('FacilityIdPrc', value);
     }
 

@@ -22,7 +22,6 @@ export class IAM extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDIAM: { aliasOf: 'SetIdIam' },
         AllergenTypeCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -332,14 +331,6 @@ export class IAM extends Segment {
     }
 
     set SetIdIam(value) {
-        this.setComponentValue('SetIdIam', value);
-    }
-
-    get SetIDIAM() {
-        return this.getComponent('SetIdIam');
-    }
-
-    set SetIDIAM(value) {
         this.setComponentValue('SetIdIam', value);
     }
 

@@ -13,7 +13,6 @@ export class CTI extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SponsorStudyID: { aliasOf: 'SponsorStudyId' },
         StudyPhaseIdentifier: {
             defaultDataType: CWE,
             dataTypes: [
@@ -51,14 +50,6 @@ export class CTI extends Segment {
     }
 
     set SponsorStudyId(value) {
-        this.setComponentValue('SponsorStudyId', value);
-    }
-
-    get SponsorStudyID() {
-        return this.getComponent('SponsorStudyId');
-    }
-
-    set SponsorStudyID(value) {
         this.setComponentValue('SponsorStudyId', value);
     }
 

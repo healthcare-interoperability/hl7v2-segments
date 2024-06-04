@@ -43,7 +43,6 @@ export class GOL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        GoalID: { aliasOf: 'GoalId' },
         GoalInstanceId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -52,7 +51,6 @@ export class GOL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        GoalInstanceID: { aliasOf: 'GoalInstanceId' },
         EpisodeOfCareId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -61,7 +59,6 @@ export class GOL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        EpisodeOfCareID: { aliasOf: 'EpisodeOfCareId' },
         GoalListPriority: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -296,14 +293,6 @@ export class GOL extends Segment {
         this.setComponentValue('GoalId', value);
     }
 
-    get GoalID() {
-        return this.getComponent('GoalId');
-    }
-
-    set GoalID(value) {
-        this.setComponentValue('GoalId', value);
-    }
-
     get GoalInstanceId() {
         return this.getComponent('GoalInstanceId');
     }
@@ -312,27 +301,11 @@ export class GOL extends Segment {
         this.setComponentValue('GoalInstanceId', value);
     }
 
-    get GoalInstanceID() {
-        return this.getComponent('GoalInstanceId');
-    }
-
-    set GoalInstanceID(value) {
-        this.setComponentValue('GoalInstanceId', value);
-    }
-
     get EpisodeOfCareId() {
         return this.getComponent('EpisodeOfCareId');
     }
 
     set EpisodeOfCareId(value) {
-        this.setComponentValue('EpisodeOfCareId', value);
-    }
-
-    get EpisodeOfCareID() {
-        return this.getComponent('EpisodeOfCareId');
-    }
-
-    set EpisodeOfCareID(value) {
         this.setComponentValue('EpisodeOfCareId', value);
     }
 

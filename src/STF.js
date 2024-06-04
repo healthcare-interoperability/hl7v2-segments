@@ -31,8 +31,7 @@ export class STF extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        STFPrimaryKeyValue: { aliasOf: 'PrimaryKeyValueStf' },
-        PrimaryKeyValueSTF: { aliasOf: 'PrimaryKeyValueStf' },
+        StfPrimaryKeyValue: { aliasOf: 'PrimaryKeyValueStf' },
         StaffIdentifierList: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -41,7 +40,7 @@ export class STF extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        StaffIDCode: { aliasOf: 'StaffIdentifierList' },
+        StaffIdCode: { aliasOf: 'StaffIdentifierList' },
         StaffName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -118,7 +117,6 @@ export class STF extends Segment {
         },
         Service: { aliasOf: 'HospitalServiceStf' },
         HospitalService: { aliasOf: 'HospitalServiceStf' },
-        HospitalServiceSTF: { aliasOf: 'HospitalServiceStf' },
         Phone: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -171,7 +169,6 @@ export class STF extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        BackupPersonID: { aliasOf: 'BackupPersonId' },
         EMailAddress: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -274,7 +271,6 @@ export class STF extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DateLastDMVReview: { aliasOf: 'DateLastDmvReview' },
         DateNextDmvReview: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -283,7 +279,6 @@ export class STF extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DateNextDMVReview: { aliasOf: 'DateNextDmvReview' },
         Race: {
             defaultDataType: CWE,
             dataTypes: [
@@ -475,19 +470,11 @@ export class STF extends Segment {
         this.setComponentValue('PrimaryKeyValueStf', value);
     }
 
-    get STFPrimaryKeyValue() {
+    get StfPrimaryKeyValue() {
         return this.getComponent('PrimaryKeyValueStf');
     }
 
-    set STFPrimaryKeyValue(value) {
-        this.setComponentValue('PrimaryKeyValueStf', value);
-    }
-
-    get PrimaryKeyValueSTF() {
-        return this.getComponent('PrimaryKeyValueStf');
-    }
-
-    set PrimaryKeyValueSTF(value) {
+    set StfPrimaryKeyValue(value) {
         this.setComponentValue('PrimaryKeyValueStf', value);
     }
 
@@ -499,11 +486,11 @@ export class STF extends Segment {
         this.setComponentValue('StaffIdentifierList', value);
     }
 
-    get StaffIDCode() {
+    get StaffIdCode() {
         return this.getComponent('StaffIdentifierList');
     }
 
-    set StaffIDCode(value) {
+    set StaffIdCode(value) {
         this.setComponentValue('StaffIdentifierList', value);
     }
 
@@ -595,14 +582,6 @@ export class STF extends Segment {
         this.setComponentValue('HospitalServiceStf', value);
     }
 
-    get HospitalServiceSTF() {
-        return this.getComponent('HospitalServiceStf');
-    }
-
-    set HospitalServiceSTF(value) {
-        this.setComponentValue('HospitalServiceStf', value);
-    }
-
     get Phone() {
         return this.getComponent('Phone');
     }
@@ -664,14 +643,6 @@ export class STF extends Segment {
     }
 
     set BackupPersonId(value) {
-        this.setComponentValue('BackupPersonId', value);
-    }
-
-    get BackupPersonID() {
-        return this.getComponent('BackupPersonId');
-    }
-
-    set BackupPersonID(value) {
         this.setComponentValue('BackupPersonId', value);
     }
 
@@ -779,27 +750,11 @@ export class STF extends Segment {
         this.setComponentValue('DateLastDmvReview', value);
     }
 
-    get DateLastDMVReview() {
-        return this.getComponent('DateLastDmvReview');
-    }
-
-    set DateLastDMVReview(value) {
-        this.setComponentValue('DateLastDmvReview', value);
-    }
-
     get DateNextDmvReview() {
         return this.getComponent('DateNextDmvReview');
     }
 
     set DateNextDmvReview(value) {
-        this.setComponentValue('DateNextDmvReview', value);
-    }
-
-    get DateNextDMVReview() {
-        return this.getComponent('DateNextDmvReview');
-    }
-
-    set DateNextDMVReview(value) {
         this.setComponentValue('DateNextDmvReview', value);
     }
 

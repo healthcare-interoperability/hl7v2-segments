@@ -21,7 +21,6 @@ export class ROL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        RoleInstanceID: { aliasOf: 'RoleInstanceId' },
         ActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -42,7 +41,6 @@ export class ROL extends Segment {
             minOccurence: 1,
         },
         Role: { aliasOf: 'RoleRol' },
-        RoleROL: { aliasOf: 'RoleRol' },
         RolePerson: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -107,7 +105,7 @@ export class ROL extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        OrganizationUnitTypeROL: {
+        OrganizationUnitTypeRol: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CE, versions: ['2.4', '2.5', '2.5.1'] },
@@ -118,7 +116,7 @@ export class ROL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        OrganizationUnitType: { aliasOf: 'OrganizationUnitTypeROL' },
+        OrganizationUnitType: { aliasOf: 'OrganizationUnitTypeRol' },
         OfficeHomeAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -165,7 +163,7 @@ export class ROL extends Segment {
         'RoleDuration',
         'RoleActionReason',
         'ProviderType',
-        'OrganizationUnitTypeROL',
+        'OrganizationUnitTypeRol',
         'OfficeHomeAddress',
         'Phone',
         'PersonSLocation',
@@ -183,14 +181,6 @@ export class ROL extends Segment {
     }
 
     set RoleInstanceId(value) {
-        this.setComponentValue('RoleInstanceId', value);
-    }
-
-    get RoleInstanceID() {
-        return this.getComponent('RoleInstanceId');
-    }
-
-    set RoleInstanceID(value) {
         this.setComponentValue('RoleInstanceId', value);
     }
 
@@ -215,14 +205,6 @@ export class ROL extends Segment {
     }
 
     set Role(value) {
-        this.setComponentValue('RoleRol', value);
-    }
-
-    get RoleROL() {
-        return this.getComponent('RoleRol');
-    }
-
-    set RoleROL(value) {
         this.setComponentValue('RoleRol', value);
     }
 
@@ -282,20 +264,20 @@ export class ROL extends Segment {
         this.setComponentValue('ProviderType', value);
     }
 
-    get OrganizationUnitTypeROL() {
-        return this.getComponent('OrganizationUnitTypeROL');
+    get OrganizationUnitTypeRol() {
+        return this.getComponent('OrganizationUnitTypeRol');
     }
 
-    set OrganizationUnitTypeROL(value) {
-        this.setComponentValue('OrganizationUnitTypeROL', value);
+    set OrganizationUnitTypeRol(value) {
+        this.setComponentValue('OrganizationUnitTypeRol', value);
     }
 
     get OrganizationUnitType() {
-        return this.getComponent('OrganizationUnitTypeROL');
+        return this.getComponent('OrganizationUnitTypeRol');
     }
 
     set OrganizationUnitType(value) {
-        this.setComponentValue('OrganizationUnitTypeROL', value);
+        this.setComponentValue('OrganizationUnitTypeRol', value);
     }
 
     get OfficeHomeAddress() {

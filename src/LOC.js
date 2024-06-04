@@ -19,7 +19,6 @@ export class LOC extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLoc' },
-        PrimaryKeyValueLOC: { aliasOf: 'PrimaryKeyValueLoc' },
         LocationDescription: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -40,7 +39,6 @@ export class LOC extends Segment {
             minOccurence: 1,
         },
         LocationType: { aliasOf: 'LocationTypeLoc' },
-        LocationTypeLOC: { aliasOf: 'LocationTypeLoc' },
         OrganizationNameLoc: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -50,7 +48,6 @@ export class LOC extends Segment {
             minOccurence: 1,
         },
         OrganizationName: { aliasOf: 'OrganizationNameLoc' },
-        OrganizationNameLOC: { aliasOf: 'OrganizationNameLoc' },
         LocationAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -137,14 +134,6 @@ export class LOC extends Segment {
         this.setComponentValue('PrimaryKeyValueLoc', value);
     }
 
-    get PrimaryKeyValueLOC() {
-        return this.getComponent('PrimaryKeyValueLoc');
-    }
-
-    set PrimaryKeyValueLOC(value) {
-        this.setComponentValue('PrimaryKeyValueLoc', value);
-    }
-
     get LocationDescription() {
         return this.getComponent('LocationDescription');
     }
@@ -169,14 +158,6 @@ export class LOC extends Segment {
         this.setComponentValue('LocationTypeLoc', value);
     }
 
-    get LocationTypeLOC() {
-        return this.getComponent('LocationTypeLoc');
-    }
-
-    set LocationTypeLOC(value) {
-        this.setComponentValue('LocationTypeLoc', value);
-    }
-
     get OrganizationNameLoc() {
         return this.getComponent('OrganizationNameLoc');
     }
@@ -190,14 +171,6 @@ export class LOC extends Segment {
     }
 
     set OrganizationName(value) {
-        this.setComponentValue('OrganizationNameLoc', value);
-    }
-
-    get OrganizationNameLOC() {
-        return this.getComponent('OrganizationNameLoc');
-    }
-
-    set OrganizationNameLOC(value) {
         this.setComponentValue('OrganizationNameLoc', value);
     }
 

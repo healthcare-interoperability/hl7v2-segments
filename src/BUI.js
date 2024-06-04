@@ -10,7 +10,7 @@ import { NR } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class BUI extends Segment {
     static components = {
-        SetIDBUI: {
+        SetIdBui: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.8'] }],
             position: 1,
@@ -110,7 +110,7 @@ export class BUI extends Segment {
 
     static componentsByIndex = [
         '',
-        'SetIDBUI',
+        'SetIdBui',
         'BloodUnitIdentifier',
         'BloodUnitType',
         'BloodUnitWeight',
@@ -130,12 +130,12 @@ export class BUI extends Segment {
         this.setValues(values);
     }
 
-    get SetIDBUI() {
-        return this.getComponent('SetIDBUI');
+    get SetIdBui() {
+        return this.getComponent('SetIdBui');
     }
 
-    set SetIDBUI(value) {
-        this.setComponentValue('SetIDBUI', value);
+    set SetIdBui(value) {
+        this.setComponentValue('SetIdBui', value);
     }
 
     get BloodUnitIdentifier() {

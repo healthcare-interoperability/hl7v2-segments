@@ -14,7 +14,6 @@ export class RGS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDRGS: { aliasOf: 'SetIdRgs' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -34,7 +33,6 @@ export class RGS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ResourceGroupID: { aliasOf: 'ResourceGroupId' },
     };
 
     static componentsByIndex = ['', 'SetIdRgs', 'SegmentActionCode', 'ResourceGroupId'];
@@ -53,14 +51,6 @@ export class RGS extends Segment {
         this.setComponentValue('SetIdRgs', value);
     }
 
-    get SetIDRGS() {
-        return this.getComponent('SetIdRgs');
-    }
-
-    set SetIDRGS(value) {
-        this.setComponentValue('SetIdRgs', value);
-    }
-
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -74,14 +64,6 @@ export class RGS extends Segment {
     }
 
     set ResourceGroupId(value) {
-        this.setComponentValue('ResourceGroupId', value);
-    }
-
-    get ResourceGroupID() {
-        return this.getComponent('ResourceGroupId');
-    }
-
-    set ResourceGroupID(value) {
         this.setComponentValue('ResourceGroupId', value);
     }
 }

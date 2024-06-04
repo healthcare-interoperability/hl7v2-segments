@@ -89,7 +89,6 @@ export class PMT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PayeeBankAccountID: { aliasOf: 'PayeeBankAccountId' },
         PaymentOrganization: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -106,7 +105,6 @@ export class PMT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ESRCodeLine: { aliasOf: 'EsrCodeLine' },
     };
 
     static componentsByIndex = [
@@ -211,14 +209,6 @@ export class PMT extends Segment {
         this.setComponentValue('PayeeBankAccountId', value);
     }
 
-    get PayeeBankAccountID() {
-        return this.getComponent('PayeeBankAccountId');
-    }
-
-    set PayeeBankAccountID(value) {
-        this.setComponentValue('PayeeBankAccountId', value);
-    }
-
     get PaymentOrganization() {
         return this.getComponent('PaymentOrganization');
     }
@@ -232,14 +222,6 @@ export class PMT extends Segment {
     }
 
     set EsrCodeLine(value) {
-        this.setComponentValue('EsrCodeLine', value);
-    }
-
-    get ESRCodeLine() {
-        return this.getComponent('EsrCodeLine');
-    }
-
-    set ESRCodeLine(value) {
         this.setComponentValue('EsrCodeLine', value);
     }
 }

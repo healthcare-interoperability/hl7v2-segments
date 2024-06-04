@@ -16,8 +16,7 @@ export class FAC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        FacilityID: { aliasOf: 'FacilityIdFac' },
-        FacilityIDFAC: { aliasOf: 'FacilityIdFac' },
+        FacilityId: { aliasOf: 'FacilityIdFac' },
         FacilityType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -138,19 +137,11 @@ export class FAC extends Segment {
         this.setComponentValue('FacilityIdFac', value);
     }
 
-    get FacilityID() {
+    get FacilityId() {
         return this.getComponent('FacilityIdFac');
     }
 
-    set FacilityID(value) {
-        this.setComponentValue('FacilityIdFac', value);
-    }
-
-    get FacilityIDFAC() {
-        return this.getComponent('FacilityIdFac');
-    }
-
-    set FacilityIDFAC(value) {
+    set FacilityId(value) {
         this.setComponentValue('FacilityIdFac', value);
     }
 

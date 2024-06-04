@@ -16,7 +16,6 @@ export class ORG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDORG: { aliasOf: 'SetIdOrg' },
         OrganizationUnitCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -39,7 +38,7 @@ export class ORG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        OrganizationUnitTypeCodeORG: { aliasOf: 'OrganizationUnitTypeCode' },
+        OrganizationUnitTypeCodeOrg: { aliasOf: 'OrganizationUnitTypeCode' },
         PrimaryOrgUnitIndicator: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -165,14 +164,6 @@ export class ORG extends Segment {
         this.setComponentValue('SetIdOrg', value);
     }
 
-    get SetIDORG() {
-        return this.getComponent('SetIdOrg');
-    }
-
-    set SetIDORG(value) {
-        this.setComponentValue('SetIdOrg', value);
-    }
-
     get OrganizationUnitCode() {
         return this.getComponent('OrganizationUnitCode');
     }
@@ -189,11 +180,11 @@ export class ORG extends Segment {
         this.setComponentValue('OrganizationUnitTypeCode', value);
     }
 
-    get OrganizationUnitTypeCodeORG() {
+    get OrganizationUnitTypeCodeOrg() {
         return this.getComponent('OrganizationUnitTypeCode');
     }
 
-    set OrganizationUnitTypeCodeORG(value) {
+    set OrganizationUnitTypeCodeOrg(value) {
         this.setComponentValue('OrganizationUnitTypeCode', value);
     }
 

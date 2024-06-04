@@ -27,8 +27,7 @@ export class PRA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PRAPrimaryKeyValue: { aliasOf: 'PrimaryKeyValuePra' },
-        PrimaryKeyValuePRA: { aliasOf: 'PrimaryKeyValuePra' },
+        PraPrimaryKeyValue: { aliasOf: 'PrimaryKeyValuePra' },
         PractitionerGroup: {
             defaultDataType: CWE,
             dataTypes: [
@@ -83,7 +82,6 @@ export class PRA extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PractitionerIDNumbers: { aliasOf: 'PractitionerIdNumbers' },
         Privileges: {
             defaultDataType: PIP,
             dataTypes: [
@@ -133,7 +131,7 @@ export class PRA extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        SetIDPRA: {
+        SetIdPra: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
             position: 12,
@@ -141,7 +139,6 @@ export class PRA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdPra: { aliasOf: 'SetIDPRA' },
     };
 
     static componentsByIndex = [
@@ -157,7 +154,7 @@ export class PRA extends Segment {
         'Institution',
         'DateLeftPractice',
         'GovernmentReimbursementBillingEligibility',
-        'SetIDPRA',
+        'SetIdPra',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -174,19 +171,11 @@ export class PRA extends Segment {
         this.setComponentValue('PrimaryKeyValuePra', value);
     }
 
-    get PRAPrimaryKeyValue() {
+    get PraPrimaryKeyValue() {
         return this.getComponent('PrimaryKeyValuePra');
     }
 
-    set PRAPrimaryKeyValue(value) {
-        this.setComponentValue('PrimaryKeyValuePra', value);
-    }
-
-    get PrimaryKeyValuePRA() {
-        return this.getComponent('PrimaryKeyValuePra');
-    }
-
-    set PrimaryKeyValuePRA(value) {
+    set PraPrimaryKeyValue(value) {
         this.setComponentValue('PrimaryKeyValuePra', value);
     }
 
@@ -246,14 +235,6 @@ export class PRA extends Segment {
         this.setComponentValue('PractitionerIdNumbers', value);
     }
 
-    get PractitionerIDNumbers() {
-        return this.getComponent('PractitionerIdNumbers');
-    }
-
-    set PractitionerIDNumbers(value) {
-        this.setComponentValue('PractitionerIdNumbers', value);
-    }
-
     get Privileges() {
         return this.getComponent('Privileges');
     }
@@ -294,19 +275,11 @@ export class PRA extends Segment {
         this.setComponentValue('GovernmentReimbursementBillingEligibility', value);
     }
 
-    get SetIDPRA() {
-        return this.getComponent('SetIDPRA');
-    }
-
-    set SetIDPRA(value) {
-        this.setComponentValue('SetIDPRA', value);
-    }
-
     get SetIdPra() {
-        return this.getComponent('SetIDPRA');
+        return this.getComponent('SetIdPra');
     }
 
     set SetIdPra(value) {
-        this.setComponentValue('SetIDPRA', value);
+        this.setComponentValue('SetIdPra', value);
     }
 }

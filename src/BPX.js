@@ -23,7 +23,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDBPX: { aliasOf: 'SetIdBpx' },
         BpDispenseStatus: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -32,7 +31,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPDispenseStatus: { aliasOf: 'BpDispenseStatus' },
         BpStatus: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -41,7 +39,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPStatus: { aliasOf: 'BpStatus' },
         BpDateTimeOfStatus: {
             defaultDataType: TS,
             dataTypes: [
@@ -53,7 +50,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPDateTimeOfStatus: { aliasOf: 'BpDateTimeOfStatus' },
         BcDonationId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -62,7 +58,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BCDonationID: { aliasOf: 'BcDonationId' },
         BcComponent: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -71,7 +66,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BCComponent: { aliasOf: 'BcComponent' },
         BcDonationTypeIntendedUse: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -80,7 +74,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BCDonationTypeIntendedUse: { aliasOf: 'BcDonationTypeIntendedUse' },
         CpCommercialProduct: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -89,7 +82,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        CPCommercialProduct: { aliasOf: 'CpCommercialProduct' },
         CpManufacturer: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -98,7 +90,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        CPManufacturer: { aliasOf: 'CpManufacturer' },
         CpLotNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -107,7 +98,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        CPLotNumber: { aliasOf: 'CpLotNumber' },
         BpBloodGroup: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -116,7 +106,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPBloodGroup: { aliasOf: 'BpBloodGroup' },
         BcSpecialTesting: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -125,7 +114,6 @@ export class BPX extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        BCSpecialTesting: { aliasOf: 'BcSpecialTesting' },
         BpExpirationDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -137,7 +125,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPExpirationDateTime: { aliasOf: 'BpExpirationDateTime' },
         BpQuantity: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -146,7 +133,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPQuantity: { aliasOf: 'BpQuantity' },
         BpAmount: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -155,7 +141,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPAmount: { aliasOf: 'BpAmount' },
         BpUnits: {
             defaultDataType: CWE,
             dataTypes: [
@@ -167,7 +152,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPUnits: { aliasOf: 'BpUnits' },
         BpUniqueId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -176,7 +160,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPUniqueID: { aliasOf: 'BpUniqueId' },
         BpActualDispensedToLocation: {
             defaultDataType: PL,
             dataTypes: [{ dataType: PL, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -185,7 +168,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPActualDispensedToLocation: { aliasOf: 'BpActualDispensedToLocation' },
         BpActualDispensedToAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -194,7 +176,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPActualDispensedToAddress: { aliasOf: 'BpActualDispensedToAddress' },
         BpDispensedToReceiver: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -203,7 +184,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPDispensedToReceiver: { aliasOf: 'BpDispensedToReceiver' },
         BpDispensingIndividual: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -212,7 +192,6 @@ export class BPX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPDispensingIndividual: { aliasOf: 'BpDispensingIndividual' },
     };
 
     static componentsByIndex = [
@@ -254,27 +233,11 @@ export class BPX extends Segment {
         this.setComponentValue('SetIdBpx', value);
     }
 
-    get SetIDBPX() {
-        return this.getComponent('SetIdBpx');
-    }
-
-    set SetIDBPX(value) {
-        this.setComponentValue('SetIdBpx', value);
-    }
-
     get BpDispenseStatus() {
         return this.getComponent('BpDispenseStatus');
     }
 
     set BpDispenseStatus(value) {
-        this.setComponentValue('BpDispenseStatus', value);
-    }
-
-    get BPDispenseStatus() {
-        return this.getComponent('BpDispenseStatus');
-    }
-
-    set BPDispenseStatus(value) {
         this.setComponentValue('BpDispenseStatus', value);
     }
 
@@ -286,27 +249,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpStatus', value);
     }
 
-    get BPStatus() {
-        return this.getComponent('BpStatus');
-    }
-
-    set BPStatus(value) {
-        this.setComponentValue('BpStatus', value);
-    }
-
     get BpDateTimeOfStatus() {
         return this.getComponent('BpDateTimeOfStatus');
     }
 
     set BpDateTimeOfStatus(value) {
-        this.setComponentValue('BpDateTimeOfStatus', value);
-    }
-
-    get BPDateTimeOfStatus() {
-        return this.getComponent('BpDateTimeOfStatus');
-    }
-
-    set BPDateTimeOfStatus(value) {
         this.setComponentValue('BpDateTimeOfStatus', value);
     }
 
@@ -318,27 +265,11 @@ export class BPX extends Segment {
         this.setComponentValue('BcDonationId', value);
     }
 
-    get BCDonationID() {
-        return this.getComponent('BcDonationId');
-    }
-
-    set BCDonationID(value) {
-        this.setComponentValue('BcDonationId', value);
-    }
-
     get BcComponent() {
         return this.getComponent('BcComponent');
     }
 
     set BcComponent(value) {
-        this.setComponentValue('BcComponent', value);
-    }
-
-    get BCComponent() {
-        return this.getComponent('BcComponent');
-    }
-
-    set BCComponent(value) {
         this.setComponentValue('BcComponent', value);
     }
 
@@ -350,27 +281,11 @@ export class BPX extends Segment {
         this.setComponentValue('BcDonationTypeIntendedUse', value);
     }
 
-    get BCDonationTypeIntendedUse() {
-        return this.getComponent('BcDonationTypeIntendedUse');
-    }
-
-    set BCDonationTypeIntendedUse(value) {
-        this.setComponentValue('BcDonationTypeIntendedUse', value);
-    }
-
     get CpCommercialProduct() {
         return this.getComponent('CpCommercialProduct');
     }
 
     set CpCommercialProduct(value) {
-        this.setComponentValue('CpCommercialProduct', value);
-    }
-
-    get CPCommercialProduct() {
-        return this.getComponent('CpCommercialProduct');
-    }
-
-    set CPCommercialProduct(value) {
         this.setComponentValue('CpCommercialProduct', value);
     }
 
@@ -382,27 +297,11 @@ export class BPX extends Segment {
         this.setComponentValue('CpManufacturer', value);
     }
 
-    get CPManufacturer() {
-        return this.getComponent('CpManufacturer');
-    }
-
-    set CPManufacturer(value) {
-        this.setComponentValue('CpManufacturer', value);
-    }
-
     get CpLotNumber() {
         return this.getComponent('CpLotNumber');
     }
 
     set CpLotNumber(value) {
-        this.setComponentValue('CpLotNumber', value);
-    }
-
-    get CPLotNumber() {
-        return this.getComponent('CpLotNumber');
-    }
-
-    set CPLotNumber(value) {
         this.setComponentValue('CpLotNumber', value);
     }
 
@@ -414,27 +313,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpBloodGroup', value);
     }
 
-    get BPBloodGroup() {
-        return this.getComponent('BpBloodGroup');
-    }
-
-    set BPBloodGroup(value) {
-        this.setComponentValue('BpBloodGroup', value);
-    }
-
     get BcSpecialTesting() {
         return this.getComponent('BcSpecialTesting');
     }
 
     set BcSpecialTesting(value) {
-        this.setComponentValue('BcSpecialTesting', value);
-    }
-
-    get BCSpecialTesting() {
-        return this.getComponent('BcSpecialTesting');
-    }
-
-    set BCSpecialTesting(value) {
         this.setComponentValue('BcSpecialTesting', value);
     }
 
@@ -446,27 +329,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpExpirationDateTime', value);
     }
 
-    get BPExpirationDateTime() {
-        return this.getComponent('BpExpirationDateTime');
-    }
-
-    set BPExpirationDateTime(value) {
-        this.setComponentValue('BpExpirationDateTime', value);
-    }
-
     get BpQuantity() {
         return this.getComponent('BpQuantity');
     }
 
     set BpQuantity(value) {
-        this.setComponentValue('BpQuantity', value);
-    }
-
-    get BPQuantity() {
-        return this.getComponent('BpQuantity');
-    }
-
-    set BPQuantity(value) {
         this.setComponentValue('BpQuantity', value);
     }
 
@@ -478,27 +345,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpAmount', value);
     }
 
-    get BPAmount() {
-        return this.getComponent('BpAmount');
-    }
-
-    set BPAmount(value) {
-        this.setComponentValue('BpAmount', value);
-    }
-
     get BpUnits() {
         return this.getComponent('BpUnits');
     }
 
     set BpUnits(value) {
-        this.setComponentValue('BpUnits', value);
-    }
-
-    get BPUnits() {
-        return this.getComponent('BpUnits');
-    }
-
-    set BPUnits(value) {
         this.setComponentValue('BpUnits', value);
     }
 
@@ -510,27 +361,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpUniqueId', value);
     }
 
-    get BPUniqueID() {
-        return this.getComponent('BpUniqueId');
-    }
-
-    set BPUniqueID(value) {
-        this.setComponentValue('BpUniqueId', value);
-    }
-
     get BpActualDispensedToLocation() {
         return this.getComponent('BpActualDispensedToLocation');
     }
 
     set BpActualDispensedToLocation(value) {
-        this.setComponentValue('BpActualDispensedToLocation', value);
-    }
-
-    get BPActualDispensedToLocation() {
-        return this.getComponent('BpActualDispensedToLocation');
-    }
-
-    set BPActualDispensedToLocation(value) {
         this.setComponentValue('BpActualDispensedToLocation', value);
     }
 
@@ -542,14 +377,6 @@ export class BPX extends Segment {
         this.setComponentValue('BpActualDispensedToAddress', value);
     }
 
-    get BPActualDispensedToAddress() {
-        return this.getComponent('BpActualDispensedToAddress');
-    }
-
-    set BPActualDispensedToAddress(value) {
-        this.setComponentValue('BpActualDispensedToAddress', value);
-    }
-
     get BpDispensedToReceiver() {
         return this.getComponent('BpDispensedToReceiver');
     }
@@ -558,27 +385,11 @@ export class BPX extends Segment {
         this.setComponentValue('BpDispensedToReceiver', value);
     }
 
-    get BPDispensedToReceiver() {
-        return this.getComponent('BpDispensedToReceiver');
-    }
-
-    set BPDispensedToReceiver(value) {
-        this.setComponentValue('BpDispensedToReceiver', value);
-    }
-
     get BpDispensingIndividual() {
         return this.getComponent('BpDispensingIndividual');
     }
 
     set BpDispensingIndividual(value) {
-        this.setComponentValue('BpDispensingIndividual', value);
-    }
-
-    get BPDispensingIndividual() {
-        return this.getComponent('BpDispensingIndividual');
-    }
-
-    set BPDispensingIndividual(value) {
         this.setComponentValue('BpDispensingIndividual', value);
     }
 }

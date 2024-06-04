@@ -27,8 +27,7 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDFinancialTransaction: { aliasOf: 'SetIdFt1' },
-        SetIDFt1: { aliasOf: 'SetIdFt1' },
+        SetIdFinancialTransaction: { aliasOf: 'SetIdFt1' },
         TransactionId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -37,7 +36,6 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        TransactionID: { aliasOf: 'TransactionId' },
         TransactionBatchId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,7 +44,6 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        TransactionBatchID: { aliasOf: 'TransactionBatchId' },
         TransactionDate: {
             defaultDataType: DR,
             dataTypes: [
@@ -154,7 +151,7 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InsurancePlanID: { aliasOf: 'HealthPlanId' },
+        InsurancePlanId: { aliasOf: 'HealthPlanId' },
         InsuranceAmount: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -286,7 +283,7 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        NDCCode: {
+        NdcCode: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CNE, versions: ['2.5', '2.5.1'] },
@@ -297,8 +294,7 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        NdcCode: { aliasOf: 'NDCCode' },
-        PaymentReferenceID: {
+        PaymentReferenceId: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
             position: 30,
@@ -306,7 +302,6 @@ export class FT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PaymentReferenceId: { aliasOf: 'PaymentReferenceID' },
         TransactionReferenceKey: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -443,8 +438,8 @@ export class FT1 extends Segment {
         'ProcedureCodeModifier',
         'AdvancedBeneficiaryNoticeCode',
         'MedicallyNecessaryDuplicateProcedureReason',
-        'NDCCode',
-        'PaymentReferenceID',
+        'NdcCode',
+        'PaymentReferenceId',
         'TransactionReferenceKey',
         'PerformingFacility',
         'OrderingFacility',
@@ -474,19 +469,11 @@ export class FT1 extends Segment {
         this.setComponentValue('SetIdFt1', value);
     }
 
-    get SetIDFinancialTransaction() {
+    get SetIdFinancialTransaction() {
         return this.getComponent('SetIdFt1');
     }
 
-    set SetIDFinancialTransaction(value) {
-        this.setComponentValue('SetIdFt1', value);
-    }
-
-    get SetIDFt1() {
-        return this.getComponent('SetIdFt1');
-    }
-
-    set SetIDFt1(value) {
+    set SetIdFinancialTransaction(value) {
         this.setComponentValue('SetIdFt1', value);
     }
 
@@ -498,27 +485,11 @@ export class FT1 extends Segment {
         this.setComponentValue('TransactionId', value);
     }
 
-    get TransactionID() {
-        return this.getComponent('TransactionId');
-    }
-
-    set TransactionID(value) {
-        this.setComponentValue('TransactionId', value);
-    }
-
     get TransactionBatchId() {
         return this.getComponent('TransactionBatchId');
     }
 
     set TransactionBatchId(value) {
-        this.setComponentValue('TransactionBatchId', value);
-    }
-
-    get TransactionBatchID() {
-        return this.getComponent('TransactionBatchId');
-    }
-
-    set TransactionBatchID(value) {
         this.setComponentValue('TransactionBatchId', value);
     }
 
@@ -618,11 +589,11 @@ export class FT1 extends Segment {
         this.setComponentValue('HealthPlanId', value);
     }
 
-    get InsurancePlanID() {
+    get InsurancePlanId() {
         return this.getComponent('HealthPlanId');
     }
 
-    set InsurancePlanID(value) {
+    set InsurancePlanId(value) {
         this.setComponentValue('HealthPlanId', value);
     }
 
@@ -746,36 +717,20 @@ export class FT1 extends Segment {
         this.setComponentValue('MedicallyNecessaryDuplicateProcedureReason', value);
     }
 
-    get NDCCode() {
-        return this.getComponent('NDCCode');
-    }
-
-    set NDCCode(value) {
-        this.setComponentValue('NDCCode', value);
-    }
-
     get NdcCode() {
-        return this.getComponent('NDCCode');
+        return this.getComponent('NdcCode');
     }
 
     set NdcCode(value) {
-        this.setComponentValue('NDCCode', value);
-    }
-
-    get PaymentReferenceID() {
-        return this.getComponent('PaymentReferenceID');
-    }
-
-    set PaymentReferenceID(value) {
-        this.setComponentValue('PaymentReferenceID', value);
+        this.setComponentValue('NdcCode', value);
     }
 
     get PaymentReferenceId() {
-        return this.getComponent('PaymentReferenceID');
+        return this.getComponent('PaymentReferenceId');
     }
 
     set PaymentReferenceId(value) {
-        this.setComponentValue('PaymentReferenceID', value);
+        this.setComponentValue('PaymentReferenceId', value);
     }
 
     get TransactionReferenceKey() {

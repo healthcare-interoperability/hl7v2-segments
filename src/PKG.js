@@ -16,7 +16,6 @@ export class PKG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdPKG: { aliasOf: 'SetIdPkg' },
         PackagingUnits: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -98,14 +97,6 @@ export class PKG extends Segment {
     }
 
     set SetIdPkg(value) {
-        this.setComponentValue('SetIdPkg', value);
-    }
-
-    get SetIdPKG() {
-        return this.getComponent('SetIdPkg');
-    }
-
-    set SetIdPKG(value) {
         this.setComponentValue('SetIdPkg', value);
     }
 

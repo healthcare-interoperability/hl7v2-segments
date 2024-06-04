@@ -15,7 +15,6 @@ export class AFF extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDAFF: { aliasOf: 'SetIdAff' },
         ProfessionalOrganization: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -70,14 +69,6 @@ export class AFF extends Segment {
     }
 
     set SetIdAff(value) {
-        this.setComponentValue('SetIdAff', value);
-    }
-
-    get SetIDAFF() {
-        return this.getComponent('SetIdAff');
-    }
-
-    set SetIDAFF(value) {
         this.setComponentValue('SetIdAff', value);
     }
 

@@ -22,7 +22,6 @@ export class IPC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        RequestedProcedureID: { aliasOf: 'RequestedProcedureId' },
         StudyInstanceUid: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -31,7 +30,6 @@ export class IPC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        StudyInstanceUID: { aliasOf: 'StudyInstanceUid' },
         ScheduledProcedureStepId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -40,7 +38,6 @@ export class IPC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ScheduledProcedureStepID: { aliasOf: 'ScheduledProcedureStepId' },
         Modality: {
             defaultDataType: CWE,
             dataTypes: [
@@ -90,8 +87,7 @@ export class IPC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ScheduledAETitle: { aliasOf: 'ScheduledStationAeTitle' },
-        ScheduledStationAETitle: { aliasOf: 'ScheduledStationAeTitle' },
+        ScheduledAeTitle: { aliasOf: 'ScheduledStationAeTitle' },
     };
 
     static componentsByIndex = [
@@ -129,14 +125,6 @@ export class IPC extends Segment {
         this.setComponentValue('RequestedProcedureId', value);
     }
 
-    get RequestedProcedureID() {
-        return this.getComponent('RequestedProcedureId');
-    }
-
-    set RequestedProcedureID(value) {
-        this.setComponentValue('RequestedProcedureId', value);
-    }
-
     get StudyInstanceUid() {
         return this.getComponent('StudyInstanceUid');
     }
@@ -145,27 +133,11 @@ export class IPC extends Segment {
         this.setComponentValue('StudyInstanceUid', value);
     }
 
-    get StudyInstanceUID() {
-        return this.getComponent('StudyInstanceUid');
-    }
-
-    set StudyInstanceUID(value) {
-        this.setComponentValue('StudyInstanceUid', value);
-    }
-
     get ScheduledProcedureStepId() {
         return this.getComponent('ScheduledProcedureStepId');
     }
 
     set ScheduledProcedureStepId(value) {
-        this.setComponentValue('ScheduledProcedureStepId', value);
-    }
-
-    get ScheduledProcedureStepID() {
-        return this.getComponent('ScheduledProcedureStepId');
-    }
-
-    set ScheduledProcedureStepID(value) {
         this.setComponentValue('ScheduledProcedureStepId', value);
     }
 
@@ -209,19 +181,11 @@ export class IPC extends Segment {
         this.setComponentValue('ScheduledStationAeTitle', value);
     }
 
-    get ScheduledAETitle() {
+    get ScheduledAeTitle() {
         return this.getComponent('ScheduledStationAeTitle');
     }
 
-    set ScheduledAETitle(value) {
-        this.setComponentValue('ScheduledStationAeTitle', value);
-    }
-
-    get ScheduledStationAETitle() {
-        return this.getComponent('ScheduledStationAeTitle');
-    }
-
-    set ScheduledStationAETitle(value) {
+    set ScheduledAeTitle(value) {
         this.setComponentValue('ScheduledStationAeTitle', value);
     }
 }

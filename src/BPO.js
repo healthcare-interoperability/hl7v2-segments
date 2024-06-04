@@ -19,7 +19,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDBPO: { aliasOf: 'SetIdBpo' },
         BpUniversalServiceIdentifier: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -28,8 +27,7 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPUniversalServiceID: { aliasOf: 'BpUniversalServiceIdentifier' },
-        BPUniversalServiceIdentifier: { aliasOf: 'BpUniversalServiceIdentifier' },
+        BpUniversalServiceId: { aliasOf: 'BpUniversalServiceIdentifier' },
         BpProcessingRequirements: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -38,7 +36,6 @@ export class BPO extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        BPProcessingRequirements: { aliasOf: 'BpProcessingRequirements' },
         BpQuantity: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -47,7 +44,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPQuantity: { aliasOf: 'BpQuantity' },
         BpAmount: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -56,7 +52,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPAmount: { aliasOf: 'BpAmount' },
         BpUnits: {
             defaultDataType: CWE,
             dataTypes: [
@@ -68,7 +63,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPUnits: { aliasOf: 'BpUnits' },
         BpIntendedUseDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -80,7 +74,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPIntendedUseDateTime: { aliasOf: 'BpIntendedUseDateTime' },
         BpIntendedDispenseFromLocation: {
             defaultDataType: PL,
             dataTypes: [{ dataType: PL, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -89,7 +82,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPIntendedDispenseFromLocation: { aliasOf: 'BpIntendedDispenseFromLocation' },
         BpIntendedDispenseFromAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -98,7 +90,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPIntendedDispenseFromAddress: { aliasOf: 'BpIntendedDispenseFromAddress' },
         BpRequestedDispenseDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -110,7 +101,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPRequestedDispenseDateTime: { aliasOf: 'BpRequestedDispenseDateTime' },
         BpRequestedDispenseToLocation: {
             defaultDataType: PL,
             dataTypes: [{ dataType: PL, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -119,7 +109,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPRequestedDispenseToLocation: { aliasOf: 'BpRequestedDispenseToLocation' },
         BpRequestedDispenseToAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -128,7 +117,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPRequestedDispenseToAddress: { aliasOf: 'BpRequestedDispenseToAddress' },
         BpIndicationForUse: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -137,7 +125,6 @@ export class BPO extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        BPIndicationForUse: { aliasOf: 'BpIndicationForUse' },
         BpInformedConsentIndicator: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -146,7 +133,6 @@ export class BPO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BPInformedConsentIndicator: { aliasOf: 'BpInformedConsentIndicator' },
     };
 
     static componentsByIndex = [
@@ -181,14 +167,6 @@ export class BPO extends Segment {
         this.setComponentValue('SetIdBpo', value);
     }
 
-    get SetIDBPO() {
-        return this.getComponent('SetIdBpo');
-    }
-
-    set SetIDBPO(value) {
-        this.setComponentValue('SetIdBpo', value);
-    }
-
     get BpUniversalServiceIdentifier() {
         return this.getComponent('BpUniversalServiceIdentifier');
     }
@@ -197,19 +175,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpUniversalServiceIdentifier', value);
     }
 
-    get BPUniversalServiceID() {
+    get BpUniversalServiceId() {
         return this.getComponent('BpUniversalServiceIdentifier');
     }
 
-    set BPUniversalServiceID(value) {
-        this.setComponentValue('BpUniversalServiceIdentifier', value);
-    }
-
-    get BPUniversalServiceIdentifier() {
-        return this.getComponent('BpUniversalServiceIdentifier');
-    }
-
-    set BPUniversalServiceIdentifier(value) {
+    set BpUniversalServiceId(value) {
         this.setComponentValue('BpUniversalServiceIdentifier', value);
     }
 
@@ -221,27 +191,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpProcessingRequirements', value);
     }
 
-    get BPProcessingRequirements() {
-        return this.getComponent('BpProcessingRequirements');
-    }
-
-    set BPProcessingRequirements(value) {
-        this.setComponentValue('BpProcessingRequirements', value);
-    }
-
     get BpQuantity() {
         return this.getComponent('BpQuantity');
     }
 
     set BpQuantity(value) {
-        this.setComponentValue('BpQuantity', value);
-    }
-
-    get BPQuantity() {
-        return this.getComponent('BpQuantity');
-    }
-
-    set BPQuantity(value) {
         this.setComponentValue('BpQuantity', value);
     }
 
@@ -253,27 +207,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpAmount', value);
     }
 
-    get BPAmount() {
-        return this.getComponent('BpAmount');
-    }
-
-    set BPAmount(value) {
-        this.setComponentValue('BpAmount', value);
-    }
-
     get BpUnits() {
         return this.getComponent('BpUnits');
     }
 
     set BpUnits(value) {
-        this.setComponentValue('BpUnits', value);
-    }
-
-    get BPUnits() {
-        return this.getComponent('BpUnits');
-    }
-
-    set BPUnits(value) {
         this.setComponentValue('BpUnits', value);
     }
 
@@ -285,27 +223,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpIntendedUseDateTime', value);
     }
 
-    get BPIntendedUseDateTime() {
-        return this.getComponent('BpIntendedUseDateTime');
-    }
-
-    set BPIntendedUseDateTime(value) {
-        this.setComponentValue('BpIntendedUseDateTime', value);
-    }
-
     get BpIntendedDispenseFromLocation() {
         return this.getComponent('BpIntendedDispenseFromLocation');
     }
 
     set BpIntendedDispenseFromLocation(value) {
-        this.setComponentValue('BpIntendedDispenseFromLocation', value);
-    }
-
-    get BPIntendedDispenseFromLocation() {
-        return this.getComponent('BpIntendedDispenseFromLocation');
-    }
-
-    set BPIntendedDispenseFromLocation(value) {
         this.setComponentValue('BpIntendedDispenseFromLocation', value);
     }
 
@@ -317,27 +239,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpIntendedDispenseFromAddress', value);
     }
 
-    get BPIntendedDispenseFromAddress() {
-        return this.getComponent('BpIntendedDispenseFromAddress');
-    }
-
-    set BPIntendedDispenseFromAddress(value) {
-        this.setComponentValue('BpIntendedDispenseFromAddress', value);
-    }
-
     get BpRequestedDispenseDateTime() {
         return this.getComponent('BpRequestedDispenseDateTime');
     }
 
     set BpRequestedDispenseDateTime(value) {
-        this.setComponentValue('BpRequestedDispenseDateTime', value);
-    }
-
-    get BPRequestedDispenseDateTime() {
-        return this.getComponent('BpRequestedDispenseDateTime');
-    }
-
-    set BPRequestedDispenseDateTime(value) {
         this.setComponentValue('BpRequestedDispenseDateTime', value);
     }
 
@@ -349,27 +255,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpRequestedDispenseToLocation', value);
     }
 
-    get BPRequestedDispenseToLocation() {
-        return this.getComponent('BpRequestedDispenseToLocation');
-    }
-
-    set BPRequestedDispenseToLocation(value) {
-        this.setComponentValue('BpRequestedDispenseToLocation', value);
-    }
-
     get BpRequestedDispenseToAddress() {
         return this.getComponent('BpRequestedDispenseToAddress');
     }
 
     set BpRequestedDispenseToAddress(value) {
-        this.setComponentValue('BpRequestedDispenseToAddress', value);
-    }
-
-    get BPRequestedDispenseToAddress() {
-        return this.getComponent('BpRequestedDispenseToAddress');
-    }
-
-    set BPRequestedDispenseToAddress(value) {
         this.setComponentValue('BpRequestedDispenseToAddress', value);
     }
 
@@ -381,27 +271,11 @@ export class BPO extends Segment {
         this.setComponentValue('BpIndicationForUse', value);
     }
 
-    get BPIndicationForUse() {
-        return this.getComponent('BpIndicationForUse');
-    }
-
-    set BPIndicationForUse(value) {
-        this.setComponentValue('BpIndicationForUse', value);
-    }
-
     get BpInformedConsentIndicator() {
         return this.getComponent('BpInformedConsentIndicator');
     }
 
     set BpInformedConsentIndicator(value) {
-        this.setComponentValue('BpInformedConsentIndicator', value);
-    }
-
-    get BPInformedConsentIndicator() {
-        return this.getComponent('BpInformedConsentIndicator');
-    }
-
-    set BPInformedConsentIndicator(value) {
         this.setComponentValue('BpInformedConsentIndicator', value);
     }
 }

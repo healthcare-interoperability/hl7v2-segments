@@ -5,7 +5,7 @@ import { CQ } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class CDO extends Segment {
     static components = {
-        SetIDCDO: {
+        SetIdCdo: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.8'] }],
             position: 1,
@@ -39,7 +39,7 @@ export class CDO extends Segment {
         },
     };
 
-    static componentsByIndex = ['', 'SetIDCDO', 'ActionCode', 'CumulativeDosageLimit', 'CumulativeDosageLimitTimeInterval'];
+    static componentsByIndex = ['', 'SetIdCdo', 'ActionCode', 'CumulativeDosageLimit', 'CumulativeDosageLimitTimeInterval'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -47,12 +47,12 @@ export class CDO extends Segment {
         this.setValues(values);
     }
 
-    get SetIDCDO() {
-        return this.getComponent('SetIDCDO');
+    get SetIdCdo() {
+        return this.getComponent('SetIdCdo');
     }
 
-    set SetIDCDO(value) {
-        this.setComponentValue('SetIDCDO', value);
+    set SetIdCdo(value) {
+        this.setComponentValue('SetIdCdo', value);
     }
 
     get ActionCode() {

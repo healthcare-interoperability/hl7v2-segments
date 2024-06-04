@@ -21,7 +21,6 @@ export class CER extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDCER: { aliasOf: 'SetIdCer' },
         SerialNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -114,7 +113,6 @@ export class CER extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SubjectID: { aliasOf: 'SubjectId' },
         SubjectName: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -164,7 +162,6 @@ export class CER extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        CRLDistributionPoint: { aliasOf: 'CrlDistributionPoint' },
         JurisdictionCountry: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -345,14 +342,6 @@ export class CER extends Segment {
         this.setComponentValue('SetIdCer', value);
     }
 
-    get SetIDCER() {
-        return this.getComponent('SetIdCer');
-    }
-
-    set SetIDCER(value) {
-        this.setComponentValue('SetIdCer', value);
-    }
-
     get SerialNumber() {
         return this.getComponent('SerialNumber');
     }
@@ -449,14 +438,6 @@ export class CER extends Segment {
         this.setComponentValue('SubjectId', value);
     }
 
-    get SubjectID() {
-        return this.getComponent('SubjectId');
-    }
-
-    set SubjectID(value) {
-        this.setComponentValue('SubjectId', value);
-    }
-
     get SubjectName() {
         return this.getComponent('SubjectName');
     }
@@ -510,14 +491,6 @@ export class CER extends Segment {
     }
 
     set CrlDistributionPoint(value) {
-        this.setComponentValue('CrlDistributionPoint', value);
-    }
-
-    get CRLDistributionPoint() {
-        return this.getComponent('CrlDistributionPoint');
-    }
-
-    set CRLDistributionPoint(value) {
         this.setComponentValue('CrlDistributionPoint', value);
     }
 

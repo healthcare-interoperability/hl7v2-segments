@@ -102,7 +102,6 @@ export class MSH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MessageControlID: { aliasOf: 'MessageControlId' },
         ProcessingId: {
             defaultDataType: PT,
             dataTypes: [{ dataType: PT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -111,7 +110,6 @@ export class MSH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProcessingID: { aliasOf: 'ProcessingId' },
         VersionId: {
             defaultDataType: VID,
             dataTypes: [
@@ -123,7 +121,6 @@ export class MSH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VersionID: { aliasOf: 'VersionId' },
         SequenceNumber: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -193,7 +190,7 @@ export class MSH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ConformanceStatementID: {
+        ConformanceStatementId: {
             defaultDataType: ID,
             dataTypes: [
                 { dataType: ID, versions: ['2.4'] },
@@ -204,7 +201,7 @@ export class MSH extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        MessageProfileIdentifier: { aliasOf: 'ConformanceStatementID' },
+        MessageProfileIdentifier: { aliasOf: 'ConformanceStatementId' },
         SendingResponsibleOrganization: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
@@ -261,7 +258,7 @@ export class MSH extends Segment {
         'CharacterSet',
         'PrincipalLanguageOfMessage',
         'AlternateCharacterSetHandlingScheme',
-        'ConformanceStatementID',
+        'ConformanceStatementId',
         'SendingResponsibleOrganization',
         'ReceivingResponsibleOrganization',
         'SendingNetworkAddress',
@@ -354,14 +351,6 @@ export class MSH extends Segment {
         this.setComponentValue('MessageControlId', value);
     }
 
-    get MessageControlID() {
-        return this.getComponent('MessageControlId');
-    }
-
-    set MessageControlID(value) {
-        this.setComponentValue('MessageControlId', value);
-    }
-
     get ProcessingId() {
         return this.getComponent('ProcessingId');
     }
@@ -370,27 +359,11 @@ export class MSH extends Segment {
         this.setComponentValue('ProcessingId', value);
     }
 
-    get ProcessingID() {
-        return this.getComponent('ProcessingId');
-    }
-
-    set ProcessingID(value) {
-        this.setComponentValue('ProcessingId', value);
-    }
-
     get VersionId() {
         return this.getComponent('VersionId');
     }
 
     set VersionId(value) {
-        this.setComponentValue('VersionId', value);
-    }
-
-    get VersionID() {
-        return this.getComponent('VersionId');
-    }
-
-    set VersionID(value) {
         this.setComponentValue('VersionId', value);
     }
 
@@ -474,20 +447,20 @@ export class MSH extends Segment {
         this.setComponentValue('AlternateCharacterSetHandlingScheme', value);
     }
 
-    get ConformanceStatementID() {
-        return this.getComponent('ConformanceStatementID');
+    get ConformanceStatementId() {
+        return this.getComponent('ConformanceStatementId');
     }
 
-    set ConformanceStatementID(value) {
-        this.setComponentValue('ConformanceStatementID', value);
+    set ConformanceStatementId(value) {
+        this.setComponentValue('ConformanceStatementId', value);
     }
 
     get MessageProfileIdentifier() {
-        return this.getComponent('ConformanceStatementID');
+        return this.getComponent('ConformanceStatementId');
     }
 
     set MessageProfileIdentifier(value) {
-        this.setComponentValue('ConformanceStatementID', value);
+        this.setComponentValue('ConformanceStatementId', value);
     }
 
     get SendingResponsibleOrganization() {

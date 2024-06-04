@@ -29,8 +29,7 @@ export class IN3 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDInsuranceCertification: { aliasOf: 'SetIdIn3' },
-        SetIDIn3: { aliasOf: 'SetIdIn3' },
+        SetIdInsuranceCertification: { aliasOf: 'SetIdIn3' },
         CertificationNumber: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -322,19 +321,11 @@ export class IN3 extends Segment {
         this.setComponentValue('SetIdIn3', value);
     }
 
-    get SetIDInsuranceCertification() {
+    get SetIdInsuranceCertification() {
         return this.getComponent('SetIdIn3');
     }
 
-    set SetIDInsuranceCertification(value) {
-        this.setComponentValue('SetIdIn3', value);
-    }
-
-    get SetIDIn3() {
-        return this.getComponent('SetIdIn3');
-    }
-
-    set SetIDIn3(value) {
+    set SetIdInsuranceCertification(value) {
         this.setComponentValue('SetIdIn3', value);
     }
 

@@ -16,7 +16,6 @@ export class PYE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDPYE: { aliasOf: 'SetIdPye' },
         PayeeType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -89,14 +88,6 @@ export class PYE extends Segment {
     }
 
     set SetIdPye(value) {
-        this.setComponentValue('SetIdPye', value);
-    }
-
-    get SetIDPYE() {
-        return this.getComponent('SetIdPye');
-    }
-
-    set SetIDPYE(value) {
         this.setComponentValue('SetIdPye', value);
     }
 

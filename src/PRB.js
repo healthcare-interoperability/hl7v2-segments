@@ -41,7 +41,6 @@ export class PRB extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProblemID: { aliasOf: 'ProblemId' },
         ProblemInstanceId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -50,7 +49,6 @@ export class PRB extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProblemInstanceID: { aliasOf: 'ProblemInstanceId' },
         EpisodeOfCareId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -59,7 +57,6 @@ export class PRB extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        EpisodeOfCareID: { aliasOf: 'EpisodeOfCareId' },
         ProblemListPriority: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -358,14 +355,6 @@ export class PRB extends Segment {
         this.setComponentValue('ProblemId', value);
     }
 
-    get ProblemID() {
-        return this.getComponent('ProblemId');
-    }
-
-    set ProblemID(value) {
-        this.setComponentValue('ProblemId', value);
-    }
-
     get ProblemInstanceId() {
         return this.getComponent('ProblemInstanceId');
     }
@@ -374,27 +363,11 @@ export class PRB extends Segment {
         this.setComponentValue('ProblemInstanceId', value);
     }
 
-    get ProblemInstanceID() {
-        return this.getComponent('ProblemInstanceId');
-    }
-
-    set ProblemInstanceID(value) {
-        this.setComponentValue('ProblemInstanceId', value);
-    }
-
     get EpisodeOfCareId() {
         return this.getComponent('EpisodeOfCareId');
     }
 
     set EpisodeOfCareId(value) {
-        this.setComponentValue('EpisodeOfCareId', value);
-    }
-
-    get EpisodeOfCareID() {
-        return this.getComponent('EpisodeOfCareId');
-    }
-
-    set EpisodeOfCareID(value) {
         this.setComponentValue('EpisodeOfCareId', value);
     }
 

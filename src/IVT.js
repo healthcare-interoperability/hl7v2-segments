@@ -17,7 +17,6 @@ export class IVT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdIVT: { aliasOf: 'SetIdIvt' },
         InventoryLocationIdentifier: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -261,14 +260,6 @@ export class IVT extends Segment {
     }
 
     set SetIdIvt(value) {
-        this.setComponentValue('SetIdIvt', value);
-    }
-
-    get SetIdIVT() {
-        return this.getComponent('SetIdIvt');
-    }
-
-    set SetIdIVT(value) {
         this.setComponentValue('SetIdIvt', value);
     }
 

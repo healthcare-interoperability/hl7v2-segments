@@ -67,7 +67,6 @@ export class GP2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        OCEEditCode: { aliasOf: 'OceEditCode' },
         AmbulatoryPaymentClassificationCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -120,8 +119,7 @@ export class GP2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ExpectedHCFAPaymentAmount: { aliasOf: 'ExpectedCmsPaymentAmount' },
-        ExpectedCMSPaymentAmount: { aliasOf: 'ExpectedCmsPaymentAmount' },
+        ExpectedHcfaPaymentAmount: { aliasOf: 'ExpectedCmsPaymentAmount' },
         ReimbursementTypeCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -224,14 +222,6 @@ export class GP2 extends Segment {
         this.setComponentValue('OceEditCode', value);
     }
 
-    get OCEEditCode() {
-        return this.getComponent('OceEditCode');
-    }
-
-    set OCEEditCode(value) {
-        this.setComponentValue('OceEditCode', value);
-    }
-
     get AmbulatoryPaymentClassificationCode() {
         return this.getComponent('AmbulatoryPaymentClassificationCode');
     }
@@ -272,19 +262,11 @@ export class GP2 extends Segment {
         this.setComponentValue('ExpectedCmsPaymentAmount', value);
     }
 
-    get ExpectedHCFAPaymentAmount() {
+    get ExpectedHcfaPaymentAmount() {
         return this.getComponent('ExpectedCmsPaymentAmount');
     }
 
-    set ExpectedHCFAPaymentAmount(value) {
-        this.setComponentValue('ExpectedCmsPaymentAmount', value);
-    }
-
-    get ExpectedCMSPaymentAmount() {
-        return this.getComponent('ExpectedCmsPaymentAmount');
-    }
-
-    set ExpectedCMSPaymentAmount(value) {
+    set ExpectedHcfaPaymentAmount(value) {
         this.setComponentValue('ExpectedCmsPaymentAmount', value);
     }
 

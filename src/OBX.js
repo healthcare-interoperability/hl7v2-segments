@@ -26,7 +26,6 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDOBX: { aliasOf: 'SetIdObx' },
         ValueType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -54,7 +53,6 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ObservationSubID: { aliasOf: 'ObservationSubId' },
         ObservationValue: {
             defaultDataType: varies,
             dataTypes: [
@@ -166,7 +164,6 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProducerSID: { aliasOf: 'ProducerSId' },
         ResponsibleObserver: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -315,14 +312,6 @@ export class OBX extends Segment {
         this.setComponentValue('SetIdObx', value);
     }
 
-    get SetIDOBX() {
-        return this.getComponent('SetIdObx');
-    }
-
-    set SetIDOBX(value) {
-        this.setComponentValue('SetIdObx', value);
-    }
-
     get ValueType() {
         return this.getComponent('ValueType');
     }
@@ -344,14 +333,6 @@ export class OBX extends Segment {
     }
 
     set ObservationSubId(value) {
-        this.setComponentValue('ObservationSubId', value);
-    }
-
-    get ObservationSubID() {
-        return this.getComponent('ObservationSubId');
-    }
-
-    set ObservationSubID(value) {
         this.setComponentValue('ObservationSubId', value);
     }
 
@@ -472,14 +453,6 @@ export class OBX extends Segment {
     }
 
     set ProducerSId(value) {
-        this.setComponentValue('ProducerSId', value);
-    }
-
-    get ProducerSID() {
-        return this.getComponent('ProducerSId');
-    }
-
-    set ProducerSID(value) {
         this.setComponentValue('ProducerSId', value);
     }
 

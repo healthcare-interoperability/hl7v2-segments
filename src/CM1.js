@@ -14,8 +14,7 @@ export class CM1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        Cm1SetID: { aliasOf: 'SetIdCm1' },
-        SetIDCm1: { aliasOf: 'SetIdCm1' },
+        Cm1SetId: { aliasOf: 'SetIdCm1' },
         StudyPhaseIdentifier: {
             defaultDataType: CWE,
             dataTypes: [
@@ -53,19 +52,11 @@ export class CM1 extends Segment {
         this.setComponentValue('SetIdCm1', value);
     }
 
-    get Cm1SetID() {
+    get Cm1SetId() {
         return this.getComponent('SetIdCm1');
     }
 
-    set Cm1SetID(value) {
-        this.setComponentValue('SetIdCm1', value);
-    }
-
-    get SetIDCm1() {
-        return this.getComponent('SetIdCm1');
-    }
-
-    set SetIDCm1(value) {
+    set Cm1SetId(value) {
         this.setComponentValue('SetIdCm1', value);
     }
 

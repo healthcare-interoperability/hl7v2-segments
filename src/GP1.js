@@ -49,7 +49,6 @@ export class GP1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        OCEEditsPerVisitCode: { aliasOf: 'OceEditsPerVisitCode' },
         OutlierCost: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -97,14 +96,6 @@ export class GP1 extends Segment {
     }
 
     set OceEditsPerVisitCode(value) {
-        this.setComponentValue('OceEditsPerVisitCode', value);
-    }
-
-    get OCEEditsPerVisitCode() {
-        return this.getComponent('OceEditsPerVisitCode');
-    }
-
-    set OCEEditsPerVisitCode(value) {
         this.setComponentValue('OceEditsPerVisitCode', value);
     }
 

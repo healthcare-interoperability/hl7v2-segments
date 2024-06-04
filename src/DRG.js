@@ -36,7 +36,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DRGAssignedDateTime: { aliasOf: 'DrgAssignedDateTime' },
         DrgApprovalIndicator: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -45,7 +44,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DRGApprovalIndicator: { aliasOf: 'DrgApprovalIndicator' },
         DrgGrouperReviewCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -57,7 +55,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DRGGrouperReviewCode: { aliasOf: 'DrgGrouperReviewCode' },
         OutlierType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -96,7 +93,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DRGPayor: { aliasOf: 'DrgPayor' },
         OutlierReimbursement: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -113,7 +109,7 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DRGTransferType: {
+        DrgTransferType: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.4', '2.5', '2.5.1', '2.6'] },
@@ -124,7 +120,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgTransferType: { aliasOf: 'DRGTransferType' },
         NameOfCoder: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
@@ -141,7 +136,7 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PCCLValueCode: {
+        PcclValueCode: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
             position: 14,
@@ -149,7 +144,6 @@ export class DRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcclValueCode: { aliasOf: 'PCCLValueCode' },
         EffectiveWeight: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
@@ -346,10 +340,10 @@ export class DRG extends Segment {
         'DrgPayor',
         'OutlierReimbursement',
         'ConfidentialIndicator',
-        'DRGTransferType',
+        'DrgTransferType',
         'NameOfCoder',
         'GrouperStatus',
-        'PCCLValueCode',
+        'PcclValueCode',
         'EffectiveWeight',
         'MonetaryAmount',
         'StatusPatient',
@@ -393,14 +387,6 @@ export class DRG extends Segment {
         this.setComponentValue('DrgAssignedDateTime', value);
     }
 
-    get DRGAssignedDateTime() {
-        return this.getComponent('DrgAssignedDateTime');
-    }
-
-    set DRGAssignedDateTime(value) {
-        this.setComponentValue('DrgAssignedDateTime', value);
-    }
-
     get DrgApprovalIndicator() {
         return this.getComponent('DrgApprovalIndicator');
     }
@@ -409,27 +395,11 @@ export class DRG extends Segment {
         this.setComponentValue('DrgApprovalIndicator', value);
     }
 
-    get DRGApprovalIndicator() {
-        return this.getComponent('DrgApprovalIndicator');
-    }
-
-    set DRGApprovalIndicator(value) {
-        this.setComponentValue('DrgApprovalIndicator', value);
-    }
-
     get DrgGrouperReviewCode() {
         return this.getComponent('DrgGrouperReviewCode');
     }
 
     set DrgGrouperReviewCode(value) {
-        this.setComponentValue('DrgGrouperReviewCode', value);
-    }
-
-    get DRGGrouperReviewCode() {
-        return this.getComponent('DrgGrouperReviewCode');
-    }
-
-    set DRGGrouperReviewCode(value) {
         this.setComponentValue('DrgGrouperReviewCode', value);
     }
 
@@ -465,14 +435,6 @@ export class DRG extends Segment {
         this.setComponentValue('DrgPayor', value);
     }
 
-    get DRGPayor() {
-        return this.getComponent('DrgPayor');
-    }
-
-    set DRGPayor(value) {
-        this.setComponentValue('DrgPayor', value);
-    }
-
     get OutlierReimbursement() {
         return this.getComponent('OutlierReimbursement');
     }
@@ -489,20 +451,12 @@ export class DRG extends Segment {
         this.setComponentValue('ConfidentialIndicator', value);
     }
 
-    get DRGTransferType() {
-        return this.getComponent('DRGTransferType');
-    }
-
-    set DRGTransferType(value) {
-        this.setComponentValue('DRGTransferType', value);
-    }
-
     get DrgTransferType() {
-        return this.getComponent('DRGTransferType');
+        return this.getComponent('DrgTransferType');
     }
 
     set DrgTransferType(value) {
-        this.setComponentValue('DRGTransferType', value);
+        this.setComponentValue('DrgTransferType', value);
     }
 
     get NameOfCoder() {
@@ -521,20 +475,12 @@ export class DRG extends Segment {
         this.setComponentValue('GrouperStatus', value);
     }
 
-    get PCCLValueCode() {
-        return this.getComponent('PCCLValueCode');
-    }
-
-    set PCCLValueCode(value) {
-        this.setComponentValue('PCCLValueCode', value);
-    }
-
     get PcclValueCode() {
-        return this.getComponent('PCCLValueCode');
+        return this.getComponent('PcclValueCode');
     }
 
     set PcclValueCode(value) {
-        this.setComponentValue('PCCLValueCode', value);
+        this.setComponentValue('PcclValueCode', value);
     }
 
     get EffectiveWeight() {

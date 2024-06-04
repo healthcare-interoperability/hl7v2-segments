@@ -26,7 +26,6 @@ export class MFA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MFNControlID: { aliasOf: 'MfnControlId' },
         EventCompletionDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -50,7 +49,6 @@ export class MFA extends Segment {
             minOccurence: 1,
         },
         ErrorReturnCodeAndOrText: { aliasOf: 'MfnRecordLevelErrorReturn' },
-        MFNRecordLevelErrorReturn: { aliasOf: 'MfnRecordLevelErrorReturn' },
         PrimaryKeyValueMfa: {
             defaultDataType: CWE,
             dataTypes: [
@@ -64,8 +62,7 @@ export class MFA extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueMfa' },
-        PrimaryKeyValueMFA: { aliasOf: 'PrimaryKeyValueMfa' },
-        PrimaryKeyValueTypeMFA: {
+        PrimaryKeyValueTypeMfa: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
             position: 6,
@@ -73,10 +70,9 @@ export class MFA extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PrimaryKeyValueTypeMfa: { aliasOf: 'PrimaryKeyValueTypeMFA' },
     };
 
-    static componentsByIndex = ['', 'RecordLevelEventCode', 'MfnControlId', 'EventCompletionDateTime', 'MfnRecordLevelErrorReturn', 'PrimaryKeyValueMfa', 'PrimaryKeyValueTypeMFA'];
+    static componentsByIndex = ['', 'RecordLevelEventCode', 'MfnControlId', 'EventCompletionDateTime', 'MfnRecordLevelErrorReturn', 'PrimaryKeyValueMfa', 'PrimaryKeyValueTypeMfa'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -97,14 +93,6 @@ export class MFA extends Segment {
     }
 
     set MfnControlId(value) {
-        this.setComponentValue('MfnControlId', value);
-    }
-
-    get MFNControlID() {
-        return this.getComponent('MfnControlId');
-    }
-
-    set MFNControlID(value) {
         this.setComponentValue('MfnControlId', value);
     }
 
@@ -132,14 +120,6 @@ export class MFA extends Segment {
         this.setComponentValue('MfnRecordLevelErrorReturn', value);
     }
 
-    get MFNRecordLevelErrorReturn() {
-        return this.getComponent('MfnRecordLevelErrorReturn');
-    }
-
-    set MFNRecordLevelErrorReturn(value) {
-        this.setComponentValue('MfnRecordLevelErrorReturn', value);
-    }
-
     get PrimaryKeyValueMfa() {
         return this.getComponent('PrimaryKeyValueMfa');
     }
@@ -156,27 +136,11 @@ export class MFA extends Segment {
         this.setComponentValue('PrimaryKeyValueMfa', value);
     }
 
-    get PrimaryKeyValueMFA() {
-        return this.getComponent('PrimaryKeyValueMfa');
-    }
-
-    set PrimaryKeyValueMFA(value) {
-        this.setComponentValue('PrimaryKeyValueMfa', value);
-    }
-
-    get PrimaryKeyValueTypeMFA() {
-        return this.getComponent('PrimaryKeyValueTypeMFA');
-    }
-
-    set PrimaryKeyValueTypeMFA(value) {
-        this.setComponentValue('PrimaryKeyValueTypeMFA', value);
-    }
-
     get PrimaryKeyValueTypeMfa() {
-        return this.getComponent('PrimaryKeyValueTypeMFA');
+        return this.getComponent('PrimaryKeyValueTypeMfa');
     }
 
     set PrimaryKeyValueTypeMfa(value) {
-        this.setComponentValue('PrimaryKeyValueTypeMFA', value);
+        this.setComponentValue('PrimaryKeyValueTypeMfa', value);
     }
 }

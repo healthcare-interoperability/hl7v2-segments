@@ -20,7 +20,6 @@ export class AIP extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIDAIP: { aliasOf: 'SetIdAip' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -37,7 +36,6 @@ export class AIP extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PersonnelResourceID: { aliasOf: 'PersonnelResourceId' },
         ResourceType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -164,14 +162,6 @@ export class AIP extends Segment {
         this.setComponentValue('SetIdAip', value);
     }
 
-    get SetIDAIP() {
-        return this.getComponent('SetIdAip');
-    }
-
-    set SetIDAIP(value) {
-        this.setComponentValue('SetIdAip', value);
-    }
-
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -185,14 +175,6 @@ export class AIP extends Segment {
     }
 
     set PersonnelResourceId(value) {
-        this.setComponentValue('PersonnelResourceId', value);
-    }
-
-    get PersonnelResourceID() {
-        return this.getComponent('PersonnelResourceId');
-    }
-
-    set PersonnelResourceID(value) {
         this.setComponentValue('PersonnelResourceId', value);
     }
 

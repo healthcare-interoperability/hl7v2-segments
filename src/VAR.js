@@ -17,7 +17,6 @@ export class VAR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VarianceInstanceID: { aliasOf: 'VarianceInstanceId' },
         DocumentedDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -82,14 +81,6 @@ export class VAR extends Segment {
     }
 
     set VarianceInstanceId(value) {
-        this.setComponentValue('VarianceInstanceId', value);
-    }
-
-    get VarianceInstanceID() {
-        return this.getComponent('VarianceInstanceId');
-    }
-
-    set VarianceInstanceID(value) {
         this.setComponentValue('VarianceInstanceId', value);
     }
 

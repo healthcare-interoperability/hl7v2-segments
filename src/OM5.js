@@ -35,7 +35,6 @@ export class OM5 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ObservationIDSuffixes: { aliasOf: 'ObservationIdSuffixes' },
     };
 
     static componentsByIndex = ['', 'SequenceNumberTestObservationMasterFile', 'TestObservationsIncludedWithinAnOrderedTestBattery', 'ObservationIdSuffixes'];
@@ -83,14 +82,6 @@ export class OM5 extends Segment {
     }
 
     set ObservationIdSuffixes(value) {
-        this.setComponentValue('ObservationIdSuffixes', value);
-    }
-
-    get ObservationIDSuffixes() {
-        return this.getComponent('ObservationIdSuffixes');
-    }
-
-    set ObservationIDSuffixes(value) {
         this.setComponentValue('ObservationIdSuffixes', value);
     }
 }
