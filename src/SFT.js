@@ -39,6 +39,7 @@ export class SFT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SoftwareBinaryID: { aliasOf: 'SoftwareBinaryId' },
         SoftwareProductInformation: {
             defaultDataType: TX,
             dataTypes: [{ dataType: TX, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -105,6 +106,14 @@ export class SFT extends Segment {
     }
 
     set SoftwareBinaryId(value) {
+        this.setComponentValue('SoftwareBinaryId', value);
+    }
+
+    get SoftwareBinaryID() {
+        return this.getComponent('SoftwareBinaryId');
+    }
+
+    set SoftwareBinaryID(value) {
         this.setComponentValue('SoftwareBinaryId', value);
     }
 

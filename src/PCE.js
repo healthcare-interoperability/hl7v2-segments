@@ -15,6 +15,7 @@ export class PCE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDPCE: { aliasOf: 'SetIdPce' },
         CostCenterAccountNumber: {
             defaultDataType: CX,
             dataTypes: [
@@ -57,6 +58,14 @@ export class PCE extends Segment {
     }
 
     set SetIdPce(value) {
+        this.setComponentValue('SetIdPce', value);
+    }
+
+    get SetIDPCE() {
+        return this.getComponent('SetIdPce');
+    }
+
+    set SetIDPCE(value) {
         this.setComponentValue('SetIdPce', value);
     }
 

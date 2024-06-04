@@ -206,6 +206,7 @@ export class IVC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        TotalAmountOfVAT: { aliasOf: 'TotalAmountOfVat' },
         VatRatesApplied: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -214,6 +215,7 @@ export class IVC extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        VATRatesApplied: { aliasOf: 'VatRatesApplied' },
         BenefitGroup: {
             defaultDataType: CWE,
             dataTypes: [
@@ -233,6 +235,7 @@ export class IVC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ProviderTaxID: { aliasOf: 'ProviderTaxId' },
         PayerTaxId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -241,6 +244,7 @@ export class IVC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PayerTaxID: { aliasOf: 'PayerTaxId' },
         ProviderTaxStatus: {
             defaultDataType: CWE,
             dataTypes: [
@@ -271,6 +275,7 @@ export class IVC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SalesTaxID: { aliasOf: 'SalesTaxId' },
     };
 
     static componentsByIndex = [
@@ -497,11 +502,27 @@ export class IVC extends Segment {
         this.setComponentValue('TotalAmountOfVat', value);
     }
 
+    get TotalAmountOfVAT() {
+        return this.getComponent('TotalAmountOfVat');
+    }
+
+    set TotalAmountOfVAT(value) {
+        this.setComponentValue('TotalAmountOfVat', value);
+    }
+
     get VatRatesApplied() {
         return this.getComponent('VatRatesApplied');
     }
 
     set VatRatesApplied(value) {
+        this.setComponentValue('VatRatesApplied', value);
+    }
+
+    get VATRatesApplied() {
+        return this.getComponent('VatRatesApplied');
+    }
+
+    set VATRatesApplied(value) {
         this.setComponentValue('VatRatesApplied', value);
     }
 
@@ -521,11 +542,27 @@ export class IVC extends Segment {
         this.setComponentValue('ProviderTaxId', value);
     }
 
+    get ProviderTaxID() {
+        return this.getComponent('ProviderTaxId');
+    }
+
+    set ProviderTaxID(value) {
+        this.setComponentValue('ProviderTaxId', value);
+    }
+
     get PayerTaxId() {
         return this.getComponent('PayerTaxId');
     }
 
     set PayerTaxId(value) {
+        this.setComponentValue('PayerTaxId', value);
+    }
+
+    get PayerTaxID() {
+        return this.getComponent('PayerTaxId');
+    }
+
+    set PayerTaxID(value) {
         this.setComponentValue('PayerTaxId', value);
     }
 
@@ -550,6 +587,14 @@ export class IVC extends Segment {
     }
 
     set SalesTaxId(value) {
+        this.setComponentValue('SalesTaxId', value);
+    }
+
+    get SalesTaxID() {
+        return this.getComponent('SalesTaxId');
+    }
+
+    set SalesTaxID(value) {
         this.setComponentValue('SalesTaxId', value);
     }
 }

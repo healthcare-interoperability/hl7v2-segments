@@ -14,6 +14,7 @@ export class VND extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIdVND: { aliasOf: 'SetIdVnd' },
         VendorIdentifier: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -61,6 +62,14 @@ export class VND extends Segment {
     }
 
     set SetIdVnd(value) {
+        this.setComponentValue('SetIdVnd', value);
+    }
+
+    get SetIdVND() {
+        return this.getComponent('SetIdVnd');
+    }
+
+    set SetIdVND(value) {
         this.setComponentValue('SetIdVnd', value);
     }
 

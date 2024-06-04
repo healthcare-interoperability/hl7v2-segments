@@ -270,7 +270,7 @@ export class ITM extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        UnitedNationsStandardProductsAndServicesCodeUnspsc: {
+        UnitedNationsStandardProductsAndServicesCodeUNSPSC: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8'] }],
             position: 33,
@@ -314,7 +314,7 @@ export class ITM extends Segment {
         'HazardousIndicator',
         'SterileIndicator',
         'MaterialDataSafetySheetNumber',
-        'UnitedNationsStandardProductsAndServicesCodeUnspsc',
+        'UnitedNationsStandardProductsAndServicesCodeUNSPSC',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -579,11 +579,11 @@ export class ITM extends Segment {
         this.setComponentValue('MaterialDataSafetySheetNumber', value);
     }
 
-    get UnitedNationsStandardProductsAndServicesCodeUnspsc() {
-        return this.getComponent('UnitedNationsStandardProductsAndServicesCodeUnspsc');
+    get UnitedNationsStandardProductsAndServicesCodeUNSPSC() {
+        return this.getComponent('UnitedNationsStandardProductsAndServicesCodeUNSPSC');
     }
 
-    set UnitedNationsStandardProductsAndServicesCodeUnspsc(value) {
-        this.setComponentValue('UnitedNationsStandardProductsAndServicesCodeUnspsc', value);
+    set UnitedNationsStandardProductsAndServicesCodeUNSPSC(value) {
+        this.setComponentValue('UnitedNationsStandardProductsAndServicesCodeUNSPSC', value);
     }
 }

@@ -108,6 +108,7 @@ export class PDC extends Segment {
             minOccurence: 1,
         },
         MarketingApprovalIdentifier: { aliasOf: 'MarketingApprovalId' },
+        MarketingApprovalID: { aliasOf: 'MarketingApprovalId' },
         LabeledShelfLife: {
             defaultDataType: CQ,
             dataTypes: [{ dataType: CQ, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -268,6 +269,14 @@ export class PDC extends Segment {
     }
 
     set MarketingApprovalIdentifier(value) {
+        this.setComponentValue('MarketingApprovalId', value);
+    }
+
+    get MarketingApprovalID() {
+        return this.getComponent('MarketingApprovalId');
+    }
+
+    set MarketingApprovalID(value) {
         this.setComponentValue('MarketingApprovalId', value);
     }
 

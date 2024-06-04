@@ -247,6 +247,7 @@ export class OM7 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        PrimaryKeyValueCDM: { aliasOf: 'PrimaryKeyValueCdm' },
     };
 
     static componentsByIndex = [
@@ -472,6 +473,14 @@ export class OM7 extends Segment {
     }
 
     set PrimaryKeyValueCdm(value) {
+        this.setComponentValue('PrimaryKeyValueCdm', value);
+    }
+
+    get PrimaryKeyValueCDM() {
+        return this.getComponent('PrimaryKeyValueCdm');
+    }
+
+    set PrimaryKeyValueCDM(value) {
         this.setComponentValue('PrimaryKeyValueCdm', value);
     }
 }

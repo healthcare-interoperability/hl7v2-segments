@@ -19,7 +19,8 @@ export class CM0 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        Cm0SetId: { aliasOf: 'SetIdCm0' },
+        Cm0SetID: { aliasOf: 'SetIdCm0' },
+        SetIDCm0: { aliasOf: 'SetIdCm0' },
         SponsorStudyId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -28,6 +29,7 @@ export class CM0 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SponsorStudyID: { aliasOf: 'SponsorStudyId' },
         AlternateStudyId: {
             defaultDataType: EI,
             dataTypes: [
@@ -39,6 +41,7 @@ export class CM0 extends Segment {
             maxOccurence: 3,
             minOccurence: 1,
         },
+        AlternateStudyID: { aliasOf: 'AlternateStudyId' },
         TitleOfStudy: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -63,6 +66,7 @@ export class CM0 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        LastIRBApprovalDate: { aliasOf: 'LastIrbApprovalDate' },
         TotalAccrualToDate: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -135,11 +139,19 @@ export class CM0 extends Segment {
         this.setComponentValue('SetIdCm0', value);
     }
 
-    get Cm0SetId() {
+    get Cm0SetID() {
         return this.getComponent('SetIdCm0');
     }
 
-    set Cm0SetId(value) {
+    set Cm0SetID(value) {
+        this.setComponentValue('SetIdCm0', value);
+    }
+
+    get SetIDCm0() {
+        return this.getComponent('SetIdCm0');
+    }
+
+    set SetIDCm0(value) {
         this.setComponentValue('SetIdCm0', value);
     }
 
@@ -151,11 +163,27 @@ export class CM0 extends Segment {
         this.setComponentValue('SponsorStudyId', value);
     }
 
+    get SponsorStudyID() {
+        return this.getComponent('SponsorStudyId');
+    }
+
+    set SponsorStudyID(value) {
+        this.setComponentValue('SponsorStudyId', value);
+    }
+
     get AlternateStudyId() {
         return this.getComponent('AlternateStudyId');
     }
 
     set AlternateStudyId(value) {
+        this.setComponentValue('AlternateStudyId', value);
+    }
+
+    get AlternateStudyID() {
+        return this.getComponent('AlternateStudyId');
+    }
+
+    set AlternateStudyID(value) {
         this.setComponentValue('AlternateStudyId', value);
     }
 
@@ -180,6 +208,14 @@ export class CM0 extends Segment {
     }
 
     set LastIrbApprovalDate(value) {
+        this.setComponentValue('LastIrbApprovalDate', value);
+    }
+
+    get LastIRBApprovalDate() {
+        return this.getComponent('LastIrbApprovalDate');
+    }
+
+    set LastIRBApprovalDate(value) {
         this.setComponentValue('LastIrbApprovalDate', value);
     }
 

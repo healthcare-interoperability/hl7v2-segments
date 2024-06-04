@@ -13,7 +13,7 @@ export class MRG extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PriorPatientIdInternal: { aliasOf: 'PriorPatientIdentifierList' },
+        PriorPatientIDInternal: { aliasOf: 'PriorPatientIdentifierList' },
         PriorAlternatePatientId: {
             defaultDataType: ST,
             dataTypes: [
@@ -25,6 +25,7 @@ export class MRG extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        PriorAlternatePatientID: { aliasOf: 'PriorAlternatePatientId' },
         PriorPatientAccountNumber: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -44,7 +45,8 @@ export class MRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PriorPatientIdExternal: { aliasOf: 'PriorPatientId' },
+        PriorPatientIDExternal: { aliasOf: 'PriorPatientId' },
+        PriorPatientID: { aliasOf: 'PriorPatientId' },
         PriorVisitNumber: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -61,6 +63,7 @@ export class MRG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PriorAlternateVisitID: { aliasOf: 'PriorAlternateVisitId' },
         PriorPatientName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -96,11 +99,11 @@ export class MRG extends Segment {
         this.setComponentValue('PriorPatientIdentifierList', value);
     }
 
-    get PriorPatientIdInternal() {
+    get PriorPatientIDInternal() {
         return this.getComponent('PriorPatientIdentifierList');
     }
 
-    set PriorPatientIdInternal(value) {
+    set PriorPatientIDInternal(value) {
         this.setComponentValue('PriorPatientIdentifierList', value);
     }
 
@@ -109,6 +112,14 @@ export class MRG extends Segment {
     }
 
     set PriorAlternatePatientId(value) {
+        this.setComponentValue('PriorAlternatePatientId', value);
+    }
+
+    get PriorAlternatePatientID() {
+        return this.getComponent('PriorAlternatePatientId');
+    }
+
+    set PriorAlternatePatientID(value) {
         this.setComponentValue('PriorAlternatePatientId', value);
     }
 
@@ -128,11 +139,19 @@ export class MRG extends Segment {
         this.setComponentValue('PriorPatientId', value);
     }
 
-    get PriorPatientIdExternal() {
+    get PriorPatientIDExternal() {
         return this.getComponent('PriorPatientId');
     }
 
-    set PriorPatientIdExternal(value) {
+    set PriorPatientIDExternal(value) {
+        this.setComponentValue('PriorPatientId', value);
+    }
+
+    get PriorPatientID() {
+        return this.getComponent('PriorPatientId');
+    }
+
+    set PriorPatientID(value) {
         this.setComponentValue('PriorPatientId', value);
     }
 
@@ -149,6 +168,14 @@ export class MRG extends Segment {
     }
 
     set PriorAlternateVisitId(value) {
+        this.setComponentValue('PriorAlternateVisitId', value);
+    }
+
+    get PriorAlternateVisitID() {
+        return this.getComponent('PriorAlternateVisitId');
+    }
+
+    set PriorAlternateVisitID(value) {
         this.setComponentValue('PriorAlternateVisitId', value);
     }
 

@@ -19,6 +19,7 @@ export class AIG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDAIG: { aliasOf: 'SetIdAig' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -38,6 +39,7 @@ export class AIG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ResourceID: { aliasOf: 'ResourceId' },
         ResourceType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -184,6 +186,14 @@ export class AIG extends Segment {
         this.setComponentValue('SetIdAig', value);
     }
 
+    get SetIDAIG() {
+        return this.getComponent('SetIdAig');
+    }
+
+    set SetIDAIG(value) {
+        this.setComponentValue('SetIdAig', value);
+    }
+
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -197,6 +207,14 @@ export class AIG extends Segment {
     }
 
     set ResourceId(value) {
+        this.setComponentValue('ResourceId', value);
+    }
+
+    get ResourceID() {
+        return this.getComponent('ResourceId');
+    }
+
+    set ResourceID(value) {
         this.setComponentValue('ResourceId', value);
     }
 

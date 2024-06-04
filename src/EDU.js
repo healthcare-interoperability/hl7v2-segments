@@ -18,6 +18,7 @@ export class EDU extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDEDU: { aliasOf: 'SetIdEdu' },
         AcademicDegree: {
             defaultDataType: CWE,
             dataTypes: [
@@ -114,6 +115,14 @@ export class EDU extends Segment {
     }
 
     set SetIdEdu(value) {
+        this.setComponentValue('SetIdEdu', value);
+    }
+
+    get SetIDEDU() {
+        return this.getComponent('SetIdEdu');
+    }
+
+    set SetIDEDU(value) {
         this.setComponentValue('SetIdEdu', value);
     }
 

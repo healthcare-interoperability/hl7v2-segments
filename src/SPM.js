@@ -22,6 +22,7 @@ export class SPM extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDSPM: { aliasOf: 'SetIdSpm' },
         SpecimenId: {
             defaultDataType: EIP,
             dataTypes: [{ dataType: EIP, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -30,6 +31,7 @@ export class SPM extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SpecimenID: { aliasOf: 'SpecimenId' },
         SpecimenParentIds: {
             defaultDataType: EIP,
             dataTypes: [{ dataType: EIP, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -328,11 +330,27 @@ export class SPM extends Segment {
         this.setComponentValue('SetIdSpm', value);
     }
 
+    get SetIDSPM() {
+        return this.getComponent('SetIdSpm');
+    }
+
+    set SetIDSPM(value) {
+        this.setComponentValue('SetIdSpm', value);
+    }
+
     get SpecimenId() {
         return this.getComponent('SpecimenId');
     }
 
     set SpecimenId(value) {
+        this.setComponentValue('SpecimenId', value);
+    }
+
+    get SpecimenID() {
+        return this.getComponent('SpecimenId');
+    }
+
+    set SpecimenID(value) {
         this.setComponentValue('SpecimenId', value);
     }
 

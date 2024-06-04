@@ -93,6 +93,7 @@ export class FHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        FileNameID: { aliasOf: 'FileNameId' },
         FileHeaderComment: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -109,6 +110,7 @@ export class FHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        FileControlID: { aliasOf: 'FileControlId' },
         ReferenceFileControlId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -117,6 +119,7 @@ export class FHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ReferenceFileControlID: { aliasOf: 'ReferenceFileControlId' },
         FileSendingNetworkAddress: {
             defaultDataType: HD,
             dataTypes: [{ dataType: HD, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
@@ -231,6 +234,14 @@ export class FHS extends Segment {
         this.setComponentValue('FileNameId', value);
     }
 
+    get FileNameID() {
+        return this.getComponent('FileNameId');
+    }
+
+    set FileNameID(value) {
+        this.setComponentValue('FileNameId', value);
+    }
+
     get FileHeaderComment() {
         return this.getComponent('FileHeaderComment');
     }
@@ -247,11 +258,27 @@ export class FHS extends Segment {
         this.setComponentValue('FileControlId', value);
     }
 
+    get FileControlID() {
+        return this.getComponent('FileControlId');
+    }
+
+    set FileControlID(value) {
+        this.setComponentValue('FileControlId', value);
+    }
+
     get ReferenceFileControlId() {
         return this.getComponent('ReferenceFileControlId');
     }
 
     set ReferenceFileControlId(value) {
+        this.setComponentValue('ReferenceFileControlId', value);
+    }
+
+    get ReferenceFileControlID() {
+        return this.getComponent('ReferenceFileControlId');
+    }
+
+    set ReferenceFileControlID(value) {
         this.setComponentValue('ReferenceFileControlId', value);
     }
 

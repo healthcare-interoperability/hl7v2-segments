@@ -26,6 +26,7 @@ export class NSC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        CurrentCPU: { aliasOf: 'CurrentCpu' },
         CurrentFileserver: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -64,6 +65,7 @@ export class NSC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        NewCPU: { aliasOf: 'NewCpu' },
         NewFileserver: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -128,6 +130,14 @@ export class NSC extends Segment {
         this.setComponentValue('CurrentCpu', value);
     }
 
+    get CurrentCPU() {
+        return this.getComponent('CurrentCpu');
+    }
+
+    set CurrentCPU(value) {
+        this.setComponentValue('CurrentCpu', value);
+    }
+
     get CurrentFileserver() {
         return this.getComponent('CurrentFileserver');
     }
@@ -157,6 +167,14 @@ export class NSC extends Segment {
     }
 
     set NewCpu(value) {
+        this.setComponentValue('NewCpu', value);
+    }
+
+    get NewCPU() {
+        return this.getComponent('NewCpu');
+    }
+
+    set NewCPU(value) {
         this.setComponentValue('NewCpu', value);
     }
 

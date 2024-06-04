@@ -26,7 +26,8 @@ export class PV1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdPatientVisit: { aliasOf: 'SetIdPv1' },
+        SetIDPatientVisit: { aliasOf: 'SetIdPv1' },
+        SetIDPv1: { aliasOf: 'SetIdPv1' },
         PatientClass: {
             defaultDataType: CWE,
             dataTypes: [
@@ -174,6 +175,7 @@ export class PV1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VIPIndicator: { aliasOf: 'VipIndicator' },
         AdmittingDoctor: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -499,6 +501,7 @@ export class PV1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AlternateVisitID: { aliasOf: 'AlternateVisitId' },
         VisitIndicator: {
             defaultDataType: CWE,
             dataTypes: [
@@ -611,11 +614,19 @@ export class PV1 extends Segment {
         this.setComponentValue('SetIdPv1', value);
     }
 
-    get SetIdPatientVisit() {
+    get SetIDPatientVisit() {
         return this.getComponent('SetIdPv1');
     }
 
-    set SetIdPatientVisit(value) {
+    set SetIDPatientVisit(value) {
+        this.setComponentValue('SetIdPv1', value);
+    }
+
+    get SetIDPv1() {
+        return this.getComponent('SetIdPv1');
+    }
+
+    set SetIDPv1(value) {
         this.setComponentValue('SetIdPv1', value);
     }
 
@@ -744,6 +755,14 @@ export class PV1 extends Segment {
     }
 
     set VipIndicator(value) {
+        this.setComponentValue('VipIndicator', value);
+    }
+
+    get VIPIndicator() {
+        return this.getComponent('VipIndicator');
+    }
+
+    set VIPIndicator(value) {
         this.setComponentValue('VipIndicator', value);
     }
 
@@ -1016,6 +1035,14 @@ export class PV1 extends Segment {
     }
 
     set AlternateVisitId(value) {
+        this.setComponentValue('AlternateVisitId', value);
+    }
+
+    get AlternateVisitID() {
+        return this.getComponent('AlternateVisitId');
+    }
+
+    set AlternateVisitID(value) {
         this.setComponentValue('AlternateVisitId', value);
     }
 

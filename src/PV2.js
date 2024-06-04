@@ -456,7 +456,7 @@ export class PV2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ExpectedLoaReturnDateTime: {
+        ExpectedLOAReturnDateTime: {
             defaultDataType: TS,
             dataTypes: [
                 { dataType: TS, versions: ['2.4', '2.5', '2.5.1'] },
@@ -467,6 +467,7 @@ export class PV2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ExpectedLoaReturnDateTime: { aliasOf: 'ExpectedLOAReturnDateTime' },
         ExpectedPreAdmissionTestingDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -547,7 +548,7 @@ export class PV2 extends Segment {
         'OrganDonorCode',
         'AdvanceDirectiveCode',
         'PatientStatusEffectiveDate',
-        'ExpectedLoaReturnDateTime',
+        'ExpectedLOAReturnDateTime',
         'ExpectedPreAdmissionTestingDateTime',
         'NotifyClergyCode',
         'AdvanceDirectiveLastVerifiedDate',
@@ -959,12 +960,20 @@ export class PV2 extends Segment {
         this.setComponentValue('PatientStatusEffectiveDate', value);
     }
 
+    get ExpectedLOAReturnDateTime() {
+        return this.getComponent('ExpectedLOAReturnDateTime');
+    }
+
+    set ExpectedLOAReturnDateTime(value) {
+        this.setComponentValue('ExpectedLOAReturnDateTime', value);
+    }
+
     get ExpectedLoaReturnDateTime() {
-        return this.getComponent('ExpectedLoaReturnDateTime');
+        return this.getComponent('ExpectedLOAReturnDateTime');
     }
 
     set ExpectedLoaReturnDateTime(value) {
-        this.setComponentValue('ExpectedLoaReturnDateTime', value);
+        this.setComponentValue('ExpectedLOAReturnDateTime', value);
     }
 
     get ExpectedPreAdmissionTestingDateTime() {

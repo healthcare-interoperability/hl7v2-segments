@@ -14,6 +14,7 @@ export class RXC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        RXComponentType: { aliasOf: 'RxComponentType' },
         ComponentCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -116,6 +117,14 @@ export class RXC extends Segment {
     }
 
     set RxComponentType(value) {
+        this.setComponentValue('RxComponentType', value);
+    }
+
+    get RXComponentType() {
+        return this.getComponent('RxComponentType');
+    }
+
+    set RXComponentType(value) {
         this.setComponentValue('RxComponentType', value);
     }
 

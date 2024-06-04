@@ -15,6 +15,7 @@ export class TQ2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDTq2: { aliasOf: 'SetIdTq2' },
         SequenceResultsFlag: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -114,6 +115,14 @@ export class TQ2 extends Segment {
     }
 
     set SetIdTq2(value) {
+        this.setComponentValue('SetIdTq2', value);
+    }
+
+    get SetIDTq2() {
+        return this.getComponent('SetIdTq2');
+    }
+
+    set SetIDTq2(value) {
         this.setComponentValue('SetIdTq2', value);
     }
 

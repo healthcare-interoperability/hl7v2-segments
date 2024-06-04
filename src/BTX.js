@@ -21,6 +21,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDBTX: { aliasOf: 'SetIdBtx' },
         BcDonationId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -29,6 +30,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BCDonationID: { aliasOf: 'BcDonationId' },
         BcComponent: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -37,6 +39,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BCComponent: { aliasOf: 'BcComponent' },
         BcBloodGroup: {
             defaultDataType: CNE,
             dataTypes: [{ dataType: CNE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -45,6 +48,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BCBloodGroup: { aliasOf: 'BcBloodGroup' },
         CpCommercialProduct: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -53,6 +57,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        CPCommercialProduct: { aliasOf: 'CpCommercialProduct' },
         CpManufacturer: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -61,6 +66,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        CPManufacturer: { aliasOf: 'CpManufacturer' },
         CpLotNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -69,6 +75,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        CPLotNumber: { aliasOf: 'CpLotNumber' },
         BpQuantity: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -77,6 +84,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPQuantity: { aliasOf: 'BpQuantity' },
         BpAmount: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -85,6 +93,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPAmount: { aliasOf: 'BpAmount' },
         BpUnits: {
             defaultDataType: CWE,
             dataTypes: [
@@ -96,6 +105,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPUnits: { aliasOf: 'BpUnits' },
         BpTransfusionDispositionStatus: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -104,6 +114,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPTransfusionDispositionStatus: { aliasOf: 'BpTransfusionDispositionStatus' },
         BpMessageStatus: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -112,6 +123,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPMessageStatus: { aliasOf: 'BpMessageStatus' },
         BpDateTimeOfStatus: {
             defaultDataType: TS,
             dataTypes: [
@@ -123,6 +135,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPDateTimeOfStatus: { aliasOf: 'BpDateTimeOfStatus' },
         BpTransfusionAdministrator: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -131,7 +144,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BpAdministrator: { aliasOf: 'BpTransfusionAdministrator' },
+        BPAdministrator: { aliasOf: 'BpTransfusionAdministrator' },
         BpTransfusionVerifier: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -140,7 +153,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BpVerifier: { aliasOf: 'BpTransfusionVerifier' },
+        BPVerifier: { aliasOf: 'BpTransfusionVerifier' },
         BpTransfusionStartDateTimeOfStatus: {
             defaultDataType: TS,
             dataTypes: [
@@ -152,6 +165,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPTransfusionStartDateTimeOfStatus: { aliasOf: 'BpTransfusionStartDateTimeOfStatus' },
         BpTransfusionEndDateTimeOfStatus: {
             defaultDataType: TS,
             dataTypes: [
@@ -163,6 +177,7 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BPTransfusionEndDateTimeOfStatus: { aliasOf: 'BpTransfusionEndDateTimeOfStatus' },
         BpAdverseReactionType: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -171,6 +186,7 @@ export class BTX extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        BPAdverseReactionType: { aliasOf: 'BpAdverseReactionType' },
         BpTransfusionInterruptedReason: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -179,7 +195,8 @@ export class BTX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        BpUniqueId: {
+        BPTransfusionInterruptedReason: { aliasOf: 'BpTransfusionInterruptedReason' },
+        BPUniqueID: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8'] }],
             position: 20,
@@ -210,7 +227,7 @@ export class BTX extends Segment {
         'BpTransfusionEndDateTimeOfStatus',
         'BpAdverseReactionType',
         'BpTransfusionInterruptedReason',
-        'BpUniqueId',
+        'BPUniqueID',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -227,11 +244,27 @@ export class BTX extends Segment {
         this.setComponentValue('SetIdBtx', value);
     }
 
+    get SetIDBTX() {
+        return this.getComponent('SetIdBtx');
+    }
+
+    set SetIDBTX(value) {
+        this.setComponentValue('SetIdBtx', value);
+    }
+
     get BcDonationId() {
         return this.getComponent('BcDonationId');
     }
 
     set BcDonationId(value) {
+        this.setComponentValue('BcDonationId', value);
+    }
+
+    get BCDonationID() {
+        return this.getComponent('BcDonationId');
+    }
+
+    set BCDonationID(value) {
         this.setComponentValue('BcDonationId', value);
     }
 
@@ -243,11 +276,27 @@ export class BTX extends Segment {
         this.setComponentValue('BcComponent', value);
     }
 
+    get BCComponent() {
+        return this.getComponent('BcComponent');
+    }
+
+    set BCComponent(value) {
+        this.setComponentValue('BcComponent', value);
+    }
+
     get BcBloodGroup() {
         return this.getComponent('BcBloodGroup');
     }
 
     set BcBloodGroup(value) {
+        this.setComponentValue('BcBloodGroup', value);
+    }
+
+    get BCBloodGroup() {
+        return this.getComponent('BcBloodGroup');
+    }
+
+    set BCBloodGroup(value) {
         this.setComponentValue('BcBloodGroup', value);
     }
 
@@ -259,11 +308,27 @@ export class BTX extends Segment {
         this.setComponentValue('CpCommercialProduct', value);
     }
 
+    get CPCommercialProduct() {
+        return this.getComponent('CpCommercialProduct');
+    }
+
+    set CPCommercialProduct(value) {
+        this.setComponentValue('CpCommercialProduct', value);
+    }
+
     get CpManufacturer() {
         return this.getComponent('CpManufacturer');
     }
 
     set CpManufacturer(value) {
+        this.setComponentValue('CpManufacturer', value);
+    }
+
+    get CPManufacturer() {
+        return this.getComponent('CpManufacturer');
+    }
+
+    set CPManufacturer(value) {
         this.setComponentValue('CpManufacturer', value);
     }
 
@@ -275,11 +340,27 @@ export class BTX extends Segment {
         this.setComponentValue('CpLotNumber', value);
     }
 
+    get CPLotNumber() {
+        return this.getComponent('CpLotNumber');
+    }
+
+    set CPLotNumber(value) {
+        this.setComponentValue('CpLotNumber', value);
+    }
+
     get BpQuantity() {
         return this.getComponent('BpQuantity');
     }
 
     set BpQuantity(value) {
+        this.setComponentValue('BpQuantity', value);
+    }
+
+    get BPQuantity() {
+        return this.getComponent('BpQuantity');
+    }
+
+    set BPQuantity(value) {
         this.setComponentValue('BpQuantity', value);
     }
 
@@ -291,11 +372,27 @@ export class BTX extends Segment {
         this.setComponentValue('BpAmount', value);
     }
 
+    get BPAmount() {
+        return this.getComponent('BpAmount');
+    }
+
+    set BPAmount(value) {
+        this.setComponentValue('BpAmount', value);
+    }
+
     get BpUnits() {
         return this.getComponent('BpUnits');
     }
 
     set BpUnits(value) {
+        this.setComponentValue('BpUnits', value);
+    }
+
+    get BPUnits() {
+        return this.getComponent('BpUnits');
+    }
+
+    set BPUnits(value) {
         this.setComponentValue('BpUnits', value);
     }
 
@@ -307,11 +404,27 @@ export class BTX extends Segment {
         this.setComponentValue('BpTransfusionDispositionStatus', value);
     }
 
+    get BPTransfusionDispositionStatus() {
+        return this.getComponent('BpTransfusionDispositionStatus');
+    }
+
+    set BPTransfusionDispositionStatus(value) {
+        this.setComponentValue('BpTransfusionDispositionStatus', value);
+    }
+
     get BpMessageStatus() {
         return this.getComponent('BpMessageStatus');
     }
 
     set BpMessageStatus(value) {
+        this.setComponentValue('BpMessageStatus', value);
+    }
+
+    get BPMessageStatus() {
+        return this.getComponent('BpMessageStatus');
+    }
+
+    set BPMessageStatus(value) {
         this.setComponentValue('BpMessageStatus', value);
     }
 
@@ -323,6 +436,14 @@ export class BTX extends Segment {
         this.setComponentValue('BpDateTimeOfStatus', value);
     }
 
+    get BPDateTimeOfStatus() {
+        return this.getComponent('BpDateTimeOfStatus');
+    }
+
+    set BPDateTimeOfStatus(value) {
+        this.setComponentValue('BpDateTimeOfStatus', value);
+    }
+
     get BpTransfusionAdministrator() {
         return this.getComponent('BpTransfusionAdministrator');
     }
@@ -331,11 +452,11 @@ export class BTX extends Segment {
         this.setComponentValue('BpTransfusionAdministrator', value);
     }
 
-    get BpAdministrator() {
+    get BPAdministrator() {
         return this.getComponent('BpTransfusionAdministrator');
     }
 
-    set BpAdministrator(value) {
+    set BPAdministrator(value) {
         this.setComponentValue('BpTransfusionAdministrator', value);
     }
 
@@ -347,11 +468,11 @@ export class BTX extends Segment {
         this.setComponentValue('BpTransfusionVerifier', value);
     }
 
-    get BpVerifier() {
+    get BPVerifier() {
         return this.getComponent('BpTransfusionVerifier');
     }
 
-    set BpVerifier(value) {
+    set BPVerifier(value) {
         this.setComponentValue('BpTransfusionVerifier', value);
     }
 
@@ -363,11 +484,27 @@ export class BTX extends Segment {
         this.setComponentValue('BpTransfusionStartDateTimeOfStatus', value);
     }
 
+    get BPTransfusionStartDateTimeOfStatus() {
+        return this.getComponent('BpTransfusionStartDateTimeOfStatus');
+    }
+
+    set BPTransfusionStartDateTimeOfStatus(value) {
+        this.setComponentValue('BpTransfusionStartDateTimeOfStatus', value);
+    }
+
     get BpTransfusionEndDateTimeOfStatus() {
         return this.getComponent('BpTransfusionEndDateTimeOfStatus');
     }
 
     set BpTransfusionEndDateTimeOfStatus(value) {
+        this.setComponentValue('BpTransfusionEndDateTimeOfStatus', value);
+    }
+
+    get BPTransfusionEndDateTimeOfStatus() {
+        return this.getComponent('BpTransfusionEndDateTimeOfStatus');
+    }
+
+    set BPTransfusionEndDateTimeOfStatus(value) {
         this.setComponentValue('BpTransfusionEndDateTimeOfStatus', value);
     }
 
@@ -379,6 +516,14 @@ export class BTX extends Segment {
         this.setComponentValue('BpAdverseReactionType', value);
     }
 
+    get BPAdverseReactionType() {
+        return this.getComponent('BpAdverseReactionType');
+    }
+
+    set BPAdverseReactionType(value) {
+        this.setComponentValue('BpAdverseReactionType', value);
+    }
+
     get BpTransfusionInterruptedReason() {
         return this.getComponent('BpTransfusionInterruptedReason');
     }
@@ -387,11 +532,19 @@ export class BTX extends Segment {
         this.setComponentValue('BpTransfusionInterruptedReason', value);
     }
 
-    get BpUniqueId() {
-        return this.getComponent('BpUniqueId');
+    get BPTransfusionInterruptedReason() {
+        return this.getComponent('BpTransfusionInterruptedReason');
     }
 
-    set BpUniqueId(value) {
-        this.setComponentValue('BpUniqueId', value);
+    set BPTransfusionInterruptedReason(value) {
+        this.setComponentValue('BpTransfusionInterruptedReason', value);
+    }
+
+    get BPUniqueID() {
+        return this.getComponent('BPUniqueID');
+    }
+
+    set BPUniqueID(value) {
+        this.setComponentValue('BPUniqueID', value);
     }
 }

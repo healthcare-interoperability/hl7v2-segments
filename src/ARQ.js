@@ -22,6 +22,7 @@ export class ARQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PlacerAppointmentID: { aliasOf: 'PlacerAppointmentId' },
         FillerAppointmentId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -30,6 +31,7 @@ export class ARQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        FillerAppointmentID: { aliasOf: 'FillerAppointmentId' },
         OccurrenceNumber: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -57,6 +59,7 @@ export class ARQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ScheduleID: { aliasOf: 'ScheduleId' },
         RequestEventReason: {
             defaultDataType: CWE,
             dataTypes: [
@@ -126,6 +129,7 @@ export class ARQ extends Segment {
             minOccurence: 1,
         },
         Priority: { aliasOf: 'PriorityArq' },
+        PriorityARQ: { aliasOf: 'PriorityArq' },
         RepeatingInterval: {
             defaultDataType: RI,
             dataTypes: [{ dataType: RI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -206,6 +210,7 @@ export class ARQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ParentPlacerAppointmentID: { aliasOf: 'ParentPlacerAppointmentId' },
         ParentFillerAppointmentId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -214,6 +219,7 @@ export class ARQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ParentFillerAppointmentID: { aliasOf: 'ParentFillerAppointmentId' },
         PlacerOrderNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -275,11 +281,27 @@ export class ARQ extends Segment {
         this.setComponentValue('PlacerAppointmentId', value);
     }
 
+    get PlacerAppointmentID() {
+        return this.getComponent('PlacerAppointmentId');
+    }
+
+    set PlacerAppointmentID(value) {
+        this.setComponentValue('PlacerAppointmentId', value);
+    }
+
     get FillerAppointmentId() {
         return this.getComponent('FillerAppointmentId');
     }
 
     set FillerAppointmentId(value) {
+        this.setComponentValue('FillerAppointmentId', value);
+    }
+
+    get FillerAppointmentID() {
+        return this.getComponent('FillerAppointmentId');
+    }
+
+    set FillerAppointmentID(value) {
         this.setComponentValue('FillerAppointmentId', value);
     }
 
@@ -304,6 +326,14 @@ export class ARQ extends Segment {
     }
 
     set ScheduleId(value) {
+        this.setComponentValue('ScheduleId', value);
+    }
+
+    get ScheduleID() {
+        return this.getComponent('ScheduleId');
+    }
+
+    set ScheduleID(value) {
         this.setComponentValue('ScheduleId', value);
     }
 
@@ -368,6 +398,14 @@ export class ARQ extends Segment {
     }
 
     set Priority(value) {
+        this.setComponentValue('PriorityArq', value);
+    }
+
+    get PriorityARQ() {
+        return this.getComponent('PriorityArq');
+    }
+
+    set PriorityARQ(value) {
         this.setComponentValue('PriorityArq', value);
     }
 
@@ -451,11 +489,27 @@ export class ARQ extends Segment {
         this.setComponentValue('ParentPlacerAppointmentId', value);
     }
 
+    get ParentPlacerAppointmentID() {
+        return this.getComponent('ParentPlacerAppointmentId');
+    }
+
+    set ParentPlacerAppointmentID(value) {
+        this.setComponentValue('ParentPlacerAppointmentId', value);
+    }
+
     get ParentFillerAppointmentId() {
         return this.getComponent('ParentFillerAppointmentId');
     }
 
     set ParentFillerAppointmentId(value) {
+        this.setComponentValue('ParentFillerAppointmentId', value);
+    }
+
+    get ParentFillerAppointmentID() {
+        return this.getComponent('ParentFillerAppointmentId');
+    }
+
+    set ParentFillerAppointmentID(value) {
         this.setComponentValue('ParentFillerAppointmentId', value);
     }
 

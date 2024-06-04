@@ -22,7 +22,7 @@ export class VTQ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VtQueryName: {
+        VTQueryName: {
             defaultDataType: CE,
             dataTypes: [{ dataType: CE, versions: ['2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6'] }],
             position: 3,
@@ -48,7 +48,7 @@ export class VTQ extends Segment {
         },
     };
 
-    static componentsByIndex = ['', 'QueryTag', 'QueryResponseFormatCode', 'VtQueryName', 'VirtualTableName', 'SelectionCriteria'];
+    static componentsByIndex = ['', 'QueryTag', 'QueryResponseFormatCode', 'VTQueryName', 'VirtualTableName', 'SelectionCriteria'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -72,12 +72,12 @@ export class VTQ extends Segment {
         this.setComponentValue('QueryResponseFormatCode', value);
     }
 
-    get VtQueryName() {
-        return this.getComponent('VtQueryName');
+    get VTQueryName() {
+        return this.getComponent('VTQueryName');
     }
 
-    set VtQueryName(value) {
-        this.setComponentValue('VtQueryName', value);
+    set VTQueryName(value) {
+        this.setComponentValue('VTQueryName', value);
     }
 
     get VirtualTableName() {

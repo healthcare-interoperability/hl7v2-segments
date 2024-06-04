@@ -71,6 +71,7 @@ export class ADJ extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AdjustmentReasonPA: { aliasOf: 'AdjustmentReasonPa' },
         AdjustmentDescription: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -218,6 +219,14 @@ export class ADJ extends Segment {
     }
 
     set AdjustmentReasonPa(value) {
+        this.setComponentValue('AdjustmentReasonPa', value);
+    }
+
+    get AdjustmentReasonPA() {
+        return this.getComponent('AdjustmentReasonPa');
+    }
+
+    set AdjustmentReasonPA(value) {
         this.setComponentValue('AdjustmentReasonPa', value);
     }
 

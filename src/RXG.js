@@ -22,6 +22,7 @@ export class RXG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        GiveSubIDCounter: { aliasOf: 'GiveSubIdCounter' },
         DispenseSubIdCounter: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -30,6 +31,7 @@ export class RXG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DispenseSubIDCounter: { aliasOf: 'DispenseSubIdCounter' },
         QuantityTiming: {
             defaultDataType: ST,
             dataTypes: [
@@ -369,11 +371,27 @@ export class RXG extends Segment {
         this.setComponentValue('GiveSubIdCounter', value);
     }
 
+    get GiveSubIDCounter() {
+        return this.getComponent('GiveSubIdCounter');
+    }
+
+    set GiveSubIDCounter(value) {
+        this.setComponentValue('GiveSubIdCounter', value);
+    }
+
     get DispenseSubIdCounter() {
         return this.getComponent('DispenseSubIdCounter');
     }
 
     set DispenseSubIdCounter(value) {
+        this.setComponentValue('DispenseSubIdCounter', value);
+    }
+
+    get DispenseSubIDCounter() {
+        return this.getComponent('DispenseSubIdCounter');
+    }
+
+    set DispenseSubIDCounter(value) {
         this.setComponentValue('DispenseSubIdCounter', value);
     }
 

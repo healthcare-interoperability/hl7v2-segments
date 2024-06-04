@@ -16,6 +16,7 @@ export class LCH extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLch' },
+        PrimaryKeyValueLCH: { aliasOf: 'PrimaryKeyValueLch' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -43,6 +44,7 @@ export class LCH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        LocationCharacteristicID: { aliasOf: 'LocationCharacteristicId' },
         LocationCharacteristicValueLch: {
             defaultDataType: CWE,
             dataTypes: [
@@ -55,6 +57,7 @@ export class LCH extends Segment {
             minOccurence: 1,
         },
         LocationCharacteristicValue: { aliasOf: 'LocationCharacteristicValueLch' },
+        LocationCharacteristicValueLCH: { aliasOf: 'LocationCharacteristicValueLch' },
     };
 
     static componentsByIndex = ['', 'PrimaryKeyValueLch', 'SegmentActionCode', 'SegmentUniqueKey', 'LocationCharacteristicId', 'LocationCharacteristicValueLch'];
@@ -78,6 +81,14 @@ export class LCH extends Segment {
     }
 
     set PrimaryKeyValue(value) {
+        this.setComponentValue('PrimaryKeyValueLch', value);
+    }
+
+    get PrimaryKeyValueLCH() {
+        return this.getComponent('PrimaryKeyValueLch');
+    }
+
+    set PrimaryKeyValueLCH(value) {
         this.setComponentValue('PrimaryKeyValueLch', value);
     }
 
@@ -105,6 +116,14 @@ export class LCH extends Segment {
         this.setComponentValue('LocationCharacteristicId', value);
     }
 
+    get LocationCharacteristicID() {
+        return this.getComponent('LocationCharacteristicId');
+    }
+
+    set LocationCharacteristicID(value) {
+        this.setComponentValue('LocationCharacteristicId', value);
+    }
+
     get LocationCharacteristicValueLch() {
         return this.getComponent('LocationCharacteristicValueLch');
     }
@@ -118,6 +137,14 @@ export class LCH extends Segment {
     }
 
     set LocationCharacteristicValue(value) {
+        this.setComponentValue('LocationCharacteristicValueLch', value);
+    }
+
+    get LocationCharacteristicValueLCH() {
+        return this.getComponent('LocationCharacteristicValueLch');
+    }
+
+    set LocationCharacteristicValueLCH(value) {
         this.setComponentValue('LocationCharacteristicValueLch', value);
     }
 }

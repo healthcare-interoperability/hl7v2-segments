@@ -23,7 +23,8 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdDiagnosis: { aliasOf: 'SetIdDg1' },
+        SetIDDiagnosis: { aliasOf: 'SetIdDg1' },
+        SetIDDg1: { aliasOf: 'SetIdDg1' },
         DiagnosisCodingMethod: {
             defaultDataType: ST,
             dataTypes: [
@@ -112,6 +113,7 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DRGApprovalIndicator: { aliasOf: 'DrgApprovalIndicator' },
         DrgGrouperReviewCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -124,6 +126,7 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DRGGrouperReviewCode: { aliasOf: 'DrgGrouperReviewCode' },
         OutlierType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -239,7 +242,7 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgCclValueCode: {
+        DRGCCLValueCode: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
             position: 23,
@@ -247,7 +250,8 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgGroupingUsage: {
+        DrgCclValueCode: { aliasOf: 'DRGCCLValueCode' },
+        DRGGroupingUsage: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
             position: 24,
@@ -255,7 +259,8 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgDiagnosisDeterminationStatus: {
+        DrgGroupingUsage: { aliasOf: 'DRGGroupingUsage' },
+        DRGDiagnosisDeterminationStatus: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.6'] },
@@ -266,7 +271,8 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PresentOnAdmissionPoaIndicator: {
+        DrgDiagnosisDeterminationStatus: { aliasOf: 'DRGDiagnosisDeterminationStatus' },
+        PresentOnAdmissionPOAIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.6'] },
@@ -277,6 +283,7 @@ export class DG1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PresentOnAdmissionPoaIndicator: { aliasOf: 'PresentOnAdmissionPOAIndicator' },
     };
 
     static componentsByIndex = [
@@ -303,10 +310,10 @@ export class DG1 extends Segment {
         'DiagnosisIdentifier',
         'DiagnosisActionCode',
         'ParentDiagnosis',
-        'DrgCclValueCode',
-        'DrgGroupingUsage',
-        'DrgDiagnosisDeterminationStatus',
-        'PresentOnAdmissionPoaIndicator',
+        'DRGCCLValueCode',
+        'DRGGroupingUsage',
+        'DRGDiagnosisDeterminationStatus',
+        'PresentOnAdmissionPOAIndicator',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -323,11 +330,19 @@ export class DG1 extends Segment {
         this.setComponentValue('SetIdDg1', value);
     }
 
-    get SetIdDiagnosis() {
+    get SetIDDiagnosis() {
         return this.getComponent('SetIdDg1');
     }
 
-    set SetIdDiagnosis(value) {
+    set SetIDDiagnosis(value) {
+        this.setComponentValue('SetIdDg1', value);
+    }
+
+    get SetIDDg1() {
+        return this.getComponent('SetIdDg1');
+    }
+
+    set SetIDDg1(value) {
         this.setComponentValue('SetIdDg1', value);
     }
 
@@ -403,11 +418,27 @@ export class DG1 extends Segment {
         this.setComponentValue('DrgApprovalIndicator', value);
     }
 
+    get DRGApprovalIndicator() {
+        return this.getComponent('DrgApprovalIndicator');
+    }
+
+    set DRGApprovalIndicator(value) {
+        this.setComponentValue('DrgApprovalIndicator', value);
+    }
+
     get DrgGrouperReviewCode() {
         return this.getComponent('DrgGrouperReviewCode');
     }
 
     set DrgGrouperReviewCode(value) {
+        this.setComponentValue('DrgGrouperReviewCode', value);
+    }
+
+    get DRGGrouperReviewCode() {
+        return this.getComponent('DrgGrouperReviewCode');
+    }
+
+    set DRGGrouperReviewCode(value) {
         this.setComponentValue('DrgGrouperReviewCode', value);
     }
 
@@ -507,35 +538,67 @@ export class DG1 extends Segment {
         this.setComponentValue('ParentDiagnosis', value);
     }
 
+    get DRGCCLValueCode() {
+        return this.getComponent('DRGCCLValueCode');
+    }
+
+    set DRGCCLValueCode(value) {
+        this.setComponentValue('DRGCCLValueCode', value);
+    }
+
     get DrgCclValueCode() {
-        return this.getComponent('DrgCclValueCode');
+        return this.getComponent('DRGCCLValueCode');
     }
 
     set DrgCclValueCode(value) {
-        this.setComponentValue('DrgCclValueCode', value);
+        this.setComponentValue('DRGCCLValueCode', value);
+    }
+
+    get DRGGroupingUsage() {
+        return this.getComponent('DRGGroupingUsage');
+    }
+
+    set DRGGroupingUsage(value) {
+        this.setComponentValue('DRGGroupingUsage', value);
     }
 
     get DrgGroupingUsage() {
-        return this.getComponent('DrgGroupingUsage');
+        return this.getComponent('DRGGroupingUsage');
     }
 
     set DrgGroupingUsage(value) {
-        this.setComponentValue('DrgGroupingUsage', value);
+        this.setComponentValue('DRGGroupingUsage', value);
+    }
+
+    get DRGDiagnosisDeterminationStatus() {
+        return this.getComponent('DRGDiagnosisDeterminationStatus');
+    }
+
+    set DRGDiagnosisDeterminationStatus(value) {
+        this.setComponentValue('DRGDiagnosisDeterminationStatus', value);
     }
 
     get DrgDiagnosisDeterminationStatus() {
-        return this.getComponent('DrgDiagnosisDeterminationStatus');
+        return this.getComponent('DRGDiagnosisDeterminationStatus');
     }
 
     set DrgDiagnosisDeterminationStatus(value) {
-        this.setComponentValue('DrgDiagnosisDeterminationStatus', value);
+        this.setComponentValue('DRGDiagnosisDeterminationStatus', value);
+    }
+
+    get PresentOnAdmissionPOAIndicator() {
+        return this.getComponent('PresentOnAdmissionPOAIndicator');
+    }
+
+    set PresentOnAdmissionPOAIndicator(value) {
+        this.setComponentValue('PresentOnAdmissionPOAIndicator', value);
     }
 
     get PresentOnAdmissionPoaIndicator() {
-        return this.getComponent('PresentOnAdmissionPoaIndicator');
+        return this.getComponent('PresentOnAdmissionPOAIndicator');
     }
 
     set PresentOnAdmissionPoaIndicator(value) {
-        this.setComponentValue('PresentOnAdmissionPoaIndicator', value);
+        this.setComponentValue('PresentOnAdmissionPOAIndicator', value);
     }
 }

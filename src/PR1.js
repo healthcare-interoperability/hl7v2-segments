@@ -23,7 +23,8 @@ export class PR1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdProcedure: { aliasOf: 'SetIdPr1' },
+        SetIDProcedure: { aliasOf: 'SetIdPr1' },
+        SetIDPr1: { aliasOf: 'SetIdPr1' },
         ProcedureCodingMethod: {
             defaultDataType: ST,
             dataTypes: [
@@ -181,7 +182,7 @@ export class PR1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ProcedureDrgType: {
+        ProcedureDRGType: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.4', '2.5', '2.5.1', '2.6'] },
@@ -192,6 +193,7 @@ export class PR1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ProcedureDrgType: { aliasOf: 'ProcedureDRGType' },
         TissueTypeCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -219,7 +221,7 @@ export class PR1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgProcedureDeterminationStatus: {
+        DRGProcedureDeterminationStatus: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.6'] },
@@ -230,7 +232,8 @@ export class PR1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DrgProcedureRelevance: {
+        DrgProcedureDeterminationStatus: { aliasOf: 'DRGProcedureDeterminationStatus' },
+        DRGProcedureRelevance: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.6'] },
@@ -241,6 +244,7 @@ export class PR1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DrgProcedureRelevance: { aliasOf: 'DRGProcedureRelevance' },
         TreatingOrganizationalUnit: {
             defaultDataType: PL,
             dataTypes: [{ dataType: PL, versions: ['2.7', '2.7.1', '2.8'] }],
@@ -285,12 +289,12 @@ export class PR1 extends Segment {
         'ProcedurePriority',
         'AssociatedDiagnosisCode',
         'ProcedureCodeModifier',
-        'ProcedureDrgType',
+        'ProcedureDRGType',
         'TissueTypeCode',
         'ProcedureIdentifier',
         'ProcedureActionCode',
-        'DrgProcedureDeterminationStatus',
-        'DrgProcedureRelevance',
+        'DRGProcedureDeterminationStatus',
+        'DRGProcedureRelevance',
         'TreatingOrganizationalUnit',
         'RespiratoryWithinSurgery',
         'ParentProcedureId',
@@ -310,11 +314,19 @@ export class PR1 extends Segment {
         this.setComponentValue('SetIdPr1', value);
     }
 
-    get SetIdProcedure() {
+    get SetIDProcedure() {
         return this.getComponent('SetIdPr1');
     }
 
-    set SetIdProcedure(value) {
+    set SetIDProcedure(value) {
+        this.setComponentValue('SetIdPr1', value);
+    }
+
+    get SetIDPr1() {
+        return this.getComponent('SetIdPr1');
+    }
+
+    set SetIDPr1(value) {
         this.setComponentValue('SetIdPr1', value);
     }
 
@@ -446,12 +458,20 @@ export class PR1 extends Segment {
         this.setComponentValue('ProcedureCodeModifier', value);
     }
 
+    get ProcedureDRGType() {
+        return this.getComponent('ProcedureDRGType');
+    }
+
+    set ProcedureDRGType(value) {
+        this.setComponentValue('ProcedureDRGType', value);
+    }
+
     get ProcedureDrgType() {
-        return this.getComponent('ProcedureDrgType');
+        return this.getComponent('ProcedureDRGType');
     }
 
     set ProcedureDrgType(value) {
-        this.setComponentValue('ProcedureDrgType', value);
+        this.setComponentValue('ProcedureDRGType', value);
     }
 
     get TissueTypeCode() {
@@ -478,20 +498,36 @@ export class PR1 extends Segment {
         this.setComponentValue('ProcedureActionCode', value);
     }
 
+    get DRGProcedureDeterminationStatus() {
+        return this.getComponent('DRGProcedureDeterminationStatus');
+    }
+
+    set DRGProcedureDeterminationStatus(value) {
+        this.setComponentValue('DRGProcedureDeterminationStatus', value);
+    }
+
     get DrgProcedureDeterminationStatus() {
-        return this.getComponent('DrgProcedureDeterminationStatus');
+        return this.getComponent('DRGProcedureDeterminationStatus');
     }
 
     set DrgProcedureDeterminationStatus(value) {
-        this.setComponentValue('DrgProcedureDeterminationStatus', value);
+        this.setComponentValue('DRGProcedureDeterminationStatus', value);
+    }
+
+    get DRGProcedureRelevance() {
+        return this.getComponent('DRGProcedureRelevance');
+    }
+
+    set DRGProcedureRelevance(value) {
+        this.setComponentValue('DRGProcedureRelevance', value);
     }
 
     get DrgProcedureRelevance() {
-        return this.getComponent('DrgProcedureRelevance');
+        return this.getComponent('DRGProcedureRelevance');
     }
 
     set DrgProcedureRelevance(value) {
-        this.setComponentValue('DrgProcedureRelevance', value);
+        this.setComponentValue('DRGProcedureRelevance', value);
     }
 
     get TreatingOrganizationalUnit() {

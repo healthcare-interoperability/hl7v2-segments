@@ -146,7 +146,7 @@ export class OM4 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PreferredSpecimenAttribtureSequenceId: {
+        PreferredSpecimenAttribtureSequenceID: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8'] }],
             position: 17,
@@ -182,7 +182,7 @@ export class OM4 extends Segment {
         'SpecimenRetentionTime',
         'SpecimenHandlingCode',
         'SpecimenPreference',
-        'PreferredSpecimenAttribtureSequenceId',
+        'PreferredSpecimenAttribtureSequenceID',
         'TaxonomicClassificationCode',
     ];
 
@@ -328,12 +328,12 @@ export class OM4 extends Segment {
         this.setComponentValue('SpecimenPreference', value);
     }
 
-    get PreferredSpecimenAttribtureSequenceId() {
-        return this.getComponent('PreferredSpecimenAttribtureSequenceId');
+    get PreferredSpecimenAttribtureSequenceID() {
+        return this.getComponent('PreferredSpecimenAttribtureSequenceID');
     }
 
-    set PreferredSpecimenAttribtureSequenceId(value) {
-        this.setComponentValue('PreferredSpecimenAttribtureSequenceId', value);
+    set PreferredSpecimenAttribtureSequenceID(value) {
+        this.setComponentValue('PreferredSpecimenAttribtureSequenceID', value);
     }
 
     get TaxonomicClassificationCode() {

@@ -17,6 +17,7 @@ export class LRL extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLrl' },
+        PrimaryKeyValueLRL: { aliasOf: 'PrimaryKeyValueLrl' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -44,6 +45,7 @@ export class LRL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        LocationRelationshipID: { aliasOf: 'LocationRelationshipId' },
         OrganizationalLocationRelationshipValue: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -94,6 +96,14 @@ export class LRL extends Segment {
         this.setComponentValue('PrimaryKeyValueLrl', value);
     }
 
+    get PrimaryKeyValueLRL() {
+        return this.getComponent('PrimaryKeyValueLrl');
+    }
+
+    set PrimaryKeyValueLRL(value) {
+        this.setComponentValue('PrimaryKeyValueLrl', value);
+    }
+
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -115,6 +125,14 @@ export class LRL extends Segment {
     }
 
     set LocationRelationshipId(value) {
+        this.setComponentValue('LocationRelationshipId', value);
+    }
+
+    get LocationRelationshipID() {
+        return this.getComponent('LocationRelationshipId');
+    }
+
+    set LocationRelationshipID(value) {
         this.setComponentValue('LocationRelationshipId', value);
     }
 

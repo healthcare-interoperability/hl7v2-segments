@@ -13,6 +13,7 @@ export class LAN extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDLAN: { aliasOf: 'SetIdLan' },
         LanguageCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -61,6 +62,14 @@ export class LAN extends Segment {
     }
 
     set SetIdLan(value) {
+        this.setComponentValue('SetIdLan', value);
+    }
+
+    get SetIDLAN() {
+        return this.getComponent('SetIdLan');
+    }
+
+    set SetIDLAN(value) {
         this.setComponentValue('SetIdLan', value);
     }
 

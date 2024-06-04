@@ -25,7 +25,8 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdNextOfKin: { aliasOf: 'SetIdNk1' },
+        SetIDNextOfKin: { aliasOf: 'SetIdNk1' },
+        SetIDNk1: { aliasOf: 'SetIdNk1' },
         Name: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -34,7 +35,7 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        NkName: { aliasOf: 'Name' },
+        NKName: { aliasOf: 'Name' },
         Relationship: {
             defaultDataType: CWE,
             dataTypes: [
@@ -392,7 +393,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VipIndicator: {
+        VIPIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.5', '2.5.1', '2.6'] },
@@ -403,6 +404,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VipIndicator: { aliasOf: 'VIPIndicator' },
         NextOfKinTelecommunicationInformation: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.7', '2.7.1', '2.8'] }],
@@ -461,7 +463,7 @@ export class NK1 extends Segment {
         'Handicap',
         'ContactPersonSocialSecurityNumber',
         'NextOfKinBirthPlace',
-        'VipIndicator',
+        'VIPIndicator',
         'NextOfKinTelecommunicationInformation',
         'ContactPersonSTelecommunicationInformation',
     ];
@@ -480,11 +482,19 @@ export class NK1 extends Segment {
         this.setComponentValue('SetIdNk1', value);
     }
 
-    get SetIdNextOfKin() {
+    get SetIDNextOfKin() {
         return this.getComponent('SetIdNk1');
     }
 
-    set SetIdNextOfKin(value) {
+    set SetIDNextOfKin(value) {
+        this.setComponentValue('SetIdNk1', value);
+    }
+
+    get SetIDNk1() {
+        return this.getComponent('SetIdNk1');
+    }
+
+    set SetIDNk1(value) {
         this.setComponentValue('SetIdNk1', value);
     }
 
@@ -496,11 +506,11 @@ export class NK1 extends Segment {
         this.setComponentValue('Name', value);
     }
 
-    get NkName() {
+    get NKName() {
         return this.getComponent('Name');
     }
 
-    set NkName(value) {
+    set NKName(value) {
         this.setComponentValue('Name', value);
     }
 
@@ -848,12 +858,20 @@ export class NK1 extends Segment {
         this.setComponentValue('NextOfKinBirthPlace', value);
     }
 
+    get VIPIndicator() {
+        return this.getComponent('VIPIndicator');
+    }
+
+    set VIPIndicator(value) {
+        this.setComponentValue('VIPIndicator', value);
+    }
+
     get VipIndicator() {
-        return this.getComponent('VipIndicator');
+        return this.getComponent('VIPIndicator');
     }
 
     set VipIndicator(value) {
-        this.setComponentValue('VipIndicator', value);
+        this.setComponentValue('VIPIndicator', value);
     }
 
     get NextOfKinTelecommunicationInformation() {

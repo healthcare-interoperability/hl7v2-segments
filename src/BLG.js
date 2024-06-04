@@ -38,6 +38,7 @@ export class BLG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AccountID: { aliasOf: 'AccountId' },
         ChargeTypeReason: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -77,6 +78,14 @@ export class BLG extends Segment {
     }
 
     set AccountId(value) {
+        this.setComponentValue('AccountId', value);
+    }
+
+    get AccountID() {
+        return this.getComponent('AccountId');
+    }
+
+    set AccountID(value) {
         this.setComponentValue('AccountId', value);
     }
 

@@ -107,6 +107,7 @@ export class RQD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DeliverToID: { aliasOf: 'DeliverToId' },
         DateNeeded: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -222,6 +223,14 @@ export class RQD extends Segment {
     }
 
     set DeliverToId(value) {
+        this.setComponentValue('DeliverToId', value);
+    }
+
+    get DeliverToID() {
+        return this.getComponent('DeliverToId');
+    }
+
+    set DeliverToID(value) {
         this.setComponentValue('DeliverToId', value);
     }
 

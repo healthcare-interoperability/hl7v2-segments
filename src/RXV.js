@@ -7,7 +7,7 @@ import { CQ } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class RXV extends Segment {
     static components = {
-        SetIdRxv: {
+        SetIDRXV: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.8'] }],
             position: 1,
@@ -55,7 +55,7 @@ export class RXV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcaType: {
+        PCAType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8'] }],
             position: 7,
@@ -63,7 +63,7 @@ export class RXV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcaDoseAmount: {
+        PCADoseAmount: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8'] }],
             position: 8,
@@ -71,7 +71,7 @@ export class RXV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcaDoseAmountUnits: {
+        PCADoseAmountUnits: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8'] }],
             position: 9,
@@ -79,7 +79,7 @@ export class RXV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcaDoseAmountVolume: {
+        PCADoseAmountVolume: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8'] }],
             position: 10,
@@ -87,7 +87,7 @@ export class RXV extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PcaDoseAmountVolumeUnits: {
+        PCADoseAmountVolumeUnits: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8'] }],
             position: 11,
@@ -187,17 +187,17 @@ export class RXV extends Segment {
 
     static componentsByIndex = [
         '',
-        'SetIdRxv',
+        'SetIDRXV',
         'BolusType',
         'BolusDoseAmount',
         'BolusDoseAmountUnits',
         'BolusDoseVolume',
         'BolusDoseVolumeUnits',
-        'PcaType',
-        'PcaDoseAmount',
-        'PcaDoseAmountUnits',
-        'PcaDoseAmountVolume',
-        'PcaDoseAmountVolumeUnits',
+        'PCAType',
+        'PCADoseAmount',
+        'PCADoseAmountUnits',
+        'PCADoseAmountVolume',
+        'PCADoseAmountVolumeUnits',
         'MaxDoseAmount',
         'MaxDoseAmountUnits',
         'MaxDoseAmountVolume',
@@ -217,12 +217,12 @@ export class RXV extends Segment {
         this.setValues(values);
     }
 
-    get SetIdRxv() {
-        return this.getComponent('SetIdRxv');
+    get SetIDRXV() {
+        return this.getComponent('SetIDRXV');
     }
 
-    set SetIdRxv(value) {
-        this.setComponentValue('SetIdRxv', value);
+    set SetIDRXV(value) {
+        this.setComponentValue('SetIDRXV', value);
     }
 
     get BolusType() {
@@ -265,44 +265,44 @@ export class RXV extends Segment {
         this.setComponentValue('BolusDoseVolumeUnits', value);
     }
 
-    get PcaType() {
-        return this.getComponent('PcaType');
+    get PCAType() {
+        return this.getComponent('PCAType');
     }
 
-    set PcaType(value) {
-        this.setComponentValue('PcaType', value);
+    set PCAType(value) {
+        this.setComponentValue('PCAType', value);
     }
 
-    get PcaDoseAmount() {
-        return this.getComponent('PcaDoseAmount');
+    get PCADoseAmount() {
+        return this.getComponent('PCADoseAmount');
     }
 
-    set PcaDoseAmount(value) {
-        this.setComponentValue('PcaDoseAmount', value);
+    set PCADoseAmount(value) {
+        this.setComponentValue('PCADoseAmount', value);
     }
 
-    get PcaDoseAmountUnits() {
-        return this.getComponent('PcaDoseAmountUnits');
+    get PCADoseAmountUnits() {
+        return this.getComponent('PCADoseAmountUnits');
     }
 
-    set PcaDoseAmountUnits(value) {
-        this.setComponentValue('PcaDoseAmountUnits', value);
+    set PCADoseAmountUnits(value) {
+        this.setComponentValue('PCADoseAmountUnits', value);
     }
 
-    get PcaDoseAmountVolume() {
-        return this.getComponent('PcaDoseAmountVolume');
+    get PCADoseAmountVolume() {
+        return this.getComponent('PCADoseAmountVolume');
     }
 
-    set PcaDoseAmountVolume(value) {
-        this.setComponentValue('PcaDoseAmountVolume', value);
+    set PCADoseAmountVolume(value) {
+        this.setComponentValue('PCADoseAmountVolume', value);
     }
 
-    get PcaDoseAmountVolumeUnits() {
-        return this.getComponent('PcaDoseAmountVolumeUnits');
+    get PCADoseAmountVolumeUnits() {
+        return this.getComponent('PCADoseAmountVolumeUnits');
     }
 
-    set PcaDoseAmountVolumeUnits(value) {
-        this.setComponentValue('PcaDoseAmountVolumeUnits', value);
+    set PCADoseAmountVolumeUnits(value) {
+        this.setComponentValue('PCADoseAmountVolumeUnits', value);
     }
 
     get MaxDoseAmount() {

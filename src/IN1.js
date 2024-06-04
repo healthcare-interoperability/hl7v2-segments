@@ -29,7 +29,8 @@ export class IN1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdInsurance: { aliasOf: 'SetIdIn1' },
+        SetIDInsurance: { aliasOf: 'SetIdIn1' },
+        SetIDIn1: { aliasOf: 'SetIdIn1' },
         HealthPlanId: {
             defaultDataType: CWE,
             dataTypes: [
@@ -41,7 +42,7 @@ export class IN1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InsurancePlanId: { aliasOf: 'HealthPlanId' },
+        InsurancePlanID: { aliasOf: 'HealthPlanId' },
         InsuranceCompanyId: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -50,6 +51,7 @@ export class IN1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        InsuranceCompanyID: { aliasOf: 'InsuranceCompanyId' },
         InsuranceCompanyName: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -106,7 +108,8 @@ export class IN1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSGroupEmployerId: { aliasOf: 'InsuredSGroupEmpId' },
+        InsuredSGroupEmployerID: { aliasOf: 'InsuredSGroupEmpId' },
+        InsuredSGroupEmpID: { aliasOf: 'InsuredSGroupEmpId' },
         InsuredSGroupEmpName: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -276,6 +279,7 @@ export class IN1 extends Segment {
             minOccurence: 1,
         },
         PreAdmitCert: { aliasOf: 'PreAdmitCertPac' },
+        PreAdmitCertPAC: { aliasOf: 'PreAdmitCertPac' },
         VerificationDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -453,6 +457,7 @@ export class IN1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PriorInsurancePlanID: { aliasOf: 'PriorInsurancePlanId' },
         CoverageType: {
             defaultDataType: CWE,
             dataTypes: [
@@ -483,6 +488,7 @@ export class IN1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        InsuredSIDNumber: { aliasOf: 'InsuredSIdNumber' },
         SignatureCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -510,7 +516,7 @@ export class IN1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VipIndicator: {
+        VIPIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.5', '2.5.1', '2.6'] },
@@ -521,6 +527,7 @@ export class IN1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VipIndicator: { aliasOf: 'VIPIndicator' },
         ExternalHealthPlanIdentifiers: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.7', '2.7.1', '2.8'] }],
@@ -593,7 +600,7 @@ export class IN1 extends Segment {
         'SignatureCode',
         'SignatureCodeDate',
         'InsuredSBirthPlace',
-        'VipIndicator',
+        'VIPIndicator',
         'ExternalHealthPlanIdentifiers',
         'InsuranceActionCode',
     ];
@@ -612,11 +619,19 @@ export class IN1 extends Segment {
         this.setComponentValue('SetIdIn1', value);
     }
 
-    get SetIdInsurance() {
+    get SetIDInsurance() {
         return this.getComponent('SetIdIn1');
     }
 
-    set SetIdInsurance(value) {
+    set SetIDInsurance(value) {
+        this.setComponentValue('SetIdIn1', value);
+    }
+
+    get SetIDIn1() {
+        return this.getComponent('SetIdIn1');
+    }
+
+    set SetIDIn1(value) {
         this.setComponentValue('SetIdIn1', value);
     }
 
@@ -628,11 +643,11 @@ export class IN1 extends Segment {
         this.setComponentValue('HealthPlanId', value);
     }
 
-    get InsurancePlanId() {
+    get InsurancePlanID() {
         return this.getComponent('HealthPlanId');
     }
 
-    set InsurancePlanId(value) {
+    set InsurancePlanID(value) {
         this.setComponentValue('HealthPlanId', value);
     }
 
@@ -641,6 +656,14 @@ export class IN1 extends Segment {
     }
 
     set InsuranceCompanyId(value) {
+        this.setComponentValue('InsuranceCompanyId', value);
+    }
+
+    get InsuranceCompanyID() {
+        return this.getComponent('InsuranceCompanyId');
+    }
+
+    set InsuranceCompanyID(value) {
         this.setComponentValue('InsuranceCompanyId', value);
     }
 
@@ -700,11 +723,19 @@ export class IN1 extends Segment {
         this.setComponentValue('InsuredSGroupEmpId', value);
     }
 
-    get InsuredSGroupEmployerId() {
+    get InsuredSGroupEmployerID() {
         return this.getComponent('InsuredSGroupEmpId');
     }
 
-    set InsuredSGroupEmployerId(value) {
+    set InsuredSGroupEmployerID(value) {
+        this.setComponentValue('InsuredSGroupEmpId', value);
+    }
+
+    get InsuredSGroupEmpID() {
+        return this.getComponent('InsuredSGroupEmpId');
+    }
+
+    set InsuredSGroupEmpID(value) {
         this.setComponentValue('InsuredSGroupEmpId', value);
     }
 
@@ -876,6 +907,14 @@ export class IN1 extends Segment {
         this.setComponentValue('PreAdmitCertPac', value);
     }
 
+    get PreAdmitCertPAC() {
+        return this.getComponent('PreAdmitCertPac');
+    }
+
+    set PreAdmitCertPAC(value) {
+        this.setComponentValue('PreAdmitCertPac', value);
+    }
+
     get VerificationDateTime() {
         return this.getComponent('VerificationDateTime');
     }
@@ -1044,6 +1083,14 @@ export class IN1 extends Segment {
         this.setComponentValue('PriorInsurancePlanId', value);
     }
 
+    get PriorInsurancePlanID() {
+        return this.getComponent('PriorInsurancePlanId');
+    }
+
+    set PriorInsurancePlanID(value) {
+        this.setComponentValue('PriorInsurancePlanId', value);
+    }
+
     get CoverageType() {
         return this.getComponent('CoverageType');
     }
@@ -1065,6 +1112,14 @@ export class IN1 extends Segment {
     }
 
     set InsuredSIdNumber(value) {
+        this.setComponentValue('InsuredSIdNumber', value);
+    }
+
+    get InsuredSIDNumber() {
+        return this.getComponent('InsuredSIdNumber');
+    }
+
+    set InsuredSIDNumber(value) {
         this.setComponentValue('InsuredSIdNumber', value);
     }
 
@@ -1092,12 +1147,20 @@ export class IN1 extends Segment {
         this.setComponentValue('InsuredSBirthPlace', value);
     }
 
+    get VIPIndicator() {
+        return this.getComponent('VIPIndicator');
+    }
+
+    set VIPIndicator(value) {
+        this.setComponentValue('VIPIndicator', value);
+    }
+
     get VipIndicator() {
-        return this.getComponent('VipIndicator');
+        return this.getComponent('VIPIndicator');
     }
 
     set VipIndicator(value) {
-        this.setComponentValue('VipIndicator', value);
+        this.setComponentValue('VIPIndicator', value);
     }
 
     get ExternalHealthPlanIdentifiers() {
