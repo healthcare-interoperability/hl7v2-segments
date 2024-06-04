@@ -27,7 +27,7 @@ export { CM0 } from './CM0.js';
 export { CM1 } from './CM1.js';
 export { CM2 } from './CM2.js';
 export { CNS } from './CNS.js';
-export { CON } from './CON.js';
+export { CON } from './CONx.js';
 export { CSP } from './CSP.js';
 export { CSR } from './CSR.js';
 export { CSS } from './CSS.js';
