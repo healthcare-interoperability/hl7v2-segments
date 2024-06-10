@@ -17,6 +17,7 @@ export class CSR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SponsorStudyID: { aliasOf: 'SponsorStudyId' },
         AlternateStudyId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -25,6 +26,7 @@ export class CSR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AlternateStudyID: { aliasOf: 'AlternateStudyId' },
         InstitutionRegisteringThePatient: {
             defaultDataType: CWE,
             dataTypes: [
@@ -44,6 +46,7 @@ export class CSR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SponsorPatientID: { aliasOf: 'SponsorPatientId' },
         AlternatePatientIdCsr: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -52,7 +55,8 @@ export class CSR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        AlternatePatientId: { aliasOf: 'AlternatePatientIdCsr' },
+        AlternatePatientID: { aliasOf: 'AlternatePatientIdCsr' },
+        AlternatePatientIDCSR: { aliasOf: 'AlternatePatientIdCsr' },
         DateTimeOfPatientStudyRegistration: {
             defaultDataType: TS,
             dataTypes: [
@@ -205,11 +209,27 @@ export class CSR extends Segment {
         this.setComponentValue('SponsorStudyId', value);
     }
 
+    get SponsorStudyID() {
+        return this.getComponent('SponsorStudyId');
+    }
+
+    set SponsorStudyID(value) {
+        this.setComponentValue('SponsorStudyId', value);
+    }
+
     get AlternateStudyId() {
         return this.getComponent('AlternateStudyId');
     }
 
     set AlternateStudyId(value) {
+        this.setComponentValue('AlternateStudyId', value);
+    }
+
+    get AlternateStudyID() {
+        return this.getComponent('AlternateStudyId');
+    }
+
+    set AlternateStudyID(value) {
         this.setComponentValue('AlternateStudyId', value);
     }
 
@@ -229,6 +249,14 @@ export class CSR extends Segment {
         this.setComponentValue('SponsorPatientId', value);
     }
 
+    get SponsorPatientID() {
+        return this.getComponent('SponsorPatientId');
+    }
+
+    set SponsorPatientID(value) {
+        this.setComponentValue('SponsorPatientId', value);
+    }
+
     get AlternatePatientIdCsr() {
         return this.getComponent('AlternatePatientIdCsr');
     }
@@ -237,11 +265,19 @@ export class CSR extends Segment {
         this.setComponentValue('AlternatePatientIdCsr', value);
     }
 
-    get AlternatePatientId() {
+    get AlternatePatientID() {
         return this.getComponent('AlternatePatientIdCsr');
     }
 
-    set AlternatePatientId(value) {
+    set AlternatePatientID(value) {
+        this.setComponentValue('AlternatePatientIdCsr', value);
+    }
+
+    get AlternatePatientIDCSR() {
+        return this.getComponent('AlternatePatientIdCsr');
+    }
+
+    set AlternatePatientIDCSR(value) {
         this.setComponentValue('AlternatePatientIdCsr', value);
     }
 

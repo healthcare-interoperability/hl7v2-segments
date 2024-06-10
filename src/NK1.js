@@ -25,7 +25,8 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdNextOfKin: { aliasOf: 'SetIdNk1' },
+        SetIDNextOfKin: { aliasOf: 'SetIdNk1' },
+        SetIDNk1: { aliasOf: 'SetIdNk1' },
         Name: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -34,7 +35,7 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        NkName: { aliasOf: 'Name' },
+        NKName: { aliasOf: 'Name' },
         Relationship: {
             defaultDataType: CWE,
             dataTypes: [
@@ -266,7 +267,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MotherSMaidenName: {
+        MothersMaidenName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 26,
@@ -274,6 +275,7 @@ export class NK1 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        MotherSMaidenName: { aliasOf: 'MothersMaidenName' },
         Nationality: {
             defaultDataType: CWE,
             dataTypes: [
@@ -309,7 +311,7 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ContactPersonSName: {
+        ContactPersonsName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 30,
@@ -317,7 +319,8 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ContactPersonSTelephoneNumber: {
+        ContactPersonSName: { aliasOf: 'ContactPersonsName' },
+        ContactPersonsTelephoneNumber: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 31,
@@ -325,7 +328,8 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ContactPersonSAddress: {
+        ContactPersonSTelephoneNumber: { aliasOf: 'ContactPersonsTelephoneNumber' },
+        ContactPersonsAddress: {
             defaultDataType: XAD,
             dataTypes: [{ dataType: XAD, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 32,
@@ -333,7 +337,8 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        NextOfKinAssociatedPartySIdentifiers: {
+        ContactPersonSAddress: { aliasOf: 'ContactPersonsAddress' },
+        NextOfKinAssociatedPartysIdentifiers: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 33,
@@ -341,7 +346,8 @@ export class NK1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        NextOfKinAssociatedPartyIdentifiers: { aliasOf: 'NextOfKinAssociatedPartySIdentifiers' },
+        NextOfKinAssociatedPartyIdentifiers: { aliasOf: 'NextOfKinAssociatedPartysIdentifiers' },
+        NextOfKinAssociatedPartySIdentifiers: { aliasOf: 'NextOfKinAssociatedPartysIdentifiers' },
         JobStatus: {
             defaultDataType: CWE,
             dataTypes: [
@@ -392,7 +398,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VipIndicator: {
+        VIPIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.5', '2.5.1', '2.6'] },
@@ -403,6 +409,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VipIndicator: { aliasOf: 'VIPIndicator' },
         NextOfKinTelecommunicationInformation: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.7', '2.7.1', '2.8'] }],
@@ -411,7 +418,7 @@ export class NK1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ContactPersonSTelecommunicationInformation: {
+        ContactPersonsTelecommunicationInformation: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.7', '2.7.1', '2.8'] }],
             position: 41,
@@ -448,22 +455,22 @@ export class NK1 extends Segment {
         'ProtectionIndicator',
         'StudentIndicator',
         'Religion',
-        'MotherSMaidenName',
+        'MothersMaidenName',
         'Nationality',
         'EthnicGroup',
         'ContactReason',
-        'ContactPersonSName',
-        'ContactPersonSTelephoneNumber',
-        'ContactPersonSAddress',
-        'NextOfKinAssociatedPartySIdentifiers',
+        'ContactPersonsName',
+        'ContactPersonsTelephoneNumber',
+        'ContactPersonsAddress',
+        'NextOfKinAssociatedPartysIdentifiers',
         'JobStatus',
         'Race',
         'Handicap',
         'ContactPersonSocialSecurityNumber',
         'NextOfKinBirthPlace',
-        'VipIndicator',
+        'VIPIndicator',
         'NextOfKinTelecommunicationInformation',
-        'ContactPersonSTelecommunicationInformation',
+        'ContactPersonsTelecommunicationInformation',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -480,11 +487,19 @@ export class NK1 extends Segment {
         this.setComponentValue('SetIdNk1', value);
     }
 
-    get SetIdNextOfKin() {
+    get SetIDNextOfKin() {
         return this.getComponent('SetIdNk1');
     }
 
-    set SetIdNextOfKin(value) {
+    set SetIDNextOfKin(value) {
+        this.setComponentValue('SetIdNk1', value);
+    }
+
+    get SetIDNk1() {
+        return this.getComponent('SetIdNk1');
+    }
+
+    set SetIDNk1(value) {
         this.setComponentValue('SetIdNk1', value);
     }
 
@@ -496,11 +511,11 @@ export class NK1 extends Segment {
         this.setComponentValue('Name', value);
     }
 
-    get NkName() {
+    get NKName() {
         return this.getComponent('Name');
     }
 
-    set NkName(value) {
+    set NKName(value) {
         this.setComponentValue('Name', value);
     }
 
@@ -728,12 +743,20 @@ export class NK1 extends Segment {
         this.setComponentValue('Religion', value);
     }
 
+    get MothersMaidenName() {
+        return this.getComponent('MothersMaidenName');
+    }
+
+    set MothersMaidenName(value) {
+        this.setComponentValue('MothersMaidenName', value);
+    }
+
     get MotherSMaidenName() {
-        return this.getComponent('MotherSMaidenName');
+        return this.getComponent('MothersMaidenName');
     }
 
     set MotherSMaidenName(value) {
-        this.setComponentValue('MotherSMaidenName', value);
+        this.setComponentValue('MothersMaidenName', value);
     }
 
     get Nationality() {
@@ -768,44 +791,76 @@ export class NK1 extends Segment {
         this.setComponentValue('ContactReason', value);
     }
 
+    get ContactPersonsName() {
+        return this.getComponent('ContactPersonsName');
+    }
+
+    set ContactPersonsName(value) {
+        this.setComponentValue('ContactPersonsName', value);
+    }
+
     get ContactPersonSName() {
-        return this.getComponent('ContactPersonSName');
+        return this.getComponent('ContactPersonsName');
     }
 
     set ContactPersonSName(value) {
-        this.setComponentValue('ContactPersonSName', value);
+        this.setComponentValue('ContactPersonsName', value);
+    }
+
+    get ContactPersonsTelephoneNumber() {
+        return this.getComponent('ContactPersonsTelephoneNumber');
+    }
+
+    set ContactPersonsTelephoneNumber(value) {
+        this.setComponentValue('ContactPersonsTelephoneNumber', value);
     }
 
     get ContactPersonSTelephoneNumber() {
-        return this.getComponent('ContactPersonSTelephoneNumber');
+        return this.getComponent('ContactPersonsTelephoneNumber');
     }
 
     set ContactPersonSTelephoneNumber(value) {
-        this.setComponentValue('ContactPersonSTelephoneNumber', value);
+        this.setComponentValue('ContactPersonsTelephoneNumber', value);
+    }
+
+    get ContactPersonsAddress() {
+        return this.getComponent('ContactPersonsAddress');
+    }
+
+    set ContactPersonsAddress(value) {
+        this.setComponentValue('ContactPersonsAddress', value);
     }
 
     get ContactPersonSAddress() {
-        return this.getComponent('ContactPersonSAddress');
+        return this.getComponent('ContactPersonsAddress');
     }
 
     set ContactPersonSAddress(value) {
-        this.setComponentValue('ContactPersonSAddress', value);
+        this.setComponentValue('ContactPersonsAddress', value);
     }
 
-    get NextOfKinAssociatedPartySIdentifiers() {
-        return this.getComponent('NextOfKinAssociatedPartySIdentifiers');
+    get NextOfKinAssociatedPartysIdentifiers() {
+        return this.getComponent('NextOfKinAssociatedPartysIdentifiers');
     }
 
-    set NextOfKinAssociatedPartySIdentifiers(value) {
-        this.setComponentValue('NextOfKinAssociatedPartySIdentifiers', value);
+    set NextOfKinAssociatedPartysIdentifiers(value) {
+        this.setComponentValue('NextOfKinAssociatedPartysIdentifiers', value);
     }
 
     get NextOfKinAssociatedPartyIdentifiers() {
-        return this.getComponent('NextOfKinAssociatedPartySIdentifiers');
+        return this.getComponent('NextOfKinAssociatedPartysIdentifiers');
     }
 
     set NextOfKinAssociatedPartyIdentifiers(value) {
-        this.setComponentValue('NextOfKinAssociatedPartySIdentifiers', value);
+        this.setComponentValue('NextOfKinAssociatedPartysIdentifiers', value);
+    }
+
+    get NextOfKinAssociatedPartySIdentifiers() {
+        return this.getComponent('NextOfKinAssociatedPartysIdentifiers');
+    }
+
+    set NextOfKinAssociatedPartySIdentifiers(value) {
+        this.setComponentValue('NextOfKinAssociatedPartysIdentifiers', value);
     }
 
     get JobStatus() {
@@ -848,12 +903,20 @@ export class NK1 extends Segment {
         this.setComponentValue('NextOfKinBirthPlace', value);
     }
 
+    get VIPIndicator() {
+        return this.getComponent('VIPIndicator');
+    }
+
+    set VIPIndicator(value) {
+        this.setComponentValue('VIPIndicator', value);
+    }
+
     get VipIndicator() {
-        return this.getComponent('VipIndicator');
+        return this.getComponent('VIPIndicator');
     }
 
     set VipIndicator(value) {
-        this.setComponentValue('VipIndicator', value);
+        this.setComponentValue('VIPIndicator', value);
     }
 
     get NextOfKinTelecommunicationInformation() {
@@ -864,11 +927,11 @@ export class NK1 extends Segment {
         this.setComponentValue('NextOfKinTelecommunicationInformation', value);
     }
 
-    get ContactPersonSTelecommunicationInformation() {
-        return this.getComponent('ContactPersonSTelecommunicationInformation');
+    get ContactPersonsTelecommunicationInformation() {
+        return this.getComponent('ContactPersonsTelecommunicationInformation');
     }
 
-    set ContactPersonSTelecommunicationInformation(value) {
-        this.setComponentValue('ContactPersonSTelecommunicationInformation', value);
+    set ContactPersonsTelecommunicationInformation(value) {
+        this.setComponentValue('ContactPersonsTelecommunicationInformation', value);
     }
 }

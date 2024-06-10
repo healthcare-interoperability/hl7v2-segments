@@ -26,6 +26,7 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDOBX: { aliasOf: 'SetIdObx' },
         ValueType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -53,6 +54,7 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ObservationSubID: { aliasOf: 'ObservationSubId' },
         ObservationValue: {
             defaultDataType: varies,
             dataTypes: [
@@ -153,7 +155,7 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProducerSId: {
+        ProducersId: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -164,6 +166,7 @@ export class OBX extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ProducersID: { aliasOf: 'ProducersId' },
         ResponsibleObserver: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -282,7 +285,7 @@ export class OBX extends Segment {
         'EffectiveDateOfReferenceRange',
         'UserDefinedAccessChecks',
         'DateTimeOfTheObservation',
-        'ProducerSId',
+        'ProducersId',
         'ResponsibleObserver',
         'ObservationMethod',
         'EquipmentInstanceIdentifier',
@@ -312,6 +315,14 @@ export class OBX extends Segment {
         this.setComponentValue('SetIdObx', value);
     }
 
+    get SetIDOBX() {
+        return this.getComponent('SetIdObx');
+    }
+
+    set SetIDOBX(value) {
+        this.setComponentValue('SetIdObx', value);
+    }
+
     get ValueType() {
         return this.getComponent('ValueType');
     }
@@ -333,6 +344,14 @@ export class OBX extends Segment {
     }
 
     set ObservationSubId(value) {
+        this.setComponentValue('ObservationSubId', value);
+    }
+
+    get ObservationSubID() {
+        return this.getComponent('ObservationSubId');
+    }
+
+    set ObservationSubID(value) {
         this.setComponentValue('ObservationSubId', value);
     }
 
@@ -448,12 +467,20 @@ export class OBX extends Segment {
         this.setComponentValue('DateTimeOfTheObservation', value);
     }
 
-    get ProducerSId() {
-        return this.getComponent('ProducerSId');
+    get ProducersId() {
+        return this.getComponent('ProducersId');
     }
 
-    set ProducerSId(value) {
-        this.setComponentValue('ProducerSId', value);
+    set ProducersId(value) {
+        this.setComponentValue('ProducersId', value);
+    }
+
+    get ProducersID() {
+        return this.getComponent('ProducersId');
+    }
+
+    set ProducersID(value) {
+        this.setComponentValue('ProducersId', value);
     }
 
     get ResponsibleObserver() {

@@ -20,7 +20,7 @@ import { XON } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class IN2 extends Segment {
     static components = {
-        InsuredSEmployeeId: {
+        InsuredsEmployeeId: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 1,
@@ -28,7 +28,9 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSSocialSecurityNumber: {
+        InsuredsEmployeeID: { aliasOf: 'InsuredsEmployeeId' },
+        InsuredSEmployeeID: { aliasOf: 'InsuredsEmployeeId' },
+        InsuredsSocialSecurityNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 2,
@@ -36,7 +38,8 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InsuredSEmployerSNameAndId: {
+        InsuredSSocialSecurityNumber: { aliasOf: 'InsuredsSocialSecurityNumber' },
+        InsuredsEmployersNameAndId: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 3,
@@ -44,7 +47,9 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSEmployerName: { aliasOf: 'InsuredSEmployerSNameAndId' },
+        InsuredsEmployerName: { aliasOf: 'InsuredsEmployersNameAndId' },
+        InsuredSEmployerSNameAndID: { aliasOf: 'InsuredsEmployersNameAndId' },
+        InsuredsEmployersNameAndID: { aliasOf: 'InsuredsEmployersNameAndId' },
         EmployerInformationData: {
             defaultDataType: CWE,
             dataTypes: [
@@ -108,7 +113,8 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ChampusIdNumber: { aliasOf: 'MilitaryIdNumber' },
+        ChampusIDNumber: { aliasOf: 'MilitaryIdNumber' },
+        MilitaryIDNumber: { aliasOf: 'MilitaryIdNumber' },
         DependentOfMilitaryRecipient: {
             defaultDataType: CWE,
             dataTypes: [
@@ -252,6 +258,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        PayorID: { aliasOf: 'PayorId' },
         PayorSubscriberId: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -260,6 +267,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        PayorSubscriberID: { aliasOf: 'PayorSubscriberId' },
         EligibilitySource: {
             defaultDataType: CWE,
             dataTypes: [
@@ -403,7 +411,7 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MotherSMaidenName: {
+        MothersMaidenName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 40,
@@ -411,6 +419,7 @@ export class IN2 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        MotherSMaidenName: { aliasOf: 'MothersMaidenName' },
         Nationality: {
             defaultDataType: CWE,
             dataTypes: [
@@ -447,7 +456,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSEmploymentStartDate: {
+        InsuredsEmploymentStartDate: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 44,
@@ -455,7 +464,8 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        EmploymentStartDate: { aliasOf: 'InsuredSEmploymentStartDate' },
+        EmploymentStartDate: { aliasOf: 'InsuredsEmploymentStartDate' },
+        InsuredSEmploymentStartDate: { aliasOf: 'InsuredsEmploymentStartDate' },
         EmploymentStopDate: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -518,7 +528,7 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InsuredSContactPersonSName: {
+        InsuredsContactPersonsName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 52,
@@ -526,8 +536,9 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSContactPersonName: { aliasOf: 'InsuredSContactPersonSName' },
-        InsuredSContactPersonPhoneNumber: {
+        InsuredsContactPersonName: { aliasOf: 'InsuredsContactPersonsName' },
+        InsuredSContactPersonSName: { aliasOf: 'InsuredsContactPersonsName' },
+        InsuredsContactPersonPhoneNumber: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 53,
@@ -535,8 +546,9 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSContactPersonTelephoneNumber: { aliasOf: 'InsuredSContactPersonPhoneNumber' },
-        InsuredSContactPersonReason: {
+        InsuredSContactPersonTelephoneNumber: { aliasOf: 'InsuredsContactPersonPhoneNumber' },
+        InsuredSContactPersonPhoneNumber: { aliasOf: 'InsuredsContactPersonPhoneNumber' },
+        InsuredsContactPersonReason: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.7', '2.7.1'] },
@@ -547,6 +559,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        InsuredSContactPersonReason: { aliasOf: 'InsuredsContactPersonReason' },
         RelationshipToThePatientStartDate: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -614,7 +627,7 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        GuarantorSRelationshipToInsured: {
+        GuarantorsRelationshipToInsured: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -626,7 +639,8 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        InsuredSPhoneNumberHome: {
+        GuarantorSRelationshipToInsured: { aliasOf: 'GuarantorsRelationshipToInsured' },
+        InsuredsPhoneNumberHome: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 63,
@@ -634,8 +648,9 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSTelephoneNumberHome: { aliasOf: 'InsuredSPhoneNumberHome' },
-        InsuredSEmployerPhoneNumber: {
+        InsuredsTelephoneNumberHome: { aliasOf: 'InsuredsPhoneNumberHome' },
+        InsuredSPhoneNumberHome: { aliasOf: 'InsuredsPhoneNumberHome' },
+        InsuredsEmployerPhoneNumber: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 64,
@@ -643,7 +658,8 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        InsuredSEmployerTelephoneNumber: { aliasOf: 'InsuredSEmployerPhoneNumber' },
+        InsuredsEmployerTelephoneNumber: { aliasOf: 'InsuredsEmployerPhoneNumber' },
+        InsuredSEmployerPhoneNumber: { aliasOf: 'InsuredsEmployerPhoneNumber' },
         MilitaryHandicappedProgram: {
             defaultDataType: CWE,
             dataTypes: [
@@ -688,6 +704,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        InsuredOrganizationNameAndID: { aliasOf: 'InsuredOrganizationNameAndId' },
         InsuredEmployerOrganizationNameAndId: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -696,6 +713,7 @@ export class IN2 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        InsuredEmployerOrganizationNameAndID: { aliasOf: 'InsuredEmployerOrganizationNameAndId' },
         Race: {
             defaultDataType: CWE,
             dataTypes: [
@@ -708,7 +726,7 @@ export class IN2 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PatientSRelationshipToInsured: {
+        PatientsRelationshipToInsured: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -719,16 +737,17 @@ export class IN2 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PatientRelationshipToInsured: { aliasOf: 'PatientSRelationshipToInsured' },
-        HcfaPatientSRelationshipToInsured: { aliasOf: 'PatientSRelationshipToInsured' },
-        CmsPatientSRelationshipToInsured: { aliasOf: 'PatientSRelationshipToInsured' },
+        PatientRelationshipToInsured: { aliasOf: 'PatientsRelationshipToInsured' },
+        HCFAPatientSRelationshipToInsured: { aliasOf: 'PatientsRelationshipToInsured' },
+        HCFAPatientsRelationshipToInsured: { aliasOf: 'PatientsRelationshipToInsured' },
+        CMSPatientsRelationshipToInsured: { aliasOf: 'PatientsRelationshipToInsured' },
     };
 
     static componentsByIndex = [
         '',
-        'InsuredSEmployeeId',
-        'InsuredSSocialSecurityNumber',
-        'InsuredSEmployerSNameAndId',
+        'InsuredsEmployeeId',
+        'InsuredsSocialSecurityNumber',
+        'InsuredsEmployersNameAndId',
         'EmployerInformationData',
         'MailClaimParty',
         'MedicareHealthInsCardNumber',
@@ -765,11 +784,11 @@ export class IN2 extends Segment {
         'ProtectionIndicator',
         'StudentIndicator',
         'Religion',
-        'MotherSMaidenName',
+        'MothersMaidenName',
         'Nationality',
         'EthnicGroup',
         'MaritalStatus',
-        'InsuredSEmploymentStartDate',
+        'InsuredsEmploymentStartDate',
         'EmploymentStopDate',
         'JobTitle',
         'JobCodeClass',
@@ -777,9 +796,9 @@ export class IN2 extends Segment {
         'EmployerContactPersonName',
         'EmployerContactPersonPhoneNumber',
         'EmployerContactReason',
-        'InsuredSContactPersonSName',
-        'InsuredSContactPersonPhoneNumber',
-        'InsuredSContactPersonReason',
+        'InsuredsContactPersonsName',
+        'InsuredsContactPersonPhoneNumber',
+        'InsuredsContactPersonReason',
         'RelationshipToThePatientStartDate',
         'RelationshipToThePatientStopDate',
         'InsuranceCoContactReason',
@@ -787,9 +806,9 @@ export class IN2 extends Segment {
         'PolicyScope',
         'PolicySource',
         'PatientMemberNumber',
-        'GuarantorSRelationshipToInsured',
-        'InsuredSPhoneNumberHome',
-        'InsuredSEmployerPhoneNumber',
+        'GuarantorsRelationshipToInsured',
+        'InsuredsPhoneNumberHome',
+        'InsuredsEmployerPhoneNumber',
         'MilitaryHandicappedProgram',
         'SuspendFlag',
         'CopayLimitFlag',
@@ -797,7 +816,7 @@ export class IN2 extends Segment {
         'InsuredOrganizationNameAndId',
         'InsuredEmployerOrganizationNameAndId',
         'Race',
-        'PatientSRelationshipToInsured',
+        'PatientsRelationshipToInsured',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -806,36 +825,76 @@ export class IN2 extends Segment {
         this.setValues(values);
     }
 
-    get InsuredSEmployeeId() {
-        return this.getComponent('InsuredSEmployeeId');
+    get InsuredsEmployeeId() {
+        return this.getComponent('InsuredsEmployeeId');
     }
 
-    set InsuredSEmployeeId(value) {
-        this.setComponentValue('InsuredSEmployeeId', value);
+    set InsuredsEmployeeId(value) {
+        this.setComponentValue('InsuredsEmployeeId', value);
+    }
+
+    get InsuredsEmployeeID() {
+        return this.getComponent('InsuredsEmployeeId');
+    }
+
+    set InsuredsEmployeeID(value) {
+        this.setComponentValue('InsuredsEmployeeId', value);
+    }
+
+    get InsuredSEmployeeID() {
+        return this.getComponent('InsuredsEmployeeId');
+    }
+
+    set InsuredSEmployeeID(value) {
+        this.setComponentValue('InsuredsEmployeeId', value);
+    }
+
+    get InsuredsSocialSecurityNumber() {
+        return this.getComponent('InsuredsSocialSecurityNumber');
+    }
+
+    set InsuredsSocialSecurityNumber(value) {
+        this.setComponentValue('InsuredsSocialSecurityNumber', value);
     }
 
     get InsuredSSocialSecurityNumber() {
-        return this.getComponent('InsuredSSocialSecurityNumber');
+        return this.getComponent('InsuredsSocialSecurityNumber');
     }
 
     set InsuredSSocialSecurityNumber(value) {
-        this.setComponentValue('InsuredSSocialSecurityNumber', value);
+        this.setComponentValue('InsuredsSocialSecurityNumber', value);
     }
 
-    get InsuredSEmployerSNameAndId() {
-        return this.getComponent('InsuredSEmployerSNameAndId');
+    get InsuredsEmployersNameAndId() {
+        return this.getComponent('InsuredsEmployersNameAndId');
     }
 
-    set InsuredSEmployerSNameAndId(value) {
-        this.setComponentValue('InsuredSEmployerSNameAndId', value);
+    set InsuredsEmployersNameAndId(value) {
+        this.setComponentValue('InsuredsEmployersNameAndId', value);
     }
 
-    get InsuredSEmployerName() {
-        return this.getComponent('InsuredSEmployerSNameAndId');
+    get InsuredsEmployerName() {
+        return this.getComponent('InsuredsEmployersNameAndId');
     }
 
-    set InsuredSEmployerName(value) {
-        this.setComponentValue('InsuredSEmployerSNameAndId', value);
+    set InsuredsEmployerName(value) {
+        this.setComponentValue('InsuredsEmployersNameAndId', value);
+    }
+
+    get InsuredSEmployerSNameAndID() {
+        return this.getComponent('InsuredsEmployersNameAndId');
+    }
+
+    set InsuredSEmployerSNameAndID(value) {
+        this.setComponentValue('InsuredsEmployersNameAndId', value);
+    }
+
+    get InsuredsEmployersNameAndID() {
+        return this.getComponent('InsuredsEmployersNameAndId');
+    }
+
+    set InsuredsEmployersNameAndID(value) {
+        this.setComponentValue('InsuredsEmployersNameAndId', value);
     }
 
     get EmployerInformationData() {
@@ -902,11 +961,19 @@ export class IN2 extends Segment {
         this.setComponentValue('MilitaryIdNumber', value);
     }
 
-    get ChampusIdNumber() {
+    get ChampusIDNumber() {
         return this.getComponent('MilitaryIdNumber');
     }
 
-    set ChampusIdNumber(value) {
+    set ChampusIDNumber(value) {
+        this.setComponentValue('MilitaryIdNumber', value);
+    }
+
+    get MilitaryIDNumber() {
+        return this.getComponent('MilitaryIdNumber');
+    }
+
+    set MilitaryIDNumber(value) {
         this.setComponentValue('MilitaryIdNumber', value);
     }
 
@@ -1094,11 +1161,27 @@ export class IN2 extends Segment {
         this.setComponentValue('PayorId', value);
     }
 
+    get PayorID() {
+        return this.getComponent('PayorId');
+    }
+
+    set PayorID(value) {
+        this.setComponentValue('PayorId', value);
+    }
+
     get PayorSubscriberId() {
         return this.getComponent('PayorSubscriberId');
     }
 
     set PayorSubscriberId(value) {
+        this.setComponentValue('PayorSubscriberId', value);
+    }
+
+    get PayorSubscriberID() {
+        return this.getComponent('PayorSubscriberId');
+    }
+
+    set PayorSubscriberID(value) {
         this.setComponentValue('PayorSubscriberId', value);
     }
 
@@ -1214,12 +1297,20 @@ export class IN2 extends Segment {
         this.setComponentValue('Religion', value);
     }
 
+    get MothersMaidenName() {
+        return this.getComponent('MothersMaidenName');
+    }
+
+    set MothersMaidenName(value) {
+        this.setComponentValue('MothersMaidenName', value);
+    }
+
     get MotherSMaidenName() {
-        return this.getComponent('MotherSMaidenName');
+        return this.getComponent('MothersMaidenName');
     }
 
     set MotherSMaidenName(value) {
-        this.setComponentValue('MotherSMaidenName', value);
+        this.setComponentValue('MothersMaidenName', value);
     }
 
     get Nationality() {
@@ -1254,20 +1345,28 @@ export class IN2 extends Segment {
         this.setComponentValue('MaritalStatus', value);
     }
 
-    get InsuredSEmploymentStartDate() {
-        return this.getComponent('InsuredSEmploymentStartDate');
+    get InsuredsEmploymentStartDate() {
+        return this.getComponent('InsuredsEmploymentStartDate');
     }
 
-    set InsuredSEmploymentStartDate(value) {
-        this.setComponentValue('InsuredSEmploymentStartDate', value);
+    set InsuredsEmploymentStartDate(value) {
+        this.setComponentValue('InsuredsEmploymentStartDate', value);
     }
 
     get EmploymentStartDate() {
-        return this.getComponent('InsuredSEmploymentStartDate');
+        return this.getComponent('InsuredsEmploymentStartDate');
     }
 
     set EmploymentStartDate(value) {
-        this.setComponentValue('InsuredSEmploymentStartDate', value);
+        this.setComponentValue('InsuredsEmploymentStartDate', value);
+    }
+
+    get InsuredSEmploymentStartDate() {
+        return this.getComponent('InsuredsEmploymentStartDate');
+    }
+
+    set InsuredSEmploymentStartDate(value) {
+        this.setComponentValue('InsuredsEmploymentStartDate', value);
     }
 
     get EmploymentStopDate() {
@@ -1326,44 +1425,68 @@ export class IN2 extends Segment {
         this.setComponentValue('EmployerContactReason', value);
     }
 
+    get InsuredsContactPersonsName() {
+        return this.getComponent('InsuredsContactPersonsName');
+    }
+
+    set InsuredsContactPersonsName(value) {
+        this.setComponentValue('InsuredsContactPersonsName', value);
+    }
+
+    get InsuredsContactPersonName() {
+        return this.getComponent('InsuredsContactPersonsName');
+    }
+
+    set InsuredsContactPersonName(value) {
+        this.setComponentValue('InsuredsContactPersonsName', value);
+    }
+
     get InsuredSContactPersonSName() {
-        return this.getComponent('InsuredSContactPersonSName');
+        return this.getComponent('InsuredsContactPersonsName');
     }
 
     set InsuredSContactPersonSName(value) {
-        this.setComponentValue('InsuredSContactPersonSName', value);
+        this.setComponentValue('InsuredsContactPersonsName', value);
     }
 
-    get InsuredSContactPersonName() {
-        return this.getComponent('InsuredSContactPersonSName');
+    get InsuredsContactPersonPhoneNumber() {
+        return this.getComponent('InsuredsContactPersonPhoneNumber');
     }
 
-    set InsuredSContactPersonName(value) {
-        this.setComponentValue('InsuredSContactPersonSName', value);
-    }
-
-    get InsuredSContactPersonPhoneNumber() {
-        return this.getComponent('InsuredSContactPersonPhoneNumber');
-    }
-
-    set InsuredSContactPersonPhoneNumber(value) {
-        this.setComponentValue('InsuredSContactPersonPhoneNumber', value);
+    set InsuredsContactPersonPhoneNumber(value) {
+        this.setComponentValue('InsuredsContactPersonPhoneNumber', value);
     }
 
     get InsuredSContactPersonTelephoneNumber() {
-        return this.getComponent('InsuredSContactPersonPhoneNumber');
+        return this.getComponent('InsuredsContactPersonPhoneNumber');
     }
 
     set InsuredSContactPersonTelephoneNumber(value) {
-        this.setComponentValue('InsuredSContactPersonPhoneNumber', value);
+        this.setComponentValue('InsuredsContactPersonPhoneNumber', value);
+    }
+
+    get InsuredSContactPersonPhoneNumber() {
+        return this.getComponent('InsuredsContactPersonPhoneNumber');
+    }
+
+    set InsuredSContactPersonPhoneNumber(value) {
+        this.setComponentValue('InsuredsContactPersonPhoneNumber', value);
+    }
+
+    get InsuredsContactPersonReason() {
+        return this.getComponent('InsuredsContactPersonReason');
+    }
+
+    set InsuredsContactPersonReason(value) {
+        this.setComponentValue('InsuredsContactPersonReason', value);
     }
 
     get InsuredSContactPersonReason() {
-        return this.getComponent('InsuredSContactPersonReason');
+        return this.getComponent('InsuredsContactPersonReason');
     }
 
     set InsuredSContactPersonReason(value) {
-        this.setComponentValue('InsuredSContactPersonReason', value);
+        this.setComponentValue('InsuredsContactPersonReason', value);
     }
 
     get RelationshipToThePatientStartDate() {
@@ -1438,44 +1561,68 @@ export class IN2 extends Segment {
         this.setComponentValue('PatientMemberNumber', value);
     }
 
+    get GuarantorsRelationshipToInsured() {
+        return this.getComponent('GuarantorsRelationshipToInsured');
+    }
+
+    set GuarantorsRelationshipToInsured(value) {
+        this.setComponentValue('GuarantorsRelationshipToInsured', value);
+    }
+
     get GuarantorSRelationshipToInsured() {
-        return this.getComponent('GuarantorSRelationshipToInsured');
+        return this.getComponent('GuarantorsRelationshipToInsured');
     }
 
     set GuarantorSRelationshipToInsured(value) {
-        this.setComponentValue('GuarantorSRelationshipToInsured', value);
+        this.setComponentValue('GuarantorsRelationshipToInsured', value);
+    }
+
+    get InsuredsPhoneNumberHome() {
+        return this.getComponent('InsuredsPhoneNumberHome');
+    }
+
+    set InsuredsPhoneNumberHome(value) {
+        this.setComponentValue('InsuredsPhoneNumberHome', value);
+    }
+
+    get InsuredsTelephoneNumberHome() {
+        return this.getComponent('InsuredsPhoneNumberHome');
+    }
+
+    set InsuredsTelephoneNumberHome(value) {
+        this.setComponentValue('InsuredsPhoneNumberHome', value);
     }
 
     get InsuredSPhoneNumberHome() {
-        return this.getComponent('InsuredSPhoneNumberHome');
+        return this.getComponent('InsuredsPhoneNumberHome');
     }
 
     set InsuredSPhoneNumberHome(value) {
-        this.setComponentValue('InsuredSPhoneNumberHome', value);
+        this.setComponentValue('InsuredsPhoneNumberHome', value);
     }
 
-    get InsuredSTelephoneNumberHome() {
-        return this.getComponent('InsuredSPhoneNumberHome');
+    get InsuredsEmployerPhoneNumber() {
+        return this.getComponent('InsuredsEmployerPhoneNumber');
     }
 
-    set InsuredSTelephoneNumberHome(value) {
-        this.setComponentValue('InsuredSPhoneNumberHome', value);
+    set InsuredsEmployerPhoneNumber(value) {
+        this.setComponentValue('InsuredsEmployerPhoneNumber', value);
+    }
+
+    get InsuredsEmployerTelephoneNumber() {
+        return this.getComponent('InsuredsEmployerPhoneNumber');
+    }
+
+    set InsuredsEmployerTelephoneNumber(value) {
+        this.setComponentValue('InsuredsEmployerPhoneNumber', value);
     }
 
     get InsuredSEmployerPhoneNumber() {
-        return this.getComponent('InsuredSEmployerPhoneNumber');
+        return this.getComponent('InsuredsEmployerPhoneNumber');
     }
 
     set InsuredSEmployerPhoneNumber(value) {
-        this.setComponentValue('InsuredSEmployerPhoneNumber', value);
-    }
-
-    get InsuredSEmployerTelephoneNumber() {
-        return this.getComponent('InsuredSEmployerPhoneNumber');
-    }
-
-    set InsuredSEmployerTelephoneNumber(value) {
-        this.setComponentValue('InsuredSEmployerPhoneNumber', value);
+        this.setComponentValue('InsuredsEmployerPhoneNumber', value);
     }
 
     get MilitaryHandicappedProgram() {
@@ -1526,11 +1673,27 @@ export class IN2 extends Segment {
         this.setComponentValue('InsuredOrganizationNameAndId', value);
     }
 
+    get InsuredOrganizationNameAndID() {
+        return this.getComponent('InsuredOrganizationNameAndId');
+    }
+
+    set InsuredOrganizationNameAndID(value) {
+        this.setComponentValue('InsuredOrganizationNameAndId', value);
+    }
+
     get InsuredEmployerOrganizationNameAndId() {
         return this.getComponent('InsuredEmployerOrganizationNameAndId');
     }
 
     set InsuredEmployerOrganizationNameAndId(value) {
+        this.setComponentValue('InsuredEmployerOrganizationNameAndId', value);
+    }
+
+    get InsuredEmployerOrganizationNameAndID() {
+        return this.getComponent('InsuredEmployerOrganizationNameAndId');
+    }
+
+    set InsuredEmployerOrganizationNameAndID(value) {
         this.setComponentValue('InsuredEmployerOrganizationNameAndId', value);
     }
 
@@ -1542,35 +1705,43 @@ export class IN2 extends Segment {
         this.setComponentValue('Race', value);
     }
 
-    get PatientSRelationshipToInsured() {
-        return this.getComponent('PatientSRelationshipToInsured');
+    get PatientsRelationshipToInsured() {
+        return this.getComponent('PatientsRelationshipToInsured');
     }
 
-    set PatientSRelationshipToInsured(value) {
-        this.setComponentValue('PatientSRelationshipToInsured', value);
+    set PatientsRelationshipToInsured(value) {
+        this.setComponentValue('PatientsRelationshipToInsured', value);
     }
 
     get PatientRelationshipToInsured() {
-        return this.getComponent('PatientSRelationshipToInsured');
+        return this.getComponent('PatientsRelationshipToInsured');
     }
 
     set PatientRelationshipToInsured(value) {
-        this.setComponentValue('PatientSRelationshipToInsured', value);
+        this.setComponentValue('PatientsRelationshipToInsured', value);
     }
 
-    get HcfaPatientSRelationshipToInsured() {
-        return this.getComponent('PatientSRelationshipToInsured');
+    get HCFAPatientSRelationshipToInsured() {
+        return this.getComponent('PatientsRelationshipToInsured');
     }
 
-    set HcfaPatientSRelationshipToInsured(value) {
-        this.setComponentValue('PatientSRelationshipToInsured', value);
+    set HCFAPatientSRelationshipToInsured(value) {
+        this.setComponentValue('PatientsRelationshipToInsured', value);
     }
 
-    get CmsPatientSRelationshipToInsured() {
-        return this.getComponent('PatientSRelationshipToInsured');
+    get HCFAPatientsRelationshipToInsured() {
+        return this.getComponent('PatientsRelationshipToInsured');
     }
 
-    set CmsPatientSRelationshipToInsured(value) {
-        this.setComponentValue('PatientSRelationshipToInsured', value);
+    set HCFAPatientsRelationshipToInsured(value) {
+        this.setComponentValue('PatientsRelationshipToInsured', value);
+    }
+
+    get CMSPatientsRelationshipToInsured() {
+        return this.getComponent('PatientsRelationshipToInsured');
+    }
+
+    set CMSPatientsRelationshipToInsured(value) {
+        this.setComponentValue('PatientsRelationshipToInsured', value);
     }
 }

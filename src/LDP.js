@@ -20,7 +20,8 @@ export class LDP extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        LdpPrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLdp' },
+        LDPPrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLdp' },
+        PrimaryKeyValueLDP: { aliasOf: 'PrimaryKeyValueLdp' },
         LocationDepartment: {
             defaultDataType: CWE,
             dataTypes: [
@@ -87,6 +88,7 @@ export class LDP extends Segment {
             minOccurence: 1,
         },
         ActivationDate: { aliasOf: 'ActivationDateLdp' },
+        ActivationDateLDP: { aliasOf: 'ActivationDateLdp' },
         InactivationDateLdp: {
             defaultDataType: TS,
             dataTypes: [
@@ -98,6 +100,7 @@ export class LDP extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        InactivationDateLDP: { aliasOf: 'InactivationDateLdp' },
         InactivatedReason: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -165,11 +168,19 @@ export class LDP extends Segment {
         this.setComponentValue('PrimaryKeyValueLdp', value);
     }
 
-    get LdpPrimaryKeyValue() {
+    get LDPPrimaryKeyValue() {
         return this.getComponent('PrimaryKeyValueLdp');
     }
 
-    set LdpPrimaryKeyValue(value) {
+    set LDPPrimaryKeyValue(value) {
+        this.setComponentValue('PrimaryKeyValueLdp', value);
+    }
+
+    get PrimaryKeyValueLDP() {
+        return this.getComponent('PrimaryKeyValueLdp');
+    }
+
+    set PrimaryKeyValueLDP(value) {
         this.setComponentValue('PrimaryKeyValueLdp', value);
     }
 
@@ -237,11 +248,27 @@ export class LDP extends Segment {
         this.setComponentValue('ActivationDateLdp', value);
     }
 
+    get ActivationDateLDP() {
+        return this.getComponent('ActivationDateLdp');
+    }
+
+    set ActivationDateLDP(value) {
+        this.setComponentValue('ActivationDateLdp', value);
+    }
+
     get InactivationDateLdp() {
         return this.getComponent('InactivationDateLdp');
     }
 
     set InactivationDateLdp(value) {
+        this.setComponentValue('InactivationDateLdp', value);
+    }
+
+    get InactivationDateLDP() {
+        return this.getComponent('InactivationDateLdp');
+    }
+
+    set InactivationDateLDP(value) {
         this.setComponentValue('InactivationDateLdp', value);
     }
 

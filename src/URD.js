@@ -5,7 +5,7 @@ import { DTM } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class URD extends Segment {
     static components = {
-        Urd1: {
+        URD1: {
             defaultDataType: TS,
             dataTypes: [
                 { dataType: ST, versions: ['2.8', '2.7', '2.7.1'] },
@@ -17,10 +17,10 @@ export class URD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        RUDateTime: { aliasOf: 'Urd1' },
+        RUDateTime: { aliasOf: 'URD1' },
     };
 
-    static componentsByIndex = ['', 'Urd1'];
+    static componentsByIndex = ['', 'URD1'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -28,19 +28,19 @@ export class URD extends Segment {
         this.setValues(values);
     }
 
-    get Urd1() {
-        return this.getComponent('Urd1');
+    get URD1() {
+        return this.getComponent('URD1');
     }
 
-    set Urd1(value) {
-        this.setComponentValue('Urd1', value);
+    set URD1(value) {
+        this.setComponentValue('URD1', value);
     }
 
     get RUDateTime() {
-        return this.getComponent('Urd1');
+        return this.getComponent('URD1');
     }
 
     set RUDateTime(value) {
-        this.setComponentValue('Urd1', value);
+        this.setComponentValue('URD1', value);
     }
 }

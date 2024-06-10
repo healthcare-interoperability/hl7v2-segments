@@ -25,9 +25,9 @@ export class RQ1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ManufacturedId: { aliasOf: 'ManufacturerIdentifier' },
-        ManufacturerId: { aliasOf: 'ManufacturerIdentifier' },
-        ManufacturerSCatalog: {
+        ManufacturedID: { aliasOf: 'ManufacturerIdentifier' },
+        ManufacturerID: { aliasOf: 'ManufacturerIdentifier' },
+        ManufacturersCatalog: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 3,
@@ -35,6 +35,7 @@ export class RQ1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ManufacturerSCatalog: { aliasOf: 'ManufacturersCatalog' },
         VendorId: {
             defaultDataType: CWE,
             dataTypes: [
@@ -46,6 +47,7 @@ export class RQ1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VendorID: { aliasOf: 'VendorId' },
         VendorCatalog: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -72,7 +74,7 @@ export class RQ1 extends Segment {
         },
     };
 
-    static componentsByIndex = ['', 'AnticipatedPrice', 'ManufacturerIdentifier', 'ManufacturerSCatalog', 'VendorId', 'VendorCatalog', 'Taxable', 'SubstituteAllowed'];
+    static componentsByIndex = ['', 'AnticipatedPrice', 'ManufacturerIdentifier', 'ManufacturersCatalog', 'VendorId', 'VendorCatalog', 'Taxable', 'SubstituteAllowed'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -96,28 +98,36 @@ export class RQ1 extends Segment {
         this.setComponentValue('ManufacturerIdentifier', value);
     }
 
-    get ManufacturedId() {
+    get ManufacturedID() {
         return this.getComponent('ManufacturerIdentifier');
     }
 
-    set ManufacturedId(value) {
+    set ManufacturedID(value) {
         this.setComponentValue('ManufacturerIdentifier', value);
     }
 
-    get ManufacturerId() {
+    get ManufacturerID() {
         return this.getComponent('ManufacturerIdentifier');
     }
 
-    set ManufacturerId(value) {
+    set ManufacturerID(value) {
         this.setComponentValue('ManufacturerIdentifier', value);
+    }
+
+    get ManufacturersCatalog() {
+        return this.getComponent('ManufacturersCatalog');
+    }
+
+    set ManufacturersCatalog(value) {
+        this.setComponentValue('ManufacturersCatalog', value);
     }
 
     get ManufacturerSCatalog() {
-        return this.getComponent('ManufacturerSCatalog');
+        return this.getComponent('ManufacturersCatalog');
     }
 
     set ManufacturerSCatalog(value) {
-        this.setComponentValue('ManufacturerSCatalog', value);
+        this.setComponentValue('ManufacturersCatalog', value);
     }
 
     get VendorId() {
@@ -125,6 +135,14 @@ export class RQ1 extends Segment {
     }
 
     set VendorId(value) {
+        this.setComponentValue('VendorId', value);
+    }
+
+    get VendorID() {
+        return this.getComponent('VendorId');
+    }
+
+    set VendorID(value) {
         this.setComponentValue('VendorId', value);
     }
 

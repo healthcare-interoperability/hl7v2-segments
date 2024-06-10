@@ -64,7 +64,7 @@ export class RXO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProviderSPharmacyTreatmentInstructions: {
+        ProvidersPharmacyTreatmentInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -75,8 +75,9 @@ export class RXO extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ProviderSPharmacyInstructions: { aliasOf: 'ProviderSPharmacyTreatmentInstructions' },
-        ProviderSAdministrationInstructions: {
+        ProvidersPharmacyInstructions: { aliasOf: 'ProvidersPharmacyTreatmentInstructions' },
+        ProviderSPharmacyTreatmentInstructions: { aliasOf: 'ProvidersPharmacyTreatmentInstructions' },
+        ProvidersAdministrationInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -87,6 +88,7 @@ export class RXO extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        ProviderSAdministrationInstructions: { aliasOf: 'ProvidersAdministrationInstructions' },
         DeliverToLocation: {
             defaultDataType: ST,
             dataTypes: [
@@ -144,7 +146,7 @@ export class RXO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        OrderingProviderSDeaNumber: {
+        OrderingProvidersDeaNumber: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 14,
@@ -152,7 +154,9 @@ export class RXO extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PharmacistTreatmentSupplierSVerifierId: {
+        OrderingProvidersDEANumber: { aliasOf: 'OrderingProvidersDeaNumber' },
+        OrderingProviderSDEANumber: { aliasOf: 'OrderingProvidersDeaNumber' },
+        PharmacistTreatmentSuppliersVerifierId: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 15,
@@ -160,6 +164,8 @@ export class RXO extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        PharmacistTreatmentSuppliersVerifierID: { aliasOf: 'PharmacistTreatmentSuppliersVerifierId' },
+        PharmacistTreatmentSupplierSVerifierID: { aliasOf: 'PharmacistTreatmentSuppliersVerifierId' },
         NeedsHumanReview: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -350,16 +356,16 @@ export class RXO extends Segment {
         'RequestedGiveAmountMaximum',
         'RequestedGiveUnits',
         'RequestedDosageForm',
-        'ProviderSPharmacyTreatmentInstructions',
-        'ProviderSAdministrationInstructions',
+        'ProvidersPharmacyTreatmentInstructions',
+        'ProvidersAdministrationInstructions',
         'DeliverToLocation',
         'AllowSubstitutions',
         'RequestedDispenseCode',
         'RequestedDispenseAmount',
         'RequestedDispenseUnits',
         'NumberOfRefills',
-        'OrderingProviderSDeaNumber',
-        'PharmacistTreatmentSupplierSVerifierId',
+        'OrderingProvidersDeaNumber',
+        'PharmacistTreatmentSuppliersVerifierId',
         'NeedsHumanReview',
         'RequestedGivePerTimeUnit',
         'RequestedGiveStrength',
@@ -429,28 +435,44 @@ export class RXO extends Segment {
         this.setComponentValue('RequestedDosageForm', value);
     }
 
+    get ProvidersPharmacyTreatmentInstructions() {
+        return this.getComponent('ProvidersPharmacyTreatmentInstructions');
+    }
+
+    set ProvidersPharmacyTreatmentInstructions(value) {
+        this.setComponentValue('ProvidersPharmacyTreatmentInstructions', value);
+    }
+
+    get ProvidersPharmacyInstructions() {
+        return this.getComponent('ProvidersPharmacyTreatmentInstructions');
+    }
+
+    set ProvidersPharmacyInstructions(value) {
+        this.setComponentValue('ProvidersPharmacyTreatmentInstructions', value);
+    }
+
     get ProviderSPharmacyTreatmentInstructions() {
-        return this.getComponent('ProviderSPharmacyTreatmentInstructions');
+        return this.getComponent('ProvidersPharmacyTreatmentInstructions');
     }
 
     set ProviderSPharmacyTreatmentInstructions(value) {
-        this.setComponentValue('ProviderSPharmacyTreatmentInstructions', value);
+        this.setComponentValue('ProvidersPharmacyTreatmentInstructions', value);
     }
 
-    get ProviderSPharmacyInstructions() {
-        return this.getComponent('ProviderSPharmacyTreatmentInstructions');
+    get ProvidersAdministrationInstructions() {
+        return this.getComponent('ProvidersAdministrationInstructions');
     }
 
-    set ProviderSPharmacyInstructions(value) {
-        this.setComponentValue('ProviderSPharmacyTreatmentInstructions', value);
+    set ProvidersAdministrationInstructions(value) {
+        this.setComponentValue('ProvidersAdministrationInstructions', value);
     }
 
     get ProviderSAdministrationInstructions() {
-        return this.getComponent('ProviderSAdministrationInstructions');
+        return this.getComponent('ProvidersAdministrationInstructions');
     }
 
     set ProviderSAdministrationInstructions(value) {
-        this.setComponentValue('ProviderSAdministrationInstructions', value);
+        this.setComponentValue('ProvidersAdministrationInstructions', value);
     }
 
     get DeliverToLocation() {
@@ -501,20 +523,52 @@ export class RXO extends Segment {
         this.setComponentValue('NumberOfRefills', value);
     }
 
-    get OrderingProviderSDeaNumber() {
-        return this.getComponent('OrderingProviderSDeaNumber');
+    get OrderingProvidersDeaNumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
     }
 
-    set OrderingProviderSDeaNumber(value) {
-        this.setComponentValue('OrderingProviderSDeaNumber', value);
+    set OrderingProvidersDeaNumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
     }
 
-    get PharmacistTreatmentSupplierSVerifierId() {
-        return this.getComponent('PharmacistTreatmentSupplierSVerifierId');
+    get OrderingProvidersDEANumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
     }
 
-    set PharmacistTreatmentSupplierSVerifierId(value) {
-        this.setComponentValue('PharmacistTreatmentSupplierSVerifierId', value);
+    set OrderingProvidersDEANumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
+    }
+
+    get OrderingProviderSDEANumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
+    }
+
+    set OrderingProviderSDEANumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
+    }
+
+    get PharmacistTreatmentSuppliersVerifierId() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSuppliersVerifierId(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
+    }
+
+    get PharmacistTreatmentSuppliersVerifierID() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSuppliersVerifierID(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
+    }
+
+    get PharmacistTreatmentSupplierSVerifierID() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSupplierSVerifierID(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
     }
 
     get NeedsHumanReview() {

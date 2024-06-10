@@ -126,7 +126,7 @@ export class ORC extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        EntererSLocation: {
+        EnterersLocation: {
             defaultDataType: PL,
             dataTypes: [{ dataType: PL, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 13,
@@ -134,6 +134,7 @@ export class ORC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        EntererSLocation: { aliasOf: 'EnterersLocation' },
         CallBackPhoneNumber: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -253,7 +254,7 @@ export class ORC extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        FillerSExpectedAvailabilityDateTime: {
+        FillersExpectedAvailabilityDateTime: {
             defaultDataType: TS,
             dataTypes: [
                 { dataType: TS, versions: ['2.5', '2.5.1'] },
@@ -336,7 +337,7 @@ export class ORC extends Segment {
         'EnteredBy',
         'VerifiedBy',
         'OrderingProvider',
-        'EntererSLocation',
+        'EnterersLocation',
         'CallBackPhoneNumber',
         'OrderEffectiveDateTime',
         'OrderControlCodeReason',
@@ -350,7 +351,7 @@ export class ORC extends Segment {
         'OrderingProviderAddress',
         'OrderStatusModifier',
         'AdvancedBeneficiaryNoticeOverrideReason',
-        'FillerSExpectedAvailabilityDateTime',
+        'FillersExpectedAvailabilityDateTime',
         'ConfidentialityCode',
         'OrderType',
         'EntererAuthorizationMode',
@@ -470,12 +471,20 @@ export class ORC extends Segment {
         this.setComponentValue('OrderingProvider', value);
     }
 
+    get EnterersLocation() {
+        return this.getComponent('EnterersLocation');
+    }
+
+    set EnterersLocation(value) {
+        this.setComponentValue('EnterersLocation', value);
+    }
+
     get EntererSLocation() {
-        return this.getComponent('EntererSLocation');
+        return this.getComponent('EnterersLocation');
     }
 
     set EntererSLocation(value) {
-        this.setComponentValue('EntererSLocation', value);
+        this.setComponentValue('EnterersLocation', value);
     }
 
     get CallBackPhoneNumber() {
@@ -582,12 +591,12 @@ export class ORC extends Segment {
         this.setComponentValue('AdvancedBeneficiaryNoticeOverrideReason', value);
     }
 
-    get FillerSExpectedAvailabilityDateTime() {
-        return this.getComponent('FillerSExpectedAvailabilityDateTime');
+    get FillersExpectedAvailabilityDateTime() {
+        return this.getComponent('FillersExpectedAvailabilityDateTime');
     }
 
-    set FillerSExpectedAvailabilityDateTime(value) {
-        this.setComponentValue('FillerSExpectedAvailabilityDateTime', value);
+    set FillersExpectedAvailabilityDateTime(value) {
+        this.setComponentValue('FillersExpectedAvailabilityDateTime', value);
     }
 
     get ConfidentialityCode() {

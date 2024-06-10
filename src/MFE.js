@@ -25,6 +25,7 @@ export class MFE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        MFNControlID: { aliasOf: 'MfnControlId' },
         EffectiveDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -48,6 +49,7 @@ export class MFE extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueMfe' },
+        PrimaryKeyValueMFE: { aliasOf: 'PrimaryKeyValueMfe' },
         PrimaryKeyValueType: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1', '2.8'] }],
@@ -98,6 +100,14 @@ export class MFE extends Segment {
         this.setComponentValue('MfnControlId', value);
     }
 
+    get MFNControlID() {
+        return this.getComponent('MfnControlId');
+    }
+
+    set MFNControlID(value) {
+        this.setComponentValue('MfnControlId', value);
+    }
+
     get EffectiveDateTime() {
         return this.getComponent('EffectiveDateTime');
     }
@@ -119,6 +129,14 @@ export class MFE extends Segment {
     }
 
     set PrimaryKeyValue(value) {
+        this.setComponentValue('PrimaryKeyValueMfe', value);
+    }
+
+    get PrimaryKeyValueMFE() {
+        return this.getComponent('PrimaryKeyValueMfe');
+    }
+
+    set PrimaryKeyValueMFE(value) {
         this.setComponentValue('PrimaryKeyValueMfe', value);
     }
 

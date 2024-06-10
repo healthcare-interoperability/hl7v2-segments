@@ -21,7 +21,7 @@ export class EQL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        EqlQueryName: {
+        EQLQueryName: {
             defaultDataType: CE,
             dataTypes: [{ dataType: CE, versions: ['2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6'] }],
             position: 3,
@@ -29,7 +29,7 @@ export class EQL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        EqlQueryStatement: {
+        EQLQueryStatement: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6'] }],
             position: 4,
@@ -39,7 +39,7 @@ export class EQL extends Segment {
         },
     };
 
-    static componentsByIndex = ['', 'QueryTag', 'QueryResponseFormatCode', 'EqlQueryName', 'EqlQueryStatement'];
+    static componentsByIndex = ['', 'QueryTag', 'QueryResponseFormatCode', 'EQLQueryName', 'EQLQueryStatement'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -63,19 +63,19 @@ export class EQL extends Segment {
         this.setComponentValue('QueryResponseFormatCode', value);
     }
 
-    get EqlQueryName() {
-        return this.getComponent('EqlQueryName');
+    get EQLQueryName() {
+        return this.getComponent('EQLQueryName');
     }
 
-    set EqlQueryName(value) {
-        this.setComponentValue('EqlQueryName', value);
+    set EQLQueryName(value) {
+        this.setComponentValue('EQLQueryName', value);
     }
 
-    get EqlQueryStatement() {
-        return this.getComponent('EqlQueryStatement');
+    get EQLQueryStatement() {
+        return this.getComponent('EQLQueryStatement');
     }
 
-    set EqlQueryStatement(value) {
-        this.setComponentValue('EqlQueryStatement', value);
+    set EQLQueryStatement(value) {
+        this.setComponentValue('EQLQueryStatement', value);
     }
 }

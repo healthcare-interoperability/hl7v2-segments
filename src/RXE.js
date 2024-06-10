@@ -77,7 +77,7 @@ export class RXE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ProviderSAdministrationInstructions: {
+        ProvidersAdministrationInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -88,7 +88,7 @@ export class RXE extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ProviderAdministrationInstructions: { aliasOf: 'ProviderSAdministrationInstructions' },
+        ProviderAdministrationInstructions: { aliasOf: 'ProvidersAdministrationInstructions' },
         DeliverToLocation: {
             defaultDataType: ST,
             dataTypes: [
@@ -136,7 +136,7 @@ export class RXE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        OrderingProviderSDeaNumber: {
+        OrderingProvidersDeaNumber: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 13,
@@ -144,7 +144,9 @@ export class RXE extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PharmacistTreatmentSupplierSVerifierId: {
+        OrderingProvidersDEANumber: { aliasOf: 'OrderingProvidersDeaNumber' },
+        OrderingProviderSDEANumber: { aliasOf: 'OrderingProvidersDeaNumber' },
+        PharmacistTreatmentSuppliersVerifierId: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 14,
@@ -152,6 +154,8 @@ export class RXE extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        PharmacistTreatmentSuppliersVerifierID: { aliasOf: 'PharmacistTreatmentSuppliersVerifierId' },
+        PharmacistTreatmentSupplierSVerifierID: { aliasOf: 'PharmacistTreatmentSuppliersVerifierId' },
         PrescriptionNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -204,7 +208,7 @@ export class RXE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PharmacyTreatmentSupplierSSpecialDispensingInstructions: {
+        PharmacyTreatmentSuppliersSpecialDispensingInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -215,6 +219,7 @@ export class RXE extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        PharmacyTreatmentSupplierSSpecialDispensingInstructions: { aliasOf: 'PharmacyTreatmentSuppliersSpecialDispensingInstructions' },
         GivePerTimeUnit: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -437,21 +442,21 @@ export class RXE extends Segment {
         'GiveAmountMaximum',
         'GiveUnits',
         'GiveDosageForm',
-        'ProviderSAdministrationInstructions',
+        'ProvidersAdministrationInstructions',
         'DeliverToLocation',
         'SubstitutionStatus',
         'DispenseAmount',
         'DispenseUnits',
         'NumberOfRefills',
-        'OrderingProviderSDeaNumber',
-        'PharmacistTreatmentSupplierSVerifierId',
+        'OrderingProvidersDeaNumber',
+        'PharmacistTreatmentSuppliersVerifierId',
         'PrescriptionNumber',
         'NumberOfRefillsRemaining',
         'NumberOfRefillsDosesDispensed',
         'DTOfMostRecentRefillOrDoseDispensed',
         'TotalDailyDose',
         'NeedsHumanReview',
-        'PharmacyTreatmentSupplierSSpecialDispensingInstructions',
+        'PharmacyTreatmentSuppliersSpecialDispensingInstructions',
         'GivePerTimeUnit',
         'GiveRateAmount',
         'GiveRateUnits',
@@ -532,20 +537,20 @@ export class RXE extends Segment {
         this.setComponentValue('GiveDosageForm', value);
     }
 
-    get ProviderSAdministrationInstructions() {
-        return this.getComponent('ProviderSAdministrationInstructions');
+    get ProvidersAdministrationInstructions() {
+        return this.getComponent('ProvidersAdministrationInstructions');
     }
 
-    set ProviderSAdministrationInstructions(value) {
-        this.setComponentValue('ProviderSAdministrationInstructions', value);
+    set ProvidersAdministrationInstructions(value) {
+        this.setComponentValue('ProvidersAdministrationInstructions', value);
     }
 
     get ProviderAdministrationInstructions() {
-        return this.getComponent('ProviderSAdministrationInstructions');
+        return this.getComponent('ProvidersAdministrationInstructions');
     }
 
     set ProviderAdministrationInstructions(value) {
-        this.setComponentValue('ProviderSAdministrationInstructions', value);
+        this.setComponentValue('ProvidersAdministrationInstructions', value);
     }
 
     get DeliverToLocation() {
@@ -588,20 +593,52 @@ export class RXE extends Segment {
         this.setComponentValue('NumberOfRefills', value);
     }
 
-    get OrderingProviderSDeaNumber() {
-        return this.getComponent('OrderingProviderSDeaNumber');
+    get OrderingProvidersDeaNumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
     }
 
-    set OrderingProviderSDeaNumber(value) {
-        this.setComponentValue('OrderingProviderSDeaNumber', value);
+    set OrderingProvidersDeaNumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
     }
 
-    get PharmacistTreatmentSupplierSVerifierId() {
-        return this.getComponent('PharmacistTreatmentSupplierSVerifierId');
+    get OrderingProvidersDEANumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
     }
 
-    set PharmacistTreatmentSupplierSVerifierId(value) {
-        this.setComponentValue('PharmacistTreatmentSupplierSVerifierId', value);
+    set OrderingProvidersDEANumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
+    }
+
+    get OrderingProviderSDEANumber() {
+        return this.getComponent('OrderingProvidersDeaNumber');
+    }
+
+    set OrderingProviderSDEANumber(value) {
+        this.setComponentValue('OrderingProvidersDeaNumber', value);
+    }
+
+    get PharmacistTreatmentSuppliersVerifierId() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSuppliersVerifierId(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
+    }
+
+    get PharmacistTreatmentSuppliersVerifierID() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSuppliersVerifierID(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
+    }
+
+    get PharmacistTreatmentSupplierSVerifierID() {
+        return this.getComponent('PharmacistTreatmentSuppliersVerifierId');
+    }
+
+    set PharmacistTreatmentSupplierSVerifierID(value) {
+        this.setComponentValue('PharmacistTreatmentSuppliersVerifierId', value);
     }
 
     get PrescriptionNumber() {
@@ -660,12 +697,20 @@ export class RXE extends Segment {
         this.setComponentValue('NeedsHumanReview', value);
     }
 
+    get PharmacyTreatmentSuppliersSpecialDispensingInstructions() {
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialDispensingInstructions');
+    }
+
+    set PharmacyTreatmentSuppliersSpecialDispensingInstructions(value) {
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialDispensingInstructions', value);
+    }
+
     get PharmacyTreatmentSupplierSSpecialDispensingInstructions() {
-        return this.getComponent('PharmacyTreatmentSupplierSSpecialDispensingInstructions');
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialDispensingInstructions');
     }
 
     set PharmacyTreatmentSupplierSSpecialDispensingInstructions(value) {
-        this.setComponentValue('PharmacyTreatmentSupplierSSpecialDispensingInstructions', value);
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialDispensingInstructions', value);
     }
 
     get GivePerTimeUnit() {

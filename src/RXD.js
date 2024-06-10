@@ -23,6 +23,7 @@ export class RXD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DispenseSubIDCounter: { aliasOf: 'DispenseSubIdCounter' },
         DispenseGiveCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -145,7 +146,7 @@ export class RXD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PharmacyTreatmentSupplierSSpecialDispensingInstructions: {
+        PharmacyTreatmentSuppliersSpecialDispensingInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -156,6 +157,7 @@ export class RXD extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        PharmacyTreatmentSupplierSSpecialDispensingInstructions: { aliasOf: 'PharmacyTreatmentSuppliersSpecialDispensingInstructions' },
         ActualStrength: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -358,7 +360,7 @@ export class RXD extends Segment {
         'TotalDailyDose',
         'DispenseToLocation',
         'NeedsHumanReview',
-        'PharmacyTreatmentSupplierSSpecialDispensingInstructions',
+        'PharmacyTreatmentSuppliersSpecialDispensingInstructions',
         'ActualStrength',
         'ActualStrengthUnit',
         'SubstanceLotNumber',
@@ -392,6 +394,14 @@ export class RXD extends Segment {
     }
 
     set DispenseSubIdCounter(value) {
+        this.setComponentValue('DispenseSubIdCounter', value);
+    }
+
+    get DispenseSubIDCounter() {
+        return this.getComponent('DispenseSubIdCounter');
+    }
+
+    set DispenseSubIDCounter(value) {
         this.setComponentValue('DispenseSubIdCounter', value);
     }
 
@@ -499,12 +509,20 @@ export class RXD extends Segment {
         this.setComponentValue('NeedsHumanReview', value);
     }
 
+    get PharmacyTreatmentSuppliersSpecialDispensingInstructions() {
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialDispensingInstructions');
+    }
+
+    set PharmacyTreatmentSuppliersSpecialDispensingInstructions(value) {
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialDispensingInstructions', value);
+    }
+
     get PharmacyTreatmentSupplierSSpecialDispensingInstructions() {
-        return this.getComponent('PharmacyTreatmentSupplierSSpecialDispensingInstructions');
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialDispensingInstructions');
     }
 
     set PharmacyTreatmentSupplierSSpecialDispensingInstructions(value) {
-        this.setComponentValue('PharmacyTreatmentSupplierSSpecialDispensingInstructions', value);
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialDispensingInstructions', value);
     }
 
     get ActualStrength() {

@@ -52,7 +52,8 @@ export class PD1 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        PatientPrimaryCareProviderNameAndIdNo: { aliasOf: 'PatientPrimaryCareProviderNameIdNo' },
+        PatientPrimaryCareProviderNameIDNo: { aliasOf: 'PatientPrimaryCareProviderNameIdNo' },
+        PatientPrimaryCareProviderNameAndIDNo: { aliasOf: 'PatientPrimaryCareProviderNameIdNo' },
         StudentIndicator: {
             defaultDataType: CWE,
             dataTypes: [
@@ -296,11 +297,19 @@ export class PD1 extends Segment {
         this.setComponentValue('PatientPrimaryCareProviderNameIdNo', value);
     }
 
-    get PatientPrimaryCareProviderNameAndIdNo() {
+    get PatientPrimaryCareProviderNameIDNo() {
         return this.getComponent('PatientPrimaryCareProviderNameIdNo');
     }
 
-    set PatientPrimaryCareProviderNameAndIdNo(value) {
+    set PatientPrimaryCareProviderNameIDNo(value) {
+        this.setComponentValue('PatientPrimaryCareProviderNameIdNo', value);
+    }
+
+    get PatientPrimaryCareProviderNameAndIDNo() {
+        return this.getComponent('PatientPrimaryCareProviderNameIdNo');
+    }
+
+    set PatientPrimaryCareProviderNameAndIDNo(value) {
         this.setComponentValue('PatientPrimaryCareProviderNameIdNo', value);
     }
 

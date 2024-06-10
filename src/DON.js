@@ -11,7 +11,7 @@ import { XCN } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class DON extends Segment {
     static components = {
-        DonationIdentificationNumberDin: {
+        DonationIdentificationNumberDIN: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8'] }],
             position: 1,
@@ -139,7 +139,7 @@ export class DON extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        IntendedRecipientDob: {
+        IntendedRecipientDOB: {
             defaultDataType: DTM,
             dataTypes: [{ dataType: DTM, versions: ['2.8'] }],
             position: 17,
@@ -227,7 +227,7 @@ export class DON extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        FinalReviewStaffId: {
+        FinalReviewStaffID: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8'] }],
             position: 28,
@@ -279,7 +279,7 @@ export class DON extends Segment {
 
     static componentsByIndex = [
         '',
-        'DonationIdentificationNumberDin',
+        'DonationIdentificationNumberDIN',
         'DonationType',
         'PhlebotomyStartDateTime',
         'PhlebotomyEndDateTime',
@@ -295,7 +295,7 @@ export class DON extends Segment {
         'PhlebotomyIssue',
         'IntendedRecipientBloodRelative',
         'IntendedRecipientName',
-        'IntendedRecipientDob',
+        'IntendedRecipientDOB',
         'IntendedRecipientFacility',
         'IntendedRecipientProcedureDate',
         'IntendedRecipientOrderingProvider',
@@ -306,7 +306,7 @@ export class DON extends Segment {
         'AphaeresisTypeMachine',
         'AphaeresisMachineSerialNumber',
         'DonorReaction',
-        'FinalReviewStaffId',
+        'FinalReviewStaffID',
         'FinalReviewDateTime',
         'NumberOfTubesCollected',
         'DonationSampleIdentifier',
@@ -320,12 +320,12 @@ export class DON extends Segment {
         this.setValues(values);
     }
 
-    get DonationIdentificationNumberDin() {
-        return this.getComponent('DonationIdentificationNumberDin');
+    get DonationIdentificationNumberDIN() {
+        return this.getComponent('DonationIdentificationNumberDIN');
     }
 
-    set DonationIdentificationNumberDin(value) {
-        this.setComponentValue('DonationIdentificationNumberDin', value);
+    set DonationIdentificationNumberDIN(value) {
+        this.setComponentValue('DonationIdentificationNumberDIN', value);
     }
 
     get DonationType() {
@@ -448,12 +448,12 @@ export class DON extends Segment {
         this.setComponentValue('IntendedRecipientName', value);
     }
 
-    get IntendedRecipientDob() {
-        return this.getComponent('IntendedRecipientDob');
+    get IntendedRecipientDOB() {
+        return this.getComponent('IntendedRecipientDOB');
     }
 
-    set IntendedRecipientDob(value) {
-        this.setComponentValue('IntendedRecipientDob', value);
+    set IntendedRecipientDOB(value) {
+        this.setComponentValue('IntendedRecipientDOB', value);
     }
 
     get IntendedRecipientFacility() {
@@ -536,12 +536,12 @@ export class DON extends Segment {
         this.setComponentValue('DonorReaction', value);
     }
 
-    get FinalReviewStaffId() {
-        return this.getComponent('FinalReviewStaffId');
+    get FinalReviewStaffID() {
+        return this.getComponent('FinalReviewStaffID');
     }
 
-    set FinalReviewStaffId(value) {
-        this.setComponentValue('FinalReviewStaffId', value);
+    set FinalReviewStaffID(value) {
+        this.setComponentValue('FinalReviewStaffID', value);
     }
 
     get FinalReviewDateTime() {

@@ -22,6 +22,7 @@ export class RXG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        GiveSubIDCounter: { aliasOf: 'GiveSubIdCounter' },
         DispenseSubIdCounter: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -30,6 +31,7 @@ export class RXG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        DispenseSubIDCounter: { aliasOf: 'DispenseSubIdCounter' },
         QuantityTiming: {
             defaultDataType: ST,
             dataTypes: [
@@ -128,7 +130,7 @@ export class RXG extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PharmacyTreatmentSupplierSSpecialAdministrationInstructions: {
+        PharmacyTreatmentSuppliersSpecialAdministrationInstructions: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -139,7 +141,8 @@ export class RXG extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PharmacySpecialAdministrationInstructions: { aliasOf: 'PharmacyTreatmentSupplierSSpecialAdministrationInstructions' },
+        PharmacySpecialAdministrationInstructions: { aliasOf: 'PharmacyTreatmentSuppliersSpecialAdministrationInstructions' },
+        PharmacyTreatmentSupplierSSpecialAdministrationInstructions: { aliasOf: 'PharmacyTreatmentSuppliersSpecialAdministrationInstructions' },
         GivePerTimeUnit: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -332,7 +335,7 @@ export class RXG extends Segment {
         'SubstitutionStatus',
         'DispenseToLocation',
         'NeedsHumanReview',
-        'PharmacyTreatmentSupplierSSpecialAdministrationInstructions',
+        'PharmacyTreatmentSuppliersSpecialAdministrationInstructions',
         'GivePerTimeUnit',
         'GiveRateAmount',
         'GiveRateUnits',
@@ -369,11 +372,27 @@ export class RXG extends Segment {
         this.setComponentValue('GiveSubIdCounter', value);
     }
 
+    get GiveSubIDCounter() {
+        return this.getComponent('GiveSubIdCounter');
+    }
+
+    set GiveSubIDCounter(value) {
+        this.setComponentValue('GiveSubIdCounter', value);
+    }
+
     get DispenseSubIdCounter() {
         return this.getComponent('DispenseSubIdCounter');
     }
 
     set DispenseSubIdCounter(value) {
+        this.setComponentValue('DispenseSubIdCounter', value);
+    }
+
+    get DispenseSubIDCounter() {
+        return this.getComponent('DispenseSubIdCounter');
+    }
+
+    set DispenseSubIDCounter(value) {
         this.setComponentValue('DispenseSubIdCounter', value);
     }
 
@@ -457,20 +476,28 @@ export class RXG extends Segment {
         this.setComponentValue('NeedsHumanReview', value);
     }
 
-    get PharmacyTreatmentSupplierSSpecialAdministrationInstructions() {
-        return this.getComponent('PharmacyTreatmentSupplierSSpecialAdministrationInstructions');
+    get PharmacyTreatmentSuppliersSpecialAdministrationInstructions() {
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialAdministrationInstructions');
     }
 
-    set PharmacyTreatmentSupplierSSpecialAdministrationInstructions(value) {
-        this.setComponentValue('PharmacyTreatmentSupplierSSpecialAdministrationInstructions', value);
+    set PharmacyTreatmentSuppliersSpecialAdministrationInstructions(value) {
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialAdministrationInstructions', value);
     }
 
     get PharmacySpecialAdministrationInstructions() {
-        return this.getComponent('PharmacyTreatmentSupplierSSpecialAdministrationInstructions');
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialAdministrationInstructions');
     }
 
     set PharmacySpecialAdministrationInstructions(value) {
-        this.setComponentValue('PharmacyTreatmentSupplierSSpecialAdministrationInstructions', value);
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialAdministrationInstructions', value);
+    }
+
+    get PharmacyTreatmentSupplierSSpecialAdministrationInstructions() {
+        return this.getComponent('PharmacyTreatmentSuppliersSpecialAdministrationInstructions');
+    }
+
+    set PharmacyTreatmentSupplierSSpecialAdministrationInstructions(value) {
+        this.setComponentValue('PharmacyTreatmentSuppliersSpecialAdministrationInstructions', value);
     }
 
     get GivePerTimeUnit() {

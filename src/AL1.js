@@ -19,6 +19,7 @@ export class AL1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDAl1: { aliasOf: 'SetIdAl1' },
         AllergenTypeCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -92,6 +93,14 @@ export class AL1 extends Segment {
     }
 
     set SetIdAl1(value) {
+        this.setComponentValue('SetIdAl1', value);
+    }
+
+    get SetIDAl1() {
+        return this.getComponent('SetIdAl1');
+    }
+
+    set SetIDAl1(value) {
         this.setComponentValue('SetIdAl1', value);
     }
 

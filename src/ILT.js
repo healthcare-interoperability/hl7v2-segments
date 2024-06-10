@@ -16,6 +16,7 @@ export class ILT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIdILT: { aliasOf: 'SetIdIlt' },
         InventoryLotNumber: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -115,6 +116,14 @@ export class ILT extends Segment {
     }
 
     set SetIdIlt(value) {
+        this.setComponentValue('SetIdIlt', value);
+    }
+
+    get SetIdILT() {
+        return this.getComponent('SetIdIlt');
+    }
+
+    set SetIdILT(value) {
         this.setComponentValue('SetIdIlt', value);
     }
 

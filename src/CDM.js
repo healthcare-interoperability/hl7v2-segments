@@ -24,6 +24,7 @@ export class CDM extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueCdm' },
+        PrimaryKeyValueCDM: { aliasOf: 'PrimaryKeyValueCdm' },
         ChargeCodeAlias: {
             defaultDataType: CWE,
             dataTypes: [
@@ -177,6 +178,14 @@ export class CDM extends Segment {
     }
 
     set PrimaryKeyValue(value) {
+        this.setComponentValue('PrimaryKeyValueCdm', value);
+    }
+
+    get PrimaryKeyValueCDM() {
+        return this.getComponent('PrimaryKeyValueCdm');
+    }
+
+    set PrimaryKeyValueCDM(value) {
         this.setComponentValue('PrimaryKeyValueCdm', value);
     }
 

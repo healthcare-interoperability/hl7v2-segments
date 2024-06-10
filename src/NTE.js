@@ -17,7 +17,8 @@ export class NTE extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdNotesAndComments: { aliasOf: 'SetIdNte' },
+        SetIDNotesAndComments: { aliasOf: 'SetIdNte' },
+        SetIDNTE: { aliasOf: 'SetIdNte' },
         SourceOfComment: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -95,11 +96,19 @@ export class NTE extends Segment {
         this.setComponentValue('SetIdNte', value);
     }
 
-    get SetIdNotesAndComments() {
+    get SetIDNotesAndComments() {
         return this.getComponent('SetIdNte');
     }
 
-    set SetIdNotesAndComments(value) {
+    set SetIDNotesAndComments(value) {
+        this.setComponentValue('SetIdNte', value);
+    }
+
+    get SetIDNTE() {
+        return this.getComponent('SetIdNte');
+    }
+
+    set SetIDNTE(value) {
         this.setComponentValue('SetIdNte', value);
     }
 

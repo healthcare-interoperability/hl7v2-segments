@@ -36,7 +36,8 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdObservationRequest: { aliasOf: 'SetIdObr' },
+        SetIDObservationRequest: { aliasOf: 'SetIdObr' },
+        SetIDOBR: { aliasOf: 'SetIdObr' },
         PlacerOrderNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -64,7 +65,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        UniversalServiceId: { aliasOf: 'UniversalServiceIdentifier' },
+        UniversalServiceID: { aliasOf: 'UniversalServiceIdentifier' },
         Priority: {
             defaultDataType: ST,
             dataTypes: [
@@ -76,7 +77,7 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PriorityObr: { aliasOf: 'Priority' },
+        PriorityOBR: { aliasOf: 'Priority' },
         RequestedDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -260,7 +261,8 @@ export class OBR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DiagnosticServiceSectionId: { aliasOf: 'DiagnosticServSectId' },
+        DiagnosticServiceSectionID: { aliasOf: 'DiagnosticServSectId' },
+        DiagnosticServSectID: { aliasOf: 'DiagnosticServSectId' },
         ResultStatus: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -404,7 +406,7 @@ export class OBR extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        CollectorSComment: {
+        CollectorsComment: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] },
@@ -415,6 +417,7 @@ export class OBR extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        CollectorSComment: { aliasOf: 'CollectorsComment' },
         TransportArrangementResponsibility: {
             defaultDataType: CWE,
             dataTypes: [
@@ -598,7 +601,7 @@ export class OBR extends Segment {
         'ScheduledDateTime',
         'NumberOfSampleContainers',
         'TransportLogisticsOfCollectedSample',
-        'CollectorSComment',
+        'CollectorsComment',
         'TransportArrangementResponsibility',
         'TransportArranged',
         'EscortRequired',
@@ -630,11 +633,19 @@ export class OBR extends Segment {
         this.setComponentValue('SetIdObr', value);
     }
 
-    get SetIdObservationRequest() {
+    get SetIDObservationRequest() {
         return this.getComponent('SetIdObr');
     }
 
-    set SetIdObservationRequest(value) {
+    set SetIDObservationRequest(value) {
+        this.setComponentValue('SetIdObr', value);
+    }
+
+    get SetIDOBR() {
+        return this.getComponent('SetIdObr');
+    }
+
+    set SetIDOBR(value) {
         this.setComponentValue('SetIdObr', value);
     }
 
@@ -662,11 +673,11 @@ export class OBR extends Segment {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 
-    get UniversalServiceId() {
+    get UniversalServiceID() {
         return this.getComponent('UniversalServiceIdentifier');
     }
 
-    set UniversalServiceId(value) {
+    set UniversalServiceID(value) {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 
@@ -678,11 +689,11 @@ export class OBR extends Segment {
         this.setComponentValue('Priority', value);
     }
 
-    get PriorityObr() {
+    get PriorityOBR() {
         return this.getComponent('Priority');
     }
 
-    set PriorityObr(value) {
+    set PriorityOBR(value) {
         this.setComponentValue('Priority', value);
     }
 
@@ -846,11 +857,19 @@ export class OBR extends Segment {
         this.setComponentValue('DiagnosticServSectId', value);
     }
 
-    get DiagnosticServiceSectionId() {
+    get DiagnosticServiceSectionID() {
         return this.getComponent('DiagnosticServSectId');
     }
 
-    set DiagnosticServiceSectionId(value) {
+    set DiagnosticServiceSectionID(value) {
+        this.setComponentValue('DiagnosticServSectId', value);
+    }
+
+    get DiagnosticServSectID() {
+        return this.getComponent('DiagnosticServSectId');
+    }
+
+    set DiagnosticServSectID(value) {
         this.setComponentValue('DiagnosticServSectId', value);
     }
 
@@ -974,12 +993,20 @@ export class OBR extends Segment {
         this.setComponentValue('TransportLogisticsOfCollectedSample', value);
     }
 
+    get CollectorsComment() {
+        return this.getComponent('CollectorsComment');
+    }
+
+    set CollectorsComment(value) {
+        this.setComponentValue('CollectorsComment', value);
+    }
+
     get CollectorSComment() {
-        return this.getComponent('CollectorSComment');
+        return this.getComponent('CollectorsComment');
     }
 
     set CollectorSComment(value) {
-        this.setComponentValue('CollectorSComment', value);
+        this.setComponentValue('CollectorsComment', value);
     }
 
     get TransportArrangementResponsibility() {

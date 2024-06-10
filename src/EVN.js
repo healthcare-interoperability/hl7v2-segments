@@ -62,6 +62,7 @@ export class EVN extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        OperatorID: { aliasOf: 'OperatorId' },
         EventOccurred: {
             defaultDataType: TS,
             dataTypes: [
@@ -128,6 +129,14 @@ export class EVN extends Segment {
     }
 
     set OperatorId(value) {
+        this.setComponentValue('OperatorId', value);
+    }
+
+    get OperatorID() {
+        return this.getComponent('OperatorId');
+    }
+
+    set OperatorID(value) {
         this.setComponentValue('OperatorId', value);
     }
 

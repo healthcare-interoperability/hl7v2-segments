@@ -15,6 +15,7 @@ export class LCC extends Segment {
             minOccurence: 1,
         },
         PrimaryKeyValue: { aliasOf: 'PrimaryKeyValueLcc' },
+        PrimaryKeyValueLCC: { aliasOf: 'PrimaryKeyValueLcc' },
         LocationDepartment: {
             defaultDataType: CWE,
             dataTypes: [
@@ -72,6 +73,14 @@ export class LCC extends Segment {
     }
 
     set PrimaryKeyValue(value) {
+        this.setComponentValue('PrimaryKeyValueLcc', value);
+    }
+
+    get PrimaryKeyValueLCC() {
+        return this.getComponent('PrimaryKeyValueLcc');
+    }
+
+    set PrimaryKeyValueLCC(value) {
         this.setComponentValue('PrimaryKeyValueLcc', value);
     }
 

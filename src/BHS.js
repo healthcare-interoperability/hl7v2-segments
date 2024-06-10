@@ -93,6 +93,7 @@ export class BHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BatchNameIDType: { aliasOf: 'BatchNameIdType' },
         BatchComment: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -109,6 +110,7 @@ export class BHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        BatchControlID: { aliasOf: 'BatchControlId' },
         ReferenceBatchControlId: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -117,6 +119,7 @@ export class BHS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ReferenceBatchControlID: { aliasOf: 'ReferenceBatchControlId' },
         BatchSendingNetworkAddress: {
             defaultDataType: HD,
             dataTypes: [{ dataType: HD, versions: ['2.6', '2.7', '2.7.1', '2.8'] }],
@@ -231,6 +234,14 @@ export class BHS extends Segment {
         this.setComponentValue('BatchNameIdType', value);
     }
 
+    get BatchNameIDType() {
+        return this.getComponent('BatchNameIdType');
+    }
+
+    set BatchNameIDType(value) {
+        this.setComponentValue('BatchNameIdType', value);
+    }
+
     get BatchComment() {
         return this.getComponent('BatchComment');
     }
@@ -247,11 +258,27 @@ export class BHS extends Segment {
         this.setComponentValue('BatchControlId', value);
     }
 
+    get BatchControlID() {
+        return this.getComponent('BatchControlId');
+    }
+
+    set BatchControlID(value) {
+        this.setComponentValue('BatchControlId', value);
+    }
+
     get ReferenceBatchControlId() {
         return this.getComponent('ReferenceBatchControlId');
     }
 
     set ReferenceBatchControlId(value) {
+        this.setComponentValue('ReferenceBatchControlId', value);
+    }
+
+    get ReferenceBatchControlID() {
+        return this.getComponent('ReferenceBatchControlId');
+    }
+
+    set ReferenceBatchControlID(value) {
         this.setComponentValue('ReferenceBatchControlId', value);
     }
 

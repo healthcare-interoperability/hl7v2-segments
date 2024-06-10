@@ -24,6 +24,7 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDUb1: { aliasOf: 'SetIdUb1' },
         BloodDeductible: {
             defaultDataType: ST,
             dataTypes: [
@@ -173,7 +174,8 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PsroUrApprovalIndicator87: { aliasOf: 'PsroUrApprovalIndicator' },
+        PSROURApprovalIndicator: { aliasOf: 'PsroUrApprovalIndicator' },
+        PSROURApprovalIndicator87: { aliasOf: 'PsroUrApprovalIndicator' },
         PsroUrApprovedStayFm: {
             defaultDataType: ST,
             dataTypes: [
@@ -185,7 +187,8 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PsroUrApprovedStayFm88: { aliasOf: 'PsroUrApprovedStayFm' },
+        PSROURApprovedStayFm: { aliasOf: 'PsroUrApprovedStayFm' },
+        PSROURApprovedStayFm88: { aliasOf: 'PsroUrApprovedStayFm' },
         PsroUrApprovedStayTo: {
             defaultDataType: ST,
             dataTypes: [
@@ -197,7 +200,8 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PsroUrApprovedStayTo89: { aliasOf: 'PsroUrApprovedStayTo' },
+        PSROURApprovedStayTo: { aliasOf: 'PsroUrApprovedStayTo' },
+        PSROURApprovedStayTo89: { aliasOf: 'PsroUrApprovedStayTo' },
         Occurrence: {
             defaultDataType: ST,
             dataTypes: [
@@ -256,6 +260,7 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        UB82Locator2: { aliasOf: 'Ub82Locator2' },
         Ub82Locator9: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -264,6 +269,7 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        UB82Locator9: { aliasOf: 'Ub82Locator9' },
         Ub82Locator27: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -272,6 +278,7 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        UB82Locator27: { aliasOf: 'Ub82Locator27' },
         Ub82Locator45: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -280,6 +287,7 @@ export class UB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        UB82Locator45: { aliasOf: 'Ub82Locator45' },
     };
 
     static componentsByIndex = [
@@ -320,6 +328,14 @@ export class UB1 extends Segment {
     }
 
     set SetIdUb1(value) {
+        this.setComponentValue('SetIdUb1', value);
+    }
+
+    get SetIDUb1() {
+        return this.getComponent('SetIdUb1');
+    }
+
+    set SetIDUb1(value) {
         this.setComponentValue('SetIdUb1', value);
     }
 
@@ -531,11 +547,19 @@ export class UB1 extends Segment {
         this.setComponentValue('PsroUrApprovalIndicator', value);
     }
 
-    get PsroUrApprovalIndicator87() {
+    get PSROURApprovalIndicator() {
         return this.getComponent('PsroUrApprovalIndicator');
     }
 
-    set PsroUrApprovalIndicator87(value) {
+    set PSROURApprovalIndicator(value) {
+        this.setComponentValue('PsroUrApprovalIndicator', value);
+    }
+
+    get PSROURApprovalIndicator87() {
+        return this.getComponent('PsroUrApprovalIndicator');
+    }
+
+    set PSROURApprovalIndicator87(value) {
         this.setComponentValue('PsroUrApprovalIndicator', value);
     }
 
@@ -547,11 +571,19 @@ export class UB1 extends Segment {
         this.setComponentValue('PsroUrApprovedStayFm', value);
     }
 
-    get PsroUrApprovedStayFm88() {
+    get PSROURApprovedStayFm() {
         return this.getComponent('PsroUrApprovedStayFm');
     }
 
-    set PsroUrApprovedStayFm88(value) {
+    set PSROURApprovedStayFm(value) {
+        this.setComponentValue('PsroUrApprovedStayFm', value);
+    }
+
+    get PSROURApprovedStayFm88() {
+        return this.getComponent('PsroUrApprovedStayFm');
+    }
+
+    set PSROURApprovedStayFm88(value) {
         this.setComponentValue('PsroUrApprovedStayFm', value);
     }
 
@@ -563,11 +595,19 @@ export class UB1 extends Segment {
         this.setComponentValue('PsroUrApprovedStayTo', value);
     }
 
-    get PsroUrApprovedStayTo89() {
+    get PSROURApprovedStayTo() {
         return this.getComponent('PsroUrApprovedStayTo');
     }
 
-    set PsroUrApprovedStayTo89(value) {
+    set PSROURApprovedStayTo(value) {
+        this.setComponentValue('PsroUrApprovedStayTo', value);
+    }
+
+    get PSROURApprovedStayTo89() {
+        return this.getComponent('PsroUrApprovedStayTo');
+    }
+
+    set PSROURApprovedStayTo89(value) {
         this.setComponentValue('PsroUrApprovedStayTo', value);
     }
 
@@ -643,11 +683,27 @@ export class UB1 extends Segment {
         this.setComponentValue('Ub82Locator2', value);
     }
 
+    get UB82Locator2() {
+        return this.getComponent('Ub82Locator2');
+    }
+
+    set UB82Locator2(value) {
+        this.setComponentValue('Ub82Locator2', value);
+    }
+
     get Ub82Locator9() {
         return this.getComponent('Ub82Locator9');
     }
 
     set Ub82Locator9(value) {
+        this.setComponentValue('Ub82Locator9', value);
+    }
+
+    get UB82Locator9() {
+        return this.getComponent('Ub82Locator9');
+    }
+
+    set UB82Locator9(value) {
         this.setComponentValue('Ub82Locator9', value);
     }
 
@@ -659,11 +715,27 @@ export class UB1 extends Segment {
         this.setComponentValue('Ub82Locator27', value);
     }
 
+    get UB82Locator27() {
+        return this.getComponent('Ub82Locator27');
+    }
+
+    set UB82Locator27(value) {
+        this.setComponentValue('Ub82Locator27', value);
+    }
+
     get Ub82Locator45() {
         return this.getComponent('Ub82Locator45');
     }
 
     set Ub82Locator45(value) {
+        this.setComponentValue('Ub82Locator45', value);
+    }
+
+    get UB82Locator45() {
+        return this.getComponent('Ub82Locator45');
+    }
+
+    set UB82Locator45(value) {
         this.setComponentValue('Ub82Locator45', value);
     }
 }

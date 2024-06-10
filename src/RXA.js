@@ -22,6 +22,7 @@ export class RXA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        GiveSubIDCounter: { aliasOf: 'GiveSubIdCounter' },
         AdministrationSubIdCounter: {
             defaultDataType: NM,
             dataTypes: [{ dataType: NM, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -30,6 +31,7 @@ export class RXA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AdministrationSubIDCounter: { aliasOf: 'AdministrationSubIdCounter' },
         DateTimeStartOfAdministration: {
             defaultDataType: TS,
             dataTypes: [
@@ -220,6 +222,7 @@ export class RXA extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ActionCodeRXA: { aliasOf: 'ActionCodeRxa' },
         SystemEntryDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -336,11 +339,27 @@ export class RXA extends Segment {
         this.setComponentValue('GiveSubIdCounter', value);
     }
 
+    get GiveSubIDCounter() {
+        return this.getComponent('GiveSubIdCounter');
+    }
+
+    set GiveSubIDCounter(value) {
+        this.setComponentValue('GiveSubIdCounter', value);
+    }
+
     get AdministrationSubIdCounter() {
         return this.getComponent('AdministrationSubIdCounter');
     }
 
     set AdministrationSubIdCounter(value) {
+        this.setComponentValue('AdministrationSubIdCounter', value);
+    }
+
+    get AdministrationSubIDCounter() {
+        return this.getComponent('AdministrationSubIdCounter');
+    }
+
+    set AdministrationSubIDCounter(value) {
         this.setComponentValue('AdministrationSubIdCounter', value);
     }
 
@@ -509,6 +528,14 @@ export class RXA extends Segment {
     }
 
     set ActionCodeRxa(value) {
+        this.setComponentValue('ActionCodeRxa', value);
+    }
+
+    get ActionCodeRXA() {
+        return this.getComponent('ActionCodeRxa');
+    }
+
+    set ActionCodeRXA(value) {
         this.setComponentValue('ActionCodeRxa', value);
     }
 

@@ -28,7 +28,8 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdGuarantor: { aliasOf: 'SetIdGt1' },
+        SetIDGuarantor: { aliasOf: 'SetIdGt1' },
+        SetIDGt1: { aliasOf: 'SetIdGt1' },
         GuarantorNumber: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -131,6 +132,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        GuarantorSSN: { aliasOf: 'GuarantorSsn' },
         GuarantorDateBegin: {
             defaultDataType: DT,
             dataTypes: [{ dataType: DT, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -188,6 +190,7 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        GuarantorEmployeeIDNumber: { aliasOf: 'GuarantorEmployeeIdNumber' },
         GuarantorEmploymentStatus: {
             defaultDataType: CWE,
             dataTypes: [
@@ -281,6 +284,7 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        GuarantorEmployerIDNumber: { aliasOf: 'GuarantorEmployerIdNumber' },
         GuarantorMaritalStatusCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -409,7 +413,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        MotherSMaidenName: {
+        MothersMaidenName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 42,
@@ -417,6 +421,7 @@ export class GT1 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        MotherSMaidenName: { aliasOf: 'MothersMaidenName' },
         Nationality: {
             defaultDataType: CWE,
             dataTypes: [
@@ -441,7 +446,7 @@ export class GT1 extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        ContactPersonSName: {
+        ContactPersonsName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 45,
@@ -449,7 +454,8 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        ContactPersonSTelephoneNumber: {
+        ContactPersonSName: { aliasOf: 'ContactPersonsName' },
+        ContactPersonsTelephoneNumber: {
             defaultDataType: XTN,
             dataTypes: [{ dataType: XTN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 46,
@@ -457,6 +463,7 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        ContactPersonSTelephoneNumber: { aliasOf: 'ContactPersonsTelephoneNumber' },
         ContactReason: {
             defaultDataType: CWE,
             dataTypes: [
@@ -496,7 +503,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        GuarantorEmployerSOrganizationName: {
+        GuarantorEmployersOrganizationName: {
             defaultDataType: XON,
             dataTypes: [{ dataType: XON, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 51,
@@ -504,6 +511,7 @@ export class GT1 extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        GuarantorEmployerSOrganizationName: { aliasOf: 'GuarantorEmployersOrganizationName' },
         Handicap: {
             defaultDataType: CWE,
             dataTypes: [
@@ -554,7 +562,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        VipIndicator: {
+        VIPIndicator: {
             defaultDataType: CWE,
             dataTypes: [
                 { dataType: IS, versions: ['2.5', '2.5.1', '2.6'] },
@@ -565,6 +573,7 @@ export class GT1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        VipIndicator: { aliasOf: 'VIPIndicator' },
     };
 
     static componentsByIndex = [
@@ -610,22 +619,22 @@ export class GT1 extends Segment {
         'ProtectionIndicator',
         'StudentIndicator',
         'Religion',
-        'MotherSMaidenName',
+        'MothersMaidenName',
         'Nationality',
         'EthnicGroup',
-        'ContactPersonSName',
-        'ContactPersonSTelephoneNumber',
+        'ContactPersonsName',
+        'ContactPersonsTelephoneNumber',
         'ContactReason',
         'ContactRelationship',
         'JobTitle',
         'JobCodeClass',
-        'GuarantorEmployerSOrganizationName',
+        'GuarantorEmployersOrganizationName',
         'Handicap',
         'JobStatus',
         'GuarantorFinancialClass',
         'GuarantorRace',
         'GuarantorBirthPlace',
-        'VipIndicator',
+        'VIPIndicator',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -642,11 +651,19 @@ export class GT1 extends Segment {
         this.setComponentValue('SetIdGt1', value);
     }
 
-    get SetIdGuarantor() {
+    get SetIDGuarantor() {
         return this.getComponent('SetIdGt1');
     }
 
-    set SetIdGuarantor(value) {
+    set SetIDGuarantor(value) {
+        this.setComponentValue('SetIdGt1', value);
+    }
+
+    get SetIDGt1() {
+        return this.getComponent('SetIdGt1');
+    }
+
+    set SetIDGt1(value) {
         this.setComponentValue('SetIdGt1', value);
     }
 
@@ -746,6 +763,14 @@ export class GT1 extends Segment {
         this.setComponentValue('GuarantorSsn', value);
     }
 
+    get GuarantorSSN() {
+        return this.getComponent('GuarantorSsn');
+    }
+
+    set GuarantorSSN(value) {
+        this.setComponentValue('GuarantorSsn', value);
+    }
+
     get GuarantorDateBegin() {
         return this.getComponent('GuarantorDateBegin');
     }
@@ -807,6 +832,14 @@ export class GT1 extends Segment {
     }
 
     set GuarantorEmployeeIdNumber(value) {
+        this.setComponentValue('GuarantorEmployeeIdNumber', value);
+    }
+
+    get GuarantorEmployeeIDNumber() {
+        return this.getComponent('GuarantorEmployeeIdNumber');
+    }
+
+    set GuarantorEmployeeIDNumber(value) {
         this.setComponentValue('GuarantorEmployeeIdNumber', value);
     }
 
@@ -895,6 +928,14 @@ export class GT1 extends Segment {
     }
 
     set GuarantorEmployerIdNumber(value) {
+        this.setComponentValue('GuarantorEmployerIdNumber', value);
+    }
+
+    get GuarantorEmployerIDNumber() {
+        return this.getComponent('GuarantorEmployerIdNumber');
+    }
+
+    set GuarantorEmployerIDNumber(value) {
         this.setComponentValue('GuarantorEmployerIdNumber', value);
     }
 
@@ -1010,12 +1051,20 @@ export class GT1 extends Segment {
         this.setComponentValue('Religion', value);
     }
 
+    get MothersMaidenName() {
+        return this.getComponent('MothersMaidenName');
+    }
+
+    set MothersMaidenName(value) {
+        this.setComponentValue('MothersMaidenName', value);
+    }
+
     get MotherSMaidenName() {
-        return this.getComponent('MotherSMaidenName');
+        return this.getComponent('MothersMaidenName');
     }
 
     set MotherSMaidenName(value) {
-        this.setComponentValue('MotherSMaidenName', value);
+        this.setComponentValue('MothersMaidenName', value);
     }
 
     get Nationality() {
@@ -1042,20 +1091,36 @@ export class GT1 extends Segment {
         this.setComponentValue('EthnicGroup', value);
     }
 
+    get ContactPersonsName() {
+        return this.getComponent('ContactPersonsName');
+    }
+
+    set ContactPersonsName(value) {
+        this.setComponentValue('ContactPersonsName', value);
+    }
+
     get ContactPersonSName() {
-        return this.getComponent('ContactPersonSName');
+        return this.getComponent('ContactPersonsName');
     }
 
     set ContactPersonSName(value) {
-        this.setComponentValue('ContactPersonSName', value);
+        this.setComponentValue('ContactPersonsName', value);
+    }
+
+    get ContactPersonsTelephoneNumber() {
+        return this.getComponent('ContactPersonsTelephoneNumber');
+    }
+
+    set ContactPersonsTelephoneNumber(value) {
+        this.setComponentValue('ContactPersonsTelephoneNumber', value);
     }
 
     get ContactPersonSTelephoneNumber() {
-        return this.getComponent('ContactPersonSTelephoneNumber');
+        return this.getComponent('ContactPersonsTelephoneNumber');
     }
 
     set ContactPersonSTelephoneNumber(value) {
-        this.setComponentValue('ContactPersonSTelephoneNumber', value);
+        this.setComponentValue('ContactPersonsTelephoneNumber', value);
     }
 
     get ContactReason() {
@@ -1098,12 +1163,20 @@ export class GT1 extends Segment {
         this.setComponentValue('JobCodeClass', value);
     }
 
+    get GuarantorEmployersOrganizationName() {
+        return this.getComponent('GuarantorEmployersOrganizationName');
+    }
+
+    set GuarantorEmployersOrganizationName(value) {
+        this.setComponentValue('GuarantorEmployersOrganizationName', value);
+    }
+
     get GuarantorEmployerSOrganizationName() {
-        return this.getComponent('GuarantorEmployerSOrganizationName');
+        return this.getComponent('GuarantorEmployersOrganizationName');
     }
 
     set GuarantorEmployerSOrganizationName(value) {
-        this.setComponentValue('GuarantorEmployerSOrganizationName', value);
+        this.setComponentValue('GuarantorEmployersOrganizationName', value);
     }
 
     get Handicap() {
@@ -1146,11 +1219,19 @@ export class GT1 extends Segment {
         this.setComponentValue('GuarantorBirthPlace', value);
     }
 
+    get VIPIndicator() {
+        return this.getComponent('VIPIndicator');
+    }
+
+    set VIPIndicator(value) {
+        this.setComponentValue('VIPIndicator', value);
+    }
+
     get VipIndicator() {
-        return this.getComponent('VipIndicator');
+        return this.getComponent('VIPIndicator');
     }
 
     set VipIndicator(value) {
-        this.setComponentValue('VipIndicator', value);
+        this.setComponentValue('VIPIndicator', value);
     }
 }

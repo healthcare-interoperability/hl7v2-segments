@@ -5,7 +5,7 @@ import { DTM } from '@healthcare-interoperability/hl7v2-datatypes';
 
 export class QRD extends Segment {
     static components = {
-        Qrd1: {
+        QRD1: {
             defaultDataType: TS,
             dataTypes: [
                 { dataType: ST, versions: ['2.8', '2.7', '2.7.1'] },
@@ -17,10 +17,10 @@ export class QRD extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        QueryDateTime: { aliasOf: 'Qrd1' },
+        QueryDateTime: { aliasOf: 'QRD1' },
     };
 
-    static componentsByIndex = ['', 'Qrd1'];
+    static componentsByIndex = ['', 'QRD1'];
 
     constructor(values, configs, isSubComponent = false) {
         super([], configs, isSubComponent);
@@ -28,19 +28,19 @@ export class QRD extends Segment {
         this.setValues(values);
     }
 
-    get Qrd1() {
-        return this.getComponent('Qrd1');
+    get QRD1() {
+        return this.getComponent('QRD1');
     }
 
-    set Qrd1(value) {
-        this.setComponentValue('Qrd1', value);
+    set QRD1(value) {
+        this.setComponentValue('QRD1', value);
     }
 
     get QueryDateTime() {
-        return this.getComponent('Qrd1');
+        return this.getComponent('QRD1');
     }
 
     set QueryDateTime(value) {
-        this.setComponentValue('Qrd1', value);
+        this.setComponentValue('QRD1', value);
     }
 }

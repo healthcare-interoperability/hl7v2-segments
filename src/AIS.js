@@ -19,6 +19,7 @@ export class AIS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDAIS: { aliasOf: 'SetIdAis' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -38,7 +39,7 @@ export class AIS extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        UniversalServiceId: { aliasOf: 'UniversalServiceIdentifier' },
+        UniversalServiceID: { aliasOf: 'UniversalServiceIdentifier' },
         StartDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -164,6 +165,14 @@ export class AIS extends Segment {
         this.setComponentValue('SetIdAis', value);
     }
 
+    get SetIDAIS() {
+        return this.getComponent('SetIdAis');
+    }
+
+    set SetIDAIS(value) {
+        this.setComponentValue('SetIdAis', value);
+    }
+
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -180,11 +189,11 @@ export class AIS extends Segment {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 
-    get UniversalServiceId() {
+    get UniversalServiceID() {
         return this.getComponent('UniversalServiceIdentifier');
     }
 
-    set UniversalServiceId(value) {
+    set UniversalServiceID(value) {
         this.setComponentValue('UniversalServiceIdentifier', value);
     }
 

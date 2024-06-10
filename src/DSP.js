@@ -13,7 +13,8 @@ export class DSP extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdDisplayData: { aliasOf: 'SetIdDsp' },
+        SetIDDisplayData: { aliasOf: 'SetIdDsp' },
+        SetIDDSP: { aliasOf: 'SetIdDsp' },
         DisplayLevel: {
             defaultDataType: SI,
             dataTypes: [{ dataType: SI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,6 +47,7 @@ export class DSP extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        ResultID: { aliasOf: 'ResultId' },
     };
 
     static componentsByIndex = ['', 'SetIdDsp', 'DisplayLevel', 'DataLine', 'LogicalBreakPoint', 'ResultId'];
@@ -64,11 +66,19 @@ export class DSP extends Segment {
         this.setComponentValue('SetIdDsp', value);
     }
 
-    get SetIdDisplayData() {
+    get SetIDDisplayData() {
         return this.getComponent('SetIdDsp');
     }
 
-    set SetIdDisplayData(value) {
+    set SetIDDisplayData(value) {
+        this.setComponentValue('SetIdDsp', value);
+    }
+
+    get SetIDDSP() {
+        return this.getComponent('SetIdDsp');
+    }
+
+    set SetIDDSP(value) {
         this.setComponentValue('SetIdDsp', value);
     }
 
@@ -101,6 +111,14 @@ export class DSP extends Segment {
     }
 
     set ResultId(value) {
+        this.setComponentValue('ResultId', value);
+    }
+
+    get ResultID() {
+        return this.getComponent('ResultId');
+    }
+
+    set ResultID(value) {
         this.setComponentValue('ResultId', value);
     }
 }

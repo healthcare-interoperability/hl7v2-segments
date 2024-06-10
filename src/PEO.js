@@ -201,7 +201,7 @@ export class PEO extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PrimaryObserverSQualification: {
+        PrimaryObserversQualification: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 22,
@@ -209,6 +209,7 @@ export class PEO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PrimaryObserverSQualification: { aliasOf: 'PrimaryObserversQualification' },
         ConfirmationProvidedBy: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -228,7 +229,7 @@ export class PEO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PrimaryObserverSIdentityMayBeDivulged: {
+        PrimaryObserversIdentityMayBeDivulged: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 25,
@@ -236,6 +237,7 @@ export class PEO extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PrimaryObserverSIdentityMayBeDivulged: { aliasOf: 'PrimaryObserversIdentityMayBeDivulged' },
     };
 
     static componentsByIndex = [
@@ -261,10 +263,10 @@ export class PEO extends Segment {
         'PrimaryObserverName',
         'PrimaryObserverAddress',
         'PrimaryObserverTelephone',
-        'PrimaryObserverSQualification',
+        'PrimaryObserversQualification',
         'ConfirmationProvidedBy',
         'PrimaryObserverAwareDateTime',
-        'PrimaryObserverSIdentityMayBeDivulged',
+        'PrimaryObserversIdentityMayBeDivulged',
     ];
 
     constructor(values, configs, isSubComponent = false) {
@@ -449,12 +451,20 @@ export class PEO extends Segment {
         this.setComponentValue('PrimaryObserverTelephone', value);
     }
 
+    get PrimaryObserversQualification() {
+        return this.getComponent('PrimaryObserversQualification');
+    }
+
+    set PrimaryObserversQualification(value) {
+        this.setComponentValue('PrimaryObserversQualification', value);
+    }
+
     get PrimaryObserverSQualification() {
-        return this.getComponent('PrimaryObserverSQualification');
+        return this.getComponent('PrimaryObserversQualification');
     }
 
     set PrimaryObserverSQualification(value) {
-        this.setComponentValue('PrimaryObserverSQualification', value);
+        this.setComponentValue('PrimaryObserversQualification', value);
     }
 
     get ConfirmationProvidedBy() {
@@ -473,11 +483,19 @@ export class PEO extends Segment {
         this.setComponentValue('PrimaryObserverAwareDateTime', value);
     }
 
+    get PrimaryObserversIdentityMayBeDivulged() {
+        return this.getComponent('PrimaryObserversIdentityMayBeDivulged');
+    }
+
+    set PrimaryObserversIdentityMayBeDivulged(value) {
+        this.setComponentValue('PrimaryObserversIdentityMayBeDivulged', value);
+    }
+
     get PrimaryObserverSIdentityMayBeDivulged() {
-        return this.getComponent('PrimaryObserverSIdentityMayBeDivulged');
+        return this.getComponent('PrimaryObserversIdentityMayBeDivulged');
     }
 
     set PrimaryObserverSIdentityMayBeDivulged(value) {
-        this.setComponentValue('PrimaryObserverSIdentityMayBeDivulged', value);
+        this.setComponentValue('PrimaryObserversIdentityMayBeDivulged', value);
     }
 }

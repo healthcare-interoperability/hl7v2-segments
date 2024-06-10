@@ -25,7 +25,8 @@ export class PID extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        SetIdPatientId: { aliasOf: 'SetIdPid' },
+        SetIDPatientID: { aliasOf: 'SetIdPid' },
+        SetIDPID: { aliasOf: 'SetIdPid' },
         PatientId: {
             defaultDataType: ST,
             dataTypes: [
@@ -37,7 +38,8 @@ export class PID extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        PatientIdExternalId: { aliasOf: 'PatientId' },
+        PatientIDExternalID: { aliasOf: 'PatientId' },
+        PatientID: { aliasOf: 'PatientId' },
         PatientIdentifierList: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -46,7 +48,7 @@ export class PID extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        PatientIdInternalId: { aliasOf: 'PatientIdentifierList' },
+        PatientIDInternalID: { aliasOf: 'PatientIdentifierList' },
         AlternatePatientIdPid: {
             defaultDataType: ST,
             dataTypes: [
@@ -58,7 +60,8 @@ export class PID extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
-        AlternatePatientId: { aliasOf: 'AlternatePatientIdPid' },
+        AlternatePatientID: { aliasOf: 'AlternatePatientIdPid' },
+        AlternatePatientIDPID: { aliasOf: 'AlternatePatientIdPid' },
         PatientName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -67,7 +70,7 @@ export class PID extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
-        MotherSMaidenName: {
+        MothersMaidenName: {
             defaultDataType: XPN,
             dataTypes: [{ dataType: XPN, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 6,
@@ -75,6 +78,7 @@ export class PID extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        MotherSMaidenName: { aliasOf: 'MothersMaidenName' },
         DateTimeOfBirth: {
             defaultDataType: TS,
             dataTypes: [
@@ -208,7 +212,8 @@ export class PID extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DriverSLicenseNumberPatient: {
+        SSNNumberPatient: { aliasOf: 'SsnNumberPatient' },
+        DriversLicenseNumberPatient: {
             defaultDataType: ST,
             dataTypes: [
                 { dataType: ST, versions: ['2.8', '2.7', '2.7.1'] },
@@ -219,8 +224,8 @@ export class PID extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        DriverSLicenseNumber: { aliasOf: 'DriverSLicenseNumberPatient' },
-        MotherSIdentifier: {
+        DriversLicenseNumber: { aliasOf: 'DriversLicenseNumberPatient' },
+        MothersIdentifier: {
             defaultDataType: CX,
             dataTypes: [{ dataType: CX, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
             position: 21,
@@ -424,7 +429,7 @@ export class PID extends Segment {
         'PatientIdentifierList',
         'AlternatePatientIdPid',
         'PatientName',
-        'MotherSMaidenName',
+        'MothersMaidenName',
         'DateTimeOfBirth',
         'AdministrativeSex',
         'PatientAlias',
@@ -438,8 +443,8 @@ export class PID extends Segment {
         'Religion',
         'PatientAccountNumber',
         'SsnNumberPatient',
-        'DriverSLicenseNumberPatient',
-        'MotherSIdentifier',
+        'DriversLicenseNumberPatient',
+        'MothersIdentifier',
         'EthnicGroup',
         'BirthPlace',
         'MultipleBirthIndicator',
@@ -475,11 +480,19 @@ export class PID extends Segment {
         this.setComponentValue('SetIdPid', value);
     }
 
-    get SetIdPatientId() {
+    get SetIDPatientID() {
         return this.getComponent('SetIdPid');
     }
 
-    set SetIdPatientId(value) {
+    set SetIDPatientID(value) {
+        this.setComponentValue('SetIdPid', value);
+    }
+
+    get SetIDPID() {
+        return this.getComponent('SetIdPid');
+    }
+
+    set SetIDPID(value) {
         this.setComponentValue('SetIdPid', value);
     }
 
@@ -491,11 +504,19 @@ export class PID extends Segment {
         this.setComponentValue('PatientId', value);
     }
 
-    get PatientIdExternalId() {
+    get PatientIDExternalID() {
         return this.getComponent('PatientId');
     }
 
-    set PatientIdExternalId(value) {
+    set PatientIDExternalID(value) {
+        this.setComponentValue('PatientId', value);
+    }
+
+    get PatientID() {
+        return this.getComponent('PatientId');
+    }
+
+    set PatientID(value) {
         this.setComponentValue('PatientId', value);
     }
 
@@ -507,11 +528,11 @@ export class PID extends Segment {
         this.setComponentValue('PatientIdentifierList', value);
     }
 
-    get PatientIdInternalId() {
+    get PatientIDInternalID() {
         return this.getComponent('PatientIdentifierList');
     }
 
-    set PatientIdInternalId(value) {
+    set PatientIDInternalID(value) {
         this.setComponentValue('PatientIdentifierList', value);
     }
 
@@ -523,11 +544,19 @@ export class PID extends Segment {
         this.setComponentValue('AlternatePatientIdPid', value);
     }
 
-    get AlternatePatientId() {
+    get AlternatePatientID() {
         return this.getComponent('AlternatePatientIdPid');
     }
 
-    set AlternatePatientId(value) {
+    set AlternatePatientID(value) {
+        this.setComponentValue('AlternatePatientIdPid', value);
+    }
+
+    get AlternatePatientIDPID() {
+        return this.getComponent('AlternatePatientIdPid');
+    }
+
+    set AlternatePatientIDPID(value) {
         this.setComponentValue('AlternatePatientIdPid', value);
     }
 
@@ -539,12 +568,20 @@ export class PID extends Segment {
         this.setComponentValue('PatientName', value);
     }
 
+    get MothersMaidenName() {
+        return this.getComponent('MothersMaidenName');
+    }
+
+    set MothersMaidenName(value) {
+        this.setComponentValue('MothersMaidenName', value);
+    }
+
     get MotherSMaidenName() {
-        return this.getComponent('MotherSMaidenName');
+        return this.getComponent('MothersMaidenName');
     }
 
     set MotherSMaidenName(value) {
-        this.setComponentValue('MotherSMaidenName', value);
+        this.setComponentValue('MothersMaidenName', value);
     }
 
     get DateTimeOfBirth() {
@@ -667,28 +704,36 @@ export class PID extends Segment {
         this.setComponentValue('SsnNumberPatient', value);
     }
 
-    get DriverSLicenseNumberPatient() {
-        return this.getComponent('DriverSLicenseNumberPatient');
+    get SSNNumberPatient() {
+        return this.getComponent('SsnNumberPatient');
     }
 
-    set DriverSLicenseNumberPatient(value) {
-        this.setComponentValue('DriverSLicenseNumberPatient', value);
+    set SSNNumberPatient(value) {
+        this.setComponentValue('SsnNumberPatient', value);
     }
 
-    get DriverSLicenseNumber() {
-        return this.getComponent('DriverSLicenseNumberPatient');
+    get DriversLicenseNumberPatient() {
+        return this.getComponent('DriversLicenseNumberPatient');
     }
 
-    set DriverSLicenseNumber(value) {
-        this.setComponentValue('DriverSLicenseNumberPatient', value);
+    set DriversLicenseNumberPatient(value) {
+        this.setComponentValue('DriversLicenseNumberPatient', value);
     }
 
-    get MotherSIdentifier() {
-        return this.getComponent('MotherSIdentifier');
+    get DriversLicenseNumber() {
+        return this.getComponent('DriversLicenseNumberPatient');
     }
 
-    set MotherSIdentifier(value) {
-        this.setComponentValue('MotherSIdentifier', value);
+    set DriversLicenseNumber(value) {
+        this.setComponentValue('DriversLicenseNumberPatient', value);
+    }
+
+    get MothersIdentifier() {
+        return this.getComponent('MothersIdentifier');
+    }
+
+    set MothersIdentifier(value) {
+        this.setComponentValue('MothersIdentifier', value);
     }
 
     get EthnicGroup() {

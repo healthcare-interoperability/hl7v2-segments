@@ -16,6 +16,7 @@ export class DB1 extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDDb1: { aliasOf: 'SetIdDb1' },
         DisabledPersonCode: {
             defaultDataType: CWE,
             dataTypes: [
@@ -101,6 +102,14 @@ export class DB1 extends Segment {
     }
 
     set SetIdDb1(value) {
+        this.setComponentValue('SetIdDb1', value);
+    }
+
+    get SetIDDb1() {
+        return this.getComponent('SetIdDb1');
+    }
+
+    set SetIDDb1(value) {
         this.setComponentValue('SetIdDb1', value);
     }
 

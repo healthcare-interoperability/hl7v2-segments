@@ -20,6 +20,7 @@ export class REL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDREL: { aliasOf: 'SetIdRel' },
         RelationshipType: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -60,6 +61,7 @@ export class REL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AssertingEntityInstanceID: { aliasOf: 'AssertingEntityInstanceId' },
         AssertingPerson: {
             defaultDataType: XCN,
             dataTypes: [{ dataType: XCN, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -176,6 +178,14 @@ export class REL extends Segment {
         this.setComponentValue('SetIdRel', value);
     }
 
+    get SetIDREL() {
+        return this.getComponent('SetIdRel');
+    }
+
+    set SetIDREL(value) {
+        this.setComponentValue('SetIdRel', value);
+    }
+
     get RelationshipType() {
         return this.getComponent('RelationshipType');
     }
@@ -213,6 +223,14 @@ export class REL extends Segment {
     }
 
     set AssertingEntityInstanceId(value) {
+        this.setComponentValue('AssertingEntityInstanceId', value);
+    }
+
+    get AssertingEntityInstanceID() {
+        return this.getComponent('AssertingEntityInstanceId');
+    }
+
+    set AssertingEntityInstanceID(value) {
         this.setComponentValue('AssertingEntityInstanceId', value);
     }
 

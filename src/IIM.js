@@ -18,6 +18,7 @@ export class IIM extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PrimaryKeyValueIIM: { aliasOf: 'PrimaryKeyValueIim' },
         ServiceItemCode: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -177,6 +178,14 @@ export class IIM extends Segment {
     }
 
     set PrimaryKeyValueIim(value) {
+        this.setComponentValue('PrimaryKeyValueIim', value);
+    }
+
+    get PrimaryKeyValueIIM() {
+        return this.getComponent('PrimaryKeyValueIim');
+    }
+
+    set PrimaryKeyValueIIM(value) {
         this.setComponentValue('PrimaryKeyValueIim', value);
     }
 

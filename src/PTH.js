@@ -28,6 +28,7 @@ export class PTH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PathwayID: { aliasOf: 'PathwayId' },
         PathwayInstanceId: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -36,6 +37,7 @@ export class PTH extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        PathwayInstanceID: { aliasOf: 'PathwayInstanceId' },
         PathwayEstablishedDateTime: {
             defaultDataType: TS,
             dataTypes: [
@@ -105,11 +107,27 @@ export class PTH extends Segment {
         this.setComponentValue('PathwayId', value);
     }
 
+    get PathwayID() {
+        return this.getComponent('PathwayId');
+    }
+
+    set PathwayID(value) {
+        this.setComponentValue('PathwayId', value);
+    }
+
     get PathwayInstanceId() {
         return this.getComponent('PathwayInstanceId');
     }
 
     set PathwayInstanceId(value) {
+        this.setComponentValue('PathwayInstanceId', value);
+    }
+
+    get PathwayInstanceID() {
+        return this.getComponent('PathwayInstanceId');
+    }
+
+    set PathwayInstanceID(value) {
         this.setComponentValue('PathwayInstanceId', value);
     }
 

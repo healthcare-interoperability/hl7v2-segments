@@ -15,6 +15,7 @@ export class IPR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        IPRIdentifier: { aliasOf: 'IprIdentifier' },
         ProviderCrossReferenceIdentifier: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -39,6 +40,7 @@ export class IPR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        IPRStatus: { aliasOf: 'IprStatus' },
         IprDateTime: {
             defaultDataType: DTM,
             dataTypes: [{ dataType: DTM, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -47,6 +49,7 @@ export class IPR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        IPRDateTime: { aliasOf: 'IprDateTime' },
         AdjudicatedPaidAmount: {
             defaultDataType: CP,
             dataTypes: [{ dataType: CP, versions: ['2.8', '2.6', '2.7', '2.7.1'] }],
@@ -71,6 +74,7 @@ export class IPR extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        IPRChecksum: { aliasOf: 'IprChecksum' },
     };
 
     static componentsByIndex = [
@@ -99,6 +103,14 @@ export class IPR extends Segment {
         this.setComponentValue('IprIdentifier', value);
     }
 
+    get IPRIdentifier() {
+        return this.getComponent('IprIdentifier');
+    }
+
+    set IPRIdentifier(value) {
+        this.setComponentValue('IprIdentifier', value);
+    }
+
     get ProviderCrossReferenceIdentifier() {
         return this.getComponent('ProviderCrossReferenceIdentifier');
     }
@@ -123,11 +135,27 @@ export class IPR extends Segment {
         this.setComponentValue('IprStatus', value);
     }
 
+    get IPRStatus() {
+        return this.getComponent('IprStatus');
+    }
+
+    set IPRStatus(value) {
+        this.setComponentValue('IprStatus', value);
+    }
+
     get IprDateTime() {
         return this.getComponent('IprDateTime');
     }
 
     set IprDateTime(value) {
+        this.setComponentValue('IprDateTime', value);
+    }
+
+    get IPRDateTime() {
+        return this.getComponent('IprDateTime');
+    }
+
+    set IPRDateTime(value) {
         this.setComponentValue('IprDateTime', value);
     }
 
@@ -152,6 +180,14 @@ export class IPR extends Segment {
     }
 
     set IprChecksum(value) {
+        this.setComponentValue('IprChecksum', value);
+    }
+
+    get IPRChecksum() {
+        return this.getComponent('IprChecksum');
+    }
+
+    set IPRChecksum(value) {
         this.setComponentValue('IprChecksum', value);
     }
 }

@@ -28,6 +28,7 @@ export class AUT extends Segment {
             minOccurence: 1,
         },
         AuthorizingPayorPlanCode: { aliasOf: 'AuthorizingPayorPlanId' },
+        AuthorizingPayorPlanID: { aliasOf: 'AuthorizingPayorPlanId' },
         AuthorizingPayorCompanyId: {
             defaultDataType: CWE,
             dataTypes: [
@@ -39,6 +40,7 @@ export class AUT extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        AuthorizingPayorCompanyID: { aliasOf: 'AuthorizingPayorCompanyId' },
         AuthorizingPayorCompanyName: {
             defaultDataType: ST,
             dataTypes: [{ dataType: ST, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -327,11 +329,27 @@ export class AUT extends Segment {
         this.setComponentValue('AuthorizingPayorPlanId', value);
     }
 
+    get AuthorizingPayorPlanID() {
+        return this.getComponent('AuthorizingPayorPlanId');
+    }
+
+    set AuthorizingPayorPlanID(value) {
+        this.setComponentValue('AuthorizingPayorPlanId', value);
+    }
+
     get AuthorizingPayorCompanyId() {
         return this.getComponent('AuthorizingPayorCompanyId');
     }
 
     set AuthorizingPayorCompanyId(value) {
+        this.setComponentValue('AuthorizingPayorCompanyId', value);
+    }
+
+    get AuthorizingPayorCompanyID() {
+        return this.getComponent('AuthorizingPayorCompanyId');
+    }
+
+    set AuthorizingPayorCompanyID(value) {
         this.setComponentValue('AuthorizingPayorCompanyId', value);
     }
 

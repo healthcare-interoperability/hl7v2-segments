@@ -21,6 +21,7 @@ export class CON extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDCON: { aliasOf: 'SetIdCon' },
         ConsentType: {
             defaultDataType: CWE,
             dataTypes: [{ dataType: CWE, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -37,7 +38,8 @@ export class CON extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
-        ConsentFormId: { aliasOf: 'ConsentFormIdAndVersion' },
+        ConsentFormID: { aliasOf: 'ConsentFormIdAndVersion' },
+        ConsentFormIDAndVersion: { aliasOf: 'ConsentFormIdAndVersion' },
         ConsentFormNumber: {
             defaultDataType: EI,
             dataTypes: [{ dataType: EI, versions: ['2.8', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -223,6 +225,7 @@ export class CON extends Segment {
             maxOccurence: 99999,
             minOccurence: 1,
         },
+        ConsenterID: { aliasOf: 'ConsenterId' },
         RelationshipToSubject: {
             defaultDataType: CWE,
             dataTypes: [
@@ -280,6 +283,14 @@ export class CON extends Segment {
         this.setComponentValue('SetIdCon', value);
     }
 
+    get SetIDCON() {
+        return this.getComponent('SetIdCon');
+    }
+
+    set SetIDCON(value) {
+        this.setComponentValue('SetIdCon', value);
+    }
+
     get ConsentType() {
         return this.getComponent('ConsentType');
     }
@@ -296,11 +307,19 @@ export class CON extends Segment {
         this.setComponentValue('ConsentFormIdAndVersion', value);
     }
 
-    get ConsentFormId() {
+    get ConsentFormID() {
         return this.getComponent('ConsentFormIdAndVersion');
     }
 
-    set ConsentFormId(value) {
+    set ConsentFormID(value) {
+        this.setComponentValue('ConsentFormIdAndVersion', value);
+    }
+
+    get ConsentFormIDAndVersion() {
+        return this.getComponent('ConsentFormIdAndVersion');
+    }
+
+    set ConsentFormIDAndVersion(value) {
         this.setComponentValue('ConsentFormIdAndVersion', value);
     }
 
@@ -485,6 +504,14 @@ export class CON extends Segment {
     }
 
     set ConsenterId(value) {
+        this.setComponentValue('ConsenterId', value);
+    }
+
+    get ConsenterID() {
+        return this.getComponent('ConsenterId');
+    }
+
+    set ConsenterID(value) {
         this.setComponentValue('ConsenterId', value);
     }
 

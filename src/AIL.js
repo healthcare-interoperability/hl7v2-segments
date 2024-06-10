@@ -20,6 +20,7 @@ export class AIL extends Segment {
             maxOccurence: 0,
             minOccurence: 1,
         },
+        SetIDAIL: { aliasOf: 'SetIdAil' },
         SegmentActionCode: {
             defaultDataType: ID,
             dataTypes: [{ dataType: ID, versions: ['2.8', '2.3', '2.3.1', '2.4', '2.5', '2.5.1', '2.6', '2.7', '2.7.1'] }],
@@ -36,6 +37,7 @@ export class AIL extends Segment {
             maxOccurence: 999999,
             minOccurence: 1,
         },
+        LocationResourceID: { aliasOf: 'LocationResourceId' },
         LocationTypeAil: {
             defaultDataType: CWE,
             dataTypes: [
@@ -48,6 +50,7 @@ export class AIL extends Segment {
             minOccurence: 1,
         },
         LocationType: { aliasOf: 'LocationTypeAil' },
+        LocationTypeAIL: { aliasOf: 'LocationTypeAil' },
         LocationGroup: {
             defaultDataType: CWE,
             dataTypes: [
@@ -162,6 +165,14 @@ export class AIL extends Segment {
         this.setComponentValue('SetIdAil', value);
     }
 
+    get SetIDAIL() {
+        return this.getComponent('SetIdAil');
+    }
+
+    set SetIDAIL(value) {
+        this.setComponentValue('SetIdAil', value);
+    }
+
     get SegmentActionCode() {
         return this.getComponent('SegmentActionCode');
     }
@@ -178,6 +189,14 @@ export class AIL extends Segment {
         this.setComponentValue('LocationResourceId', value);
     }
 
+    get LocationResourceID() {
+        return this.getComponent('LocationResourceId');
+    }
+
+    set LocationResourceID(value) {
+        this.setComponentValue('LocationResourceId', value);
+    }
+
     get LocationTypeAil() {
         return this.getComponent('LocationTypeAil');
     }
@@ -191,6 +210,14 @@ export class AIL extends Segment {
     }
 
     set LocationType(value) {
+        this.setComponentValue('LocationTypeAil', value);
+    }
+
+    get LocationTypeAIL() {
+        return this.getComponent('LocationTypeAil');
+    }
+
+    set LocationTypeAIL(value) {
         this.setComponentValue('LocationTypeAil', value);
     }
 
