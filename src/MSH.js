@@ -522,4 +522,15 @@ export class MSH extends Segment {
     set ReceivingNetworkAddress(value) {
         this.setComponentValue('ReceivingNetworkAddress', value);
     }
+
+    toString() {
+        const tempValues = this.values.slice(1);
+        const segmentValues = tempValues.map(value => {
+            if (Array.isArray(value)) {
+                return value.map(valueItem => valueItem.toString()).join(this.repetitionDelimiter);
+            }
+            return value.toString();
+        }).join(this.delimiter);
+        return `${this.segmentType}${segmentValues}`;
+    }
 }
