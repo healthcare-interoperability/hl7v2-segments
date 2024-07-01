@@ -524,6 +524,7 @@ export class MSH extends Segment {
     }
 
     toString() {
+        this.FieldSeparator = '';
         const tempValues = this.values.slice(1);
         const segmentValues = tempValues.map(value => {
             if (Array.isArray(value)) {
