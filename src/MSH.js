@@ -272,6 +272,7 @@ export class MSH extends Segment {
         super([], configs, isSubComponent);
         this.setSegmentType('MSH');
         this.setValues(values);
+        this.FieldSeparator = this.delimiter;
     }
 
     get FieldSeparator() {
